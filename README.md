@@ -20,6 +20,7 @@ merkt sich die zuletzt geladene Fassung für Starts ohne Netz. Änderungen hier 
 |---|---|---|
 | `config/muehle-werbe-config.json` | Mühle Meister | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/muehle-werbe-config.json` |
 | `config/dame-werbe-config.json` | Dame Meister | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/dame-werbe-config.json` |
+| `config/lucky-catch-werbe-config.json` | Lucky Catch | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/lucky-catch-werbe-config.json` |
 
 Was sich einstellen lässt (alle Felder optional, fehlende behalten ihren Wert in der App):
 
