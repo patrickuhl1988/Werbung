@@ -24,6 +24,10 @@ merkt sich die zuletzt geladene Fassung für Starts ohne Netz. Änderungen hier 
 | `config/quiznova-werbe-config.json` | QuizNova | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/quiznova-werbe-config.json` |
 | `config/arrow-puzzle-werbe-config.json` | Arrow Puzzle | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/arrow-puzzle-werbe-config.json` |
 | `config/sort-rush-werbe-config.json` | Sort Rush | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/sort-rush-werbe-config.json` |
+|  | NULLWEAVE |  |
+|  | Zip |  |
+|  | Würfel Dungeon |  |
+|  | Königinnen |  |
 
 Was sich einstellen lässt (alle Felder optional, fehlende behalten ihren Wert in der App):
 
