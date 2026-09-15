@@ -1,10 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-15",
   "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["joker-studios"],
+    "selectedIds": [
+      "joker-studios"
+    ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -13,18 +15,40 @@
     "trigger": {
       "mode": "games",
       "everyGames": 2,
-      "gameEvents": ["game_end_offline", "game_end_online"],
+      "gameEvents": [
+        "game_end_offline",
+        "game_end_online"
+      ],
       "gameEndBehavior": "onDismiss",
       "dismissMinSeconds": 3,
-      "releaseEvents": ["result_action", "game_start", "menu_return"],
+      "releaseEvents": [
+        "result_action",
+        "game_start",
+        "menu_return"
+      ],
       "everyMinutes": 10,
       "minutesBehavior": "onEvent",
-      "minuteEvents": ["game_end_offline", "game_end_online", "good_move"],
+      "minuteEvents": [
+        "game_end_offline",
+        "game_end_online",
+        "good_move"
+      ],
       "playTimeOnlyDuringGame": false
     },
     "excludeSelf": true,
     "frequencyCapMinutes": 2,
     "graceGames": 1,
     "muted": true
+  },
+  "_integration": {
+    "appId": "com.patrickuhl.wuerfeldungeon",
+    "clients": [
+      "Godot Android 0.8.0+",
+      "Godot browser beta",
+      "Legacy Web/Capacitor"
+    ],
+    "adapter": "Existing Werbemodul 1.0.0; native Android WebViewAssetLoader host",
+    "placements": "Completed runs, released from result screen at a safe menu; no overlay during combat",
+    "analytics": "Independent, optional Firebase Analytics and Crashlytics in Android only"
   }
 }
