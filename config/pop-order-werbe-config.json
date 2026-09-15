@@ -12,7 +12,7 @@
     "rotation": "sequential",
     "trigger": {
       "mode": "games",
-      "everyGames": 7,
+      "everyGames": 10,
       "gameEvents": ["game_end_offline", "game_end_online"],
       "gameEndBehavior": "onDismiss",
       "dismissMinSeconds": 3,
