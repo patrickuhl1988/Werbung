@@ -26,5 +26,18 @@
     "frequencyCapMinutes": 2,
     "graceGames": 1,
     "muted": true
-  }
+  },
+  "creatives": [
+    {
+      "_hinweis": "Zeigt den Joculus-Spot unter frischer Adresse. Der alte Dateiname bleibt bis zu sieben Tage in den Zwischenspeichern der Geraete.",
+      "id": "joker-studios",
+      "media": {
+        "portrait": {
+          "type": "video",
+          "src": "videos/joculus-spot-hoch.mp4",
+          "poster": "posters/joculus-spot-hoch.jpg"
+        }
+      }
+    }
+  ]
 }

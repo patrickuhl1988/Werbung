@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-17",
   "_hinweis": "Werbeeinstellungen fuer Pop Order. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -26,5 +26,18 @@
     "frequencyCapMinutes": 2,
     "graceGames": 1,
     "muted": true
-  }
+  },
+  "creatives": [
+    {
+      "_hinweis": "Zeigt den Joculus-Spot unter frischer Adresse. Der alte Dateiname bleibt bis zu sieben Tage in den Zwischenspeichern der Geraete.",
+      "id": "joker-studios",
+      "media": {
+        "portrait": {
+          "type": "video",
+          "src": "videos/joculus-spot-hoch.mp4",
+          "poster": "posters/joculus-spot-hoch.jpg"
+        }
+      }
+    }
+  ]
 }
