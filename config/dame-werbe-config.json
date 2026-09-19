@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-19",
   "_hinweis": "Werbeeinstellungen fuer Dame Meister. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -12,7 +12,7 @@
     "rotation": "sequential",
     "trigger": {
       "mode": "games",
-      "everyGames": 2,
+      "everyGames": 3,
       "gameEvents": ["game_end_offline", "game_end_online"],
       "gameEndBehavior": "onDismiss",
       "dismissMinSeconds": 3,

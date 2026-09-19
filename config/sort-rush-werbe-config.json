@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-19",
   "_hinweis": "Werbeeinstellungen fuer Sort Rush. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -11,7 +11,7 @@
     "sequenceLength": 1,
     "rotation": "sequential",
     "trigger": {
-      "mode": "games",
+      "mode": "minutes",
       "everyGames": 2,
       "gameEvents": ["game_end_offline", "game_end_online"],
       "gameEndBehavior": "onDismiss",
@@ -19,7 +19,7 @@
       "releaseEvents": ["result_action", "game_start", "menu_return"],
       "everyMinutes": 10,
       "minutesBehavior": "onEvent",
-      "minuteEvents": ["game_end_offline", "game_end_online", "good_move"],
+      "minuteEvents": ["result_action", "game_start", "menu_return"],
       "playTimeOnlyDuringGame": false
     },
     "excludeSelf": true,
