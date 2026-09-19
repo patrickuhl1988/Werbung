@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-19",
   "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["joker-studios"],
+    "selectedIds": ["joker-studios", "quiznova-bild"],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -38,6 +38,24 @@
           "poster": "posters/joculus-spot-hoch.jpg"
         }
       }
+    },
+    {
+      "_hinweis": "QuizNova-Standbild, im Wechsel mit dem Joculus-Spot. Fuehrt zum Play-Store-Eintrag von QuizNova.",
+      "id": "quiznova-bild",
+      "kind": "game",
+      "title": { "de": "QuizNova", "en": "Quiz Nova" },
+      "tagline": {
+        "de": "Über 1.000 Fragen, 6 Kategorien, 5 Modi – komplett offline",
+        "en": "Over 1,000 questions, 6 categories, 5 modes – fully offline"
+      },
+      "icon": "icons/quiznova.png",
+      "media": {
+        "portrait": { "type": "image", "src": "images/quiznova-bild-hoch.jpg" }
+      },
+      "target": { "android": "de.uhl.quiznova" },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": ["quiz"]
     }
   ]
 }
