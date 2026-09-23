@@ -13,6 +13,27 @@ Eintrag im Katalog – kein App-Update nötig (jsDelivr cacht bis zu 7 Tage; Än
 
 ## config/ – Werbeeinstellungen pro Spiel
 
+### Kampagne vom 23.09.2026
+
+Alle 19 Configs außer `muehle-werbe-config.json` bewerben Bridge Royale, Kettro (`zip`),
+Nova Knock, Null Weave, Pop Order, Seifen Atelier, Sort Rush, Tiefsee Tempel und Würfel Dungeon.
+Jede Spiel-ID kommt einmal in `selectedIds` vor; `rotation: "random"` wählt gleichverteilt.
+`excludeSelf: true` bleibt aktiv: pro Anzeige 1/8 für die übrigen Spiele in einer der neun
+beworbenen Apps, sonst 1/9. Auslöser, Wartezeiten und Werbehäufigkeit bleiben unverändert.
+
+Die 19 unveränderten PNG-Originale liegen unter `images/campaign-2026-09-23/`.
+Die Configs verwenden vollständige `raw.githubusercontent.com`-Bildadressen mit neuen
+Dateipfaden. Dadurch umgehen diese Anzeigen den bisherigen jsDelivr-Mediencache und
+benötigen keine sieben Tage Wartezeit. Die Apps müssen die neue Remote-Config beim
+nächsten Online-Start laden; der bestehende Config-Cache kann bis zu fünf Minuten dauern.
+Bereits laufende oder offline gestartete Apps behalten bis zum nächsten Abruf ihren Stand.
+
+Bridge, Kettro, Nova Knock, Tiefsee Tempel und Würfel Dungeon besitzen Hoch- und Querformat.
+Null Weave verwendet im Querformat das vorhandene Quadrat. Pop Order und Seifen Atelier
+verwenden dort ihr zweites Hochformatmotiv, Sort Rush dasselbe Hochformatbild. Das Modul
+stellt diese Bilder vollständig mit `contain` und Hintergrund dar; sie werden nicht beschnitten.
+Die beiden zusätzlich hochgeladenen Tiefsee-Motive bleiben als Reserve verfügbar.
+
 Eine JSON-Datei je App. Die App lädt ihre Datei bei jedem Start (raw.githubusercontent.com, Cache 5 Minuten) und
 merkt sich die zuletzt geladene Fassung für Starts ohne Netz. Änderungen hier wirken also ohne neuen Build.
 

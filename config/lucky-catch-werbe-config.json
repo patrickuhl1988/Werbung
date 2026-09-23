@@ -1,25 +1,46 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-09-23",
   "_hinweis": "Werbeeinstellungen fuer Lucky Catch. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["joker-studios", "quiznova-bild"],
+    "selectedIds": [
+      "bridge-royale",
+      "zip",
+      "nova-knock",
+      "nullweave",
+      "pop-order",
+      "seifen-atelier",
+      "sort-rush",
+      "tiefsee-tempel",
+      "wuerfel-dungeon"
+    ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
     "sequenceLength": 1,
-    "rotation": "sequential",
+    "rotation": "random",
     "trigger": {
       "mode": "minutes",
       "everyGames": 2,
-      "gameEvents": ["game_end_offline", "game_end_online"],
+      "gameEvents": [
+        "game_end_offline",
+        "game_end_online"
+      ],
       "gameEndBehavior": "onDismiss",
       "dismissMinSeconds": 3,
-      "releaseEvents": ["result_action", "game_start", "menu_return"],
+      "releaseEvents": [
+        "result_action",
+        "game_start",
+        "menu_return"
+      ],
       "everyMinutes": 10,
       "minutesBehavior": "onEvent",
-      "minuteEvents": ["result_action", "game_start", "menu_return"],
+      "minuteEvents": [
+        "result_action",
+        "game_start",
+        "menu_return"
+      ],
       "playTimeOnlyDuringGame": false
     },
     "excludeSelf": true,
@@ -29,33 +50,283 @@
   },
   "creatives": [
     {
-      "_hinweis": "Zeigt den Joculus-Spot unter frischer Adresse. Der alte Dateiname bleibt bis zu sieben Tage in den Zwischenspeichern der Geraete.",
-      "id": "joker-studios",
+      "id": "bridge-royale",
+      "kind": "game",
+      "title": {
+        "de": "Bridge Royale",
+        "en": "Bridge Royale"
+      },
+      "tagline": {
+        "de": "Vollwertiges Kontrakt-Bridge gegen starke KI – mit 30 Lektionen",
+        "en": "Full contract bridge against strong AI – with 30 lessons"
+      },
+      "icon": "icons/bridge-royale.png",
       "media": {
         "portrait": {
-          "type": "video",
-          "src": "videos/joculus-spot-hoch.mp4",
-          "poster": "posters/joculus-spot-hoch.jpg"
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Bridge-Royale_Advertisement_EN_Portrait.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Bridge-Royale_Advertisement_EN_Landscape.png"
         }
-      }
+      },
+      "target": {
+        "android": "de.bridgeroyale.app"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "card"
+      ]
     },
     {
-      "_hinweis": "QuizNova-Standbild, im Wechsel mit dem Joculus-Spot. Fuehrt zum Play-Store-Eintrag von QuizNova.",
-      "id": "quiznova-bild",
+      "id": "zip",
       "kind": "game",
-      "title": { "de": "QuizNova", "en": "Quiz Nova" },
+      "title": {
+        "de": "Kettro",
+        "en": "Kettro"
+      },
       "tagline": {
-        "de": "Über 1.000 Fragen, 6 Kategorien, 5 Modi – komplett offline",
-        "en": "Over 1,000 questions, 6 categories, 5 modes – fully offline"
+        "de": "Eine Linie, alle Zahlen, jede Zelle genau einmal – jeden Tag ein neues Rätsel",
+        "en": "One line, all numbers, every cell exactly once – a fresh puzzle every day"
       },
-      "icon": "icons/quiznova.png",
+      "icon": "icons/zip.png",
       "media": {
-        "portrait": { "type": "image", "src": "images/quiznova-bild-hoch.jpg" }
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Kettro_Find-Your-Path_EN_Portrait.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Kettro_Aha-Moment_EN_Landscape.png"
+        }
       },
-      "target": { "android": "de.uhl.quiznova" },
-      "accent": "#8b7bff",
+      "target": {
+        "android": "de.patrickuhl.zip"
+      },
+      "accent": "#37d6e8",
       "status": "live",
-      "tags": ["quiz"]
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "id": "nova-knock",
+      "kind": "game",
+      "title": {
+        "de": "Nova Knock",
+        "en": "Nova Knock"
+      },
+      "tagline": {
+        "de": "Physik-Puzzle im Orbit: Railgun ausrichten, Schwerkraft nutzen – 100 Level",
+        "en": "Physics puzzler in orbit: line up the railgun, use gravity wells – 100 levels"
+      },
+      "icon": "icons/nova-knock.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Nova-Knock_Advertisement_01_Chain-Reaction_EN_Portrait.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Nova-Knock_Advertisement_02_Orbital-Empire_EN_Landscape.png"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#37d6e8",
+      "status": "live",
+      "tags": [
+        "physics"
+      ]
+    },
+    {
+      "id": "nullweave",
+      "kind": "game",
+      "title": {
+        "de": "Null Weave",
+        "en": "Null Weave"
+      },
+      "tagline": {
+        "de": "Tower Defense neu gedacht: leuchtende Fäden spannen statt Türme bauen",
+        "en": "Tower defense reimagined: stretch glowing threads instead of building towers"
+      },
+      "icon": "icons/nullweave.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Null-Weave_Advertisement_EN_Portrait.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Null-Weave_Advertisement_EN_Square.png"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.nullweave"
+      },
+      "accent": "#37d6e8",
+      "status": "live",
+      "tags": [
+        "td"
+      ]
+    },
+    {
+      "id": "pop-order",
+      "kind": "game",
+      "title": {
+        "de": "Pop Order",
+        "en": "Pop Order"
+      },
+      "tagline": {
+        "de": "Entspanntes Logik-Puzzle: Bubbles in der richtigen Reihenfolge tippen",
+        "en": "Relaxed logic puzzle: tap bubbles in the right order"
+      },
+      "icon": "icons/pop-order.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_01_What-Comes-First_EN.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_02_Small-To-Big_EN.png"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.poporder"
+      },
+      "accent": "#5ea2ff",
+      "status": "live",
+      "tags": [
+        "logic"
+      ]
+    },
+    {
+      "id": "seifen-atelier",
+      "kind": "game",
+      "title": {
+        "de": "Seifen Atelier",
+        "en": "Seifen Atelier"
+      },
+      "tagline": {
+        "de": "ASMR-Puzzle zum Runterkommen: Seifenschichten schnitzen, 120 Level ohne Zeitdruck",
+        "en": "ASMR puzzle to unwind: carve soap layers, 120 levels with no time pressure"
+      },
+      "icon": "icons/seifen-atelier.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-01_One-More-Slice_EN.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-02_Your-Happy-Place_EN.png"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.seifenatelier"
+      },
+      "accent": "#f4a6c1",
+      "status": "live",
+      "tags": [
+        "zen"
+      ]
+    },
+    {
+      "id": "sort-rush",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Ball-Sortier-Puzzle mit Twist: gegen eine KI im selben Level statt gegen die Uhr",
+        "en": "Ball sorting puzzle with a twist: race an AI solving the same level"
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#4ade80",
+      "status": "live",
+      "tags": [
+        "sort"
+      ]
+    },
+    {
+      "id": "tiefsee-tempel",
+      "kind": "game",
+      "title": {
+        "de": "Tiefsee Tempel",
+        "en": "Tiefsee Tempel"
+      },
+      "tagline": {
+        "de": "Triple-Tile-Matching auf Tauchgang: fünf Tiefenzonen, 100 faire Level",
+        "en": "Triple-tile matching on a deep-sea dive: five depth zones, 100 fair levels"
+      },
+      "icon": "icons/tiefsee-tempel.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Tiefsee-Tempel_Deep-Sea-Temple_Ad-01_Match-3_EN_Mobile-9x16.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Tiefsee-Tempel_Deep-Sea-Temple_Ad-02_Your-Reef_EN.png"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.tiefseetempel"
+      },
+      "accent": "#2ec4b6",
+      "status": "live",
+      "tags": [
+        "match"
+      ]
+    },
+    {
+      "id": "wuerfel-dungeon",
+      "kind": "game",
+      "title": {
+        "de": "Würfel Dungeon",
+        "en": "Würfel Dungeon"
+      },
+      "tagline": {
+        "de": "Dice-Roguelite: würfeln, Kombos schmieden, den Dungeon in 10 Minuten bezwingen",
+        "en": "Dice roguelite: roll, forge combos and beat the dungeon in crisp 10-minute runs"
+      },
+      "icon": "icons/wuerfel-dungeon.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Wuerfel-Dungeon_Ad-02_Adventure_EN.png"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Wuerfel-Dungeon_Ad-01_Boss_EN.png"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.wuerfeldungeon"
+      },
+      "accent": "#a06be0",
+      "status": "live",
+      "tags": [
+        "roguelite"
+      ]
     }
   ]
 }
