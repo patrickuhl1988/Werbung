@@ -35,13 +35,15 @@
 
 <p class="lang">Deutsch</p>
 <h1>Datenschutzerklärung</h1>
-<p class="sub">Für die App <strong>NULLWEAVE — Weave the Light Back</strong>. Stand: 5. September 2026.</p>
+<p class="sub">Für die App <strong>NULLWEAVE — Weave the Light Back</strong>. Stand: 22. September 2026.</p>
 
 <div class="box">
-  <strong>Kurzfassung:</strong> NULLWEAVE erhebt, speichert und überträgt <strong>keinerlei personenbezogene Daten</strong>.
-  Die App funktioniert vollständig offline, stellt zur Laufzeit keine Netzwerkverbindungen her,
-  enthält keine Werbung, kein Tracking, keine Analyse-SDKs und keine In-App-Käufe.
-  Es ist kein Benutzerkonto erforderlich.
+  <strong>Kurzfassung:</strong> NULLWEAVE ist vollständig offline spielbar, enthält keine Werbung und keine
+  In-App-Käufe, und es ist kein Benutzerkonto erforderlich. Ohne Ihre ausdrückliche Zustimmung werden
+  <strong>keine Daten an uns oder an Dritte übertragen</strong>. Beim ersten Start fragt die App einmalig,
+  ob eine <strong>optionale Nutzungsstatistik</strong> (Google Firebase Analytics) eingeschaltet werden darf.
+  Die Voreinstellung ist <strong>aus</strong>; „Nicht erlauben“ hat keinerlei Nachteil im Spiel, und Sie können
+  die Wahl jederzeit in den Einstellungen ändern.
 </div>
 
 <h2>1. Verantwortlicher</h2>
@@ -52,7 +54,8 @@
 <p><em>Hinweis: Bitte ergänzen Sie hier vor der Veröffentlichung Ihre vollständige ladungsfähige Anschrift, sofern gesetzlich erforderlich.</em></p>
 
 <h2>2. Welche Daten werden verarbeitet?</h2>
-<p><strong>Keine.</strong> Die App erhebt insbesondere nicht:</p>
+<p>
+  <strong>Ohne Ihre Zustimmung: keine.</strong> Die App erhebt insbesondere nicht:</p>
 <ul>
   <li>Namen, E-Mail-Adressen oder sonstige Kontaktdaten</li>
   <li>Geräte- oder Werbe-IDs (z. B. Android Advertising ID)</li>
@@ -61,6 +64,35 @@
   <li>Nutzungs-, Absturz- oder Diagnosedaten</li>
   <li>Kontakte, Fotos, Dateien, Kalender oder Mikrofon-/Kameradaten</li>
 </ul>
+
+<h2>2a. Optionale Nutzungsstatistik (nur mit Zustimmung)</h2>
+<p>
+  Beim ersten Start fragt die App, ob sie eine anonyme Nutzungsstatistik erheben darf. Rechtsgrundlage ist
+  Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Ohne Zustimmung wird nichts erhoben und nichts gesendet.
+</p>
+<p><strong>Wenn Sie zustimmen</strong>, verarbeitet die App über <strong>Google Firebase Analytics</strong>:</p>
+<ul>
+  <li>Spielereignisse: Levelstart, Levelende (gewonnen/verloren, erreichte Welle, Spulen, Dauer), Wellenstart</li>
+  <li>technische Angaben, die Firebase selbst erhebt: eine pseudonyme App-Instanz-Kennung, App-Version,
+      Gerätemodell, Betriebssystemversion, Sprache und die ungefähre Region (aus der IP-Adresse abgeleitet;
+      die IP-Adresse selbst wird von Google nicht dauerhaft gespeichert)</li>
+</ul>
+<p>
+  <strong>Nicht erhoben werden</strong>: Name, E-Mail-Adresse, Werbe-ID (Android Advertising ID), genauer
+  Standort, Kontakte, Fotos oder Dateien. Es findet keine personalisierte Werbung und keine Weitergabe zu
+  Werbezwecken statt.
+</p>
+<p>
+  Empfänger ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, mit möglicher
+  Verarbeitung in den USA auf Grundlage der EU-Standardvertragsklauseln bzw. des EU-US Data Privacy Framework.
+  Die Daten dienen ausschließlich dazu, zu erkennen, an welchen Stellen das Spiel zu schwer oder unklar ist.
+  Die Aufbewahrungsdauer in Firebase beträgt maximal 14 Monate.
+</p>
+<p>
+  <strong>Widerruf:</strong> jederzeit über <em>Einstellungen → Spielstatistik → Verwalten</em>. Mit dem Widerruf
+  endet die Erfassung sofort, und die lokale Analytics-Kennung wird zurückgesetzt. Der Widerruf hat keinen
+  Einfluss auf die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung und keinen Einfluss auf das Spiel.
+</p>
 
 <h2>3. Lokale Speicherung auf dem Gerät</h2>
 <p>
@@ -89,8 +121,8 @@
 <ul>
   <li><code>android.permission.INTERNET</code> — Bestandteil des verwendeten App-Frameworks (Capacitor), das die
       Spieloberfläche über einen geräteinternen lokalen Kanal ausliefert.
-      <strong>Die App stellt zur Laufzeit keine Verbindungen zu Servern im Internet her</strong> und überträgt
-      keine Daten. Das Spiel ist im Flugmodus vollständig spielbar.</li>
+      <strong>Ohne Ihre Zustimmung zur Statistik stellt die App zur Laufzeit keine Verbindungen zu Servern im
+      Internet her</strong>; mit Zustimmung werden ausschließlich die unter 2a genannten Ereignisse an Firebase gesendet. Das Spiel ist im Flugmodus vollständig spielbar.</li>
   <li><code>android.permission.VIBRATE</code> — für das haptische Feedback beim Spielen (kurzes Vibrieren bei
       Treffern und beim Erreichen von Spulen). In den Einstellungen abschaltbar. Diese Berechtigung
       liest keine Daten aus.</li>
@@ -99,8 +131,10 @@
 
 <h2>5. Keine Weitergabe an Dritte</h2>
 <p>
-  Da keine Daten erhoben werden, findet auch keine Weitergabe, kein Verkauf und keine Übermittlung
-  in Drittländer statt. Es sind keine Drittanbieter-SDKs für Werbung, Analyse oder Crash-Reporting eingebunden.
+  Es werden keine Daten verkauft. Eine Weitergabe findet ausschließlich im unter Punkt 2a beschriebenen
+  Umfang statt: an Google als Auftragsverarbeiter der Statistik, und nur, wenn Sie dem zugestimmt haben.
+  Ohne Zustimmung verlassen keine Daten Ihr Gerät. Weitere Drittanbieter-SDKs für Werbung oder
+  Crash-Reporting sind nicht eingebunden.
 </p>
 
 <h2>6. Verarbeitung durch Google Play</h2>
@@ -113,8 +147,9 @@
 
 <h2>7. Kinder</h2>
 <p>
-  NULLWEAVE ist für ein allgemeines Publikum geeignet. Da keinerlei Daten erhoben werden, werden auch
-  keine Daten von Kindern erhoben.
+  NULLWEAVE ist für ein allgemeines Publikum geeignet. Die Statistik nach Punkt 2a ist standardmäßig
+  ausgeschaltet und wird nur nach ausdrücklicher Zustimmung aktiv. Wir richten uns nicht gezielt an Kinder
+  und erheben wissentlich keine Daten von Kindern unter 16 Jahren.
 </p>
 
 <h2>8. Ihre Rechte</h2>
@@ -135,12 +170,14 @@
 
 <p class="lang">English</p>
 <h1>Privacy Policy</h1>
-<p class="sub">For the app <strong>NULLWEAVE — Weave the Light Back</strong>. Last updated: 5 September 2026.</p>
+<p class="sub">For the app <strong>NULLWEAVE — Weave the Light Back</strong>. Last updated: 22 September 2026.</p>
 
 <div class="box">
-  <strong>In short:</strong> NULLWEAVE collects, stores and transmits <strong>no personal data whatsoever</strong>.
-  The app works entirely offline, makes no network requests at runtime, and contains no ads,
-  no tracking, no analytics SDKs and no in-app purchases. No account is required.
+  <strong>In short:</strong> NULLWEAVE is fully playable offline, contains no ads and no in-app purchases,
+  and requires no account. Without your explicit consent, <strong>no data is transmitted</strong> to us or to
+  anyone else. On first launch the app asks once whether <strong>optional usage statistics</strong>
+  (Google Firebase Analytics) may be switched on. The default is <strong>off</strong>; declining costs you
+  nothing in the game, and you can change your choice at any time in the settings.
 </div>
 
 <h2>1. Controller</h2>
@@ -150,9 +187,36 @@
 </p>
 
 <h2>2. What data is processed?</h2>
-<p><strong>None.</strong> The app specifically does not collect names, email addresses, device or advertising
-identifiers, location data, IP addresses, usage/crash/diagnostic data, contacts, photos, files, calendar,
-microphone or camera data.</p>
+<p><strong>Without your consent: none.</strong> The app specifically does not collect names, email addresses,
+advertising identifiers, location data, contacts, photos, files, calendar, microphone or camera data.</p>
+
+<h2>2a. Optional usage statistics (with consent only)</h2>
+<p>
+  On first launch the app asks whether it may collect anonymous usage statistics. The legal basis is your
+  consent under Art. 6(1)(a) GDPR. Without consent nothing is collected and nothing is sent.
+</p>
+<p><strong>If you consent</strong>, the app processes the following through <strong>Google Firebase Analytics</strong>:</p>
+<ul>
+  <li>game events: level start, level end (won/lost, wave reached, spools, duration), wave start</li>
+  <li>technical data Firebase collects itself: a pseudonymous app instance identifier, app version, device
+      model, OS version, language and approximate region (derived from the IP address, which Google does not
+      store permanently)</li>
+</ul>
+<p>
+  <strong>Not collected</strong>: name, email address, advertising ID, precise location, contacts, photos or
+  files. There is no personalised advertising and no sharing for advertising purposes.
+</p>
+<p>
+  The recipient is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, with possible
+  processing in the USA on the basis of the EU Standard Contractual Clauses and the EU-US Data Privacy
+  Framework. The data is used solely to see where the game is too hard or unclear. Firebase retains it for at
+  most 14 months.
+</p>
+<p>
+  <strong>Withdrawal:</strong> at any time via <em>Settings → Game statistics → Manage</em>. Collection stops
+  immediately and the local analytics identifier is reset. Withdrawal does not affect the lawfulness of
+  processing before it, and has no effect on the game.
+</p>
 
 <h2>3. Local storage on your device</h2>
 <p>
@@ -174,8 +238,8 @@ microphone or camera data.</p>
 <p>The app package declares exactly two permissions:</p>
 <ul>
   <li><code>android.permission.INTERNET</code> — part of the app framework used (Capacitor), which serves the
-      game interface over a device-local channel. <strong>The app makes no connections to internet servers at
-      runtime</strong> and transmits no data. The game is fully playable in airplane mode.</li>
+      game interface over a device-local channel. <strong>Unless you consent to the statistics, the app makes no connections to internet servers at
+      runtime</strong>; with consent, only the events listed in section 2a are sent to Firebase. The game is fully playable in airplane mode.</li>
   <li><code>android.permission.VIBRATE</code> — for haptic feedback during play (a short vibration on hits and
       when spools are earned). Can be turned off in Settings. This permission reads no data.</li>
 </ul>
@@ -183,8 +247,9 @@ microphone or camera data.</p>
 
 <h2>5. No sharing with third parties</h2>
 <p>
-  Because no data is collected, no data is shared, sold or transferred to third countries. No third-party
-  advertising, analytics or crash-reporting SDKs are integrated.
+  No data is sold. Data is shared only to the extent described in section 2a: with Google as the processor of
+  the statistics, and only if you consented. Without consent, no data leaves your device. No further
+  third-party advertising or crash-reporting SDKs are integrated.
 </p>
 
 <h2>6. Processing by Google Play</h2>
@@ -196,7 +261,9 @@ microphone or camera data.</p>
 </p>
 
 <h2>7. Children</h2>
-<p>NULLWEAVE is suitable for a general audience. As no data at all is collected, no children's data is collected either.</p>
+<p>NULLWEAVE is suitable for a general audience. The statistics described in section 2a are off by default and
+only become active after explicit consent. We do not target children and do not knowingly collect data from
+children under 16.</p>
 
 <h2>8. Your rights</h2>
 <p>
@@ -212,7 +279,7 @@ microphone or camera data.</p>
   is always available at the URL listed on the Play Store listing.
 </p>
 
-<footer>NULLWEAVE — Weave the Light Back · 100 % offline · keine Datenerhebung / no data collection</footer>
+<footer>NULLWEAVE — Weave the Light Back · offline spielbar · Statistik nur mit Zustimmung / statistics only with consent</footer>
 </main>
 </body>
 </html>
