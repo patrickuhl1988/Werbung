@@ -4,7 +4,7 @@
   "_hinweis": "Werbeeinstellungen fuer NULL SIGNAL. Ausgangskonfiguration identisch mit Sort Rush. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["bridge-royale", "zip", "nova-knock", "nullweave", "pop-order", "seifen-atelier", "sort-rush", "tiefsee-tempel", "wuerfel-dungeon", "quiznova-bild", "arrow-puzzle-bild-1", "muehle-meister-bild-1", "kiosk-simulator-bild-1", "lucky-catch-bild-1", "sonaris-bild-1", "dame-meister-bild-1", "lumenfall-bild-1", "drop-match-bild-1", "feierabend-rush-bild-1", "pop-order-bild-2", "seifen-atelier-bild-2", "tiefsee-tempel-bild-2"],
+    "selectedIds": ["bridge-royale", "zip", "nova-knock", "tiefsee-tempel", "wuerfel-dungeon", "arrow-puzzle-bild-2", "muehle-meister-bild-2", "kiosk-simulator-bild-2", "lucky-catch-bild-2", "sonaris-bild-2", "dame-meister-bild-2", "lumenfall-bild-2", "drop-match-bild-2", "feierabend-rush-bild-2", "tiefsee-tempel-bild-1"],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -133,130 +133,6 @@
       ]
     },
     {
-      "id": "nullweave",
-      "kind": "game",
-      "title": {
-        "de": "Null Weave",
-        "en": "Null Weave"
-      },
-      "tagline": {
-        "de": "Tower Defense neu gedacht: leuchtende Fäden spannen statt Türme bauen",
-        "en": "Tower defense reimagined: stretch glowing threads instead of building towers"
-      },
-      "icon": "icons/nullweave.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Null-Weave_Advertisement_EN_Portrait.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Null-Weave_Advertisement_EN_Square.png"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.nullweave"
-      },
-      "accent": "#37d6e8",
-      "status": "live",
-      "tags": [
-        "td"
-      ]
-    },
-    {
-      "id": "pop-order",
-      "kind": "game",
-      "title": {
-        "de": "Pop Order",
-        "en": "Pop Order"
-      },
-      "tagline": {
-        "de": "Entspanntes Logik-Puzzle: Bubbles in der richtigen Reihenfolge tippen",
-        "en": "Relaxed logic puzzle: tap bubbles in the right order"
-      },
-      "icon": "icons/pop-order.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_01_What-Comes-First_EN.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_02_Small-To-Big_EN.png"
-        }
-      },
-      "target": {
-        "android": "com.patrickuhl.poporder"
-      },
-      "accent": "#5ea2ff",
-      "status": "live",
-      "tags": [
-        "logic"
-      ]
-    },
-    {
-      "id": "seifen-atelier",
-      "kind": "game",
-      "title": {
-        "de": "Seifen Atelier",
-        "en": "Seifen Atelier"
-      },
-      "tagline": {
-        "de": "ASMR-Puzzle zum Runterkommen: Seifenschichten schnitzen, 120 Level ohne Zeitdruck",
-        "en": "ASMR puzzle to unwind: carve soap layers, 120 levels with no time pressure"
-      },
-      "icon": "icons/seifen-atelier.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-01_One-More-Slice_EN.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-02_Your-Happy-Place_EN.png"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.seifenatelier"
-      },
-      "accent": "#f4a6c1",
-      "status": "live",
-      "tags": [
-        "zen"
-      ]
-    },
-    {
-      "id": "sort-rush",
-      "kind": "game",
-      "title": {
-        "de": "Sort Rush",
-        "en": "Sort Rush"
-      },
-      "tagline": {
-        "de": "Ball-Sortier-Puzzle mit Twist: gegen eine KI im selben Level statt gegen die Uhr",
-        "en": "Ball sorting puzzle with a twist: race an AI solving the same level"
-      },
-      "icon": "icons/sort-rush.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
-        }
-      },
-      "target": {
-        "android": "com.patrickuhl.sortrush"
-      },
-      "accent": "#4ade80",
-      "status": "live",
-      "tags": [
-        "sort"
-      ]
-    },
-    {
       "id": "tiefsee-tempel",
       "kind": "game",
       "title": {
@@ -319,34 +195,7 @@
       ]
     },
     {
-      "id": "quiznova-bild",
-      "kind": "game",
-      "title": {
-        "de": "QuizNova",
-        "en": "Quiz Nova"
-      },
-      "tagline": {
-        "de": "Über 1.000 Fragen, 6 Kategorien, 5 Modi – komplett offline",
-        "en": "Over 1,000 questions, 6 categories, 5 modes – fully offline"
-      },
-      "icon": "icons/quiznova.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/quiznova-bild-hoch.jpg"
-        }
-      },
-      "target": {
-        "android": "de.uhl.quiznova"
-      },
-      "accent": "#8b7bff",
-      "status": "live",
-      "tags": [
-        "quiz"
-      ]
-    },
-    {
-      "id": "arrow-puzzle-bild-1",
+      "id": "arrow-puzzle-bild-2",
       "kind": "game",
       "title": {
         "de": "Arrow Puzzle",
@@ -358,9 +207,9 @@
       },
       "icon": "icons/arrow-puzzle.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/arrow-puzzle-bild-1-hoch.jpg"
+          "src": "images/arrow-puzzle-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -373,7 +222,7 @@
       ]
     },
     {
-      "id": "muehle-meister-bild-1",
+      "id": "muehle-meister-bild-2",
       "kind": "game",
       "title": {
         "de": "Mühle Meister",
@@ -385,9 +234,9 @@
       },
       "icon": "icons/muehle-meister.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/muehle-meister-bild-1-hoch.jpg"
+          "src": "images/muehle-meister-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -400,7 +249,7 @@
       ]
     },
     {
-      "id": "kiosk-simulator-bild-1",
+      "id": "kiosk-simulator-bild-2",
       "kind": "game",
       "title": {
         "de": "Büdchenbaron",
@@ -412,9 +261,9 @@
       },
       "icon": "icons/kiosk-simulator.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/kiosk-simulator-bild-1-hoch.jpg"
+          "src": "images/kiosk-simulator-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -427,7 +276,7 @@
       ]
     },
     {
-      "id": "lucky-catch-bild-1",
+      "id": "lucky-catch-bild-2",
       "kind": "game",
       "title": {
         "de": "Lucky Catch",
@@ -439,9 +288,9 @@
       },
       "icon": "icons/lucky-catch.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/lucky-catch-bild-1-hoch.jpg"
+          "src": "images/lucky-catch-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -454,7 +303,7 @@
       ]
     },
     {
-      "id": "sonaris-bild-1",
+      "id": "sonaris-bild-2",
       "kind": "game",
       "title": {
         "de": "SONARIS",
@@ -466,9 +315,9 @@
       },
       "icon": "icons/sonaris.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/sonaris-bild-1-hoch.jpg"
+          "src": "images/sonaris-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -481,7 +330,7 @@
       ]
     },
     {
-      "id": "dame-meister-bild-1",
+      "id": "dame-meister-bild-2",
       "kind": "game",
       "title": {
         "de": "Dame Meister",
@@ -493,9 +342,9 @@
       },
       "icon": "icons/dame-meister.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/dame-meister-bild-1-hoch.jpg"
+          "src": "images/dame-meister-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -508,7 +357,7 @@
       ]
     },
     {
-      "id": "lumenfall-bild-1",
+      "id": "lumenfall-bild-2",
       "kind": "game",
       "title": {
         "de": "Candlerift",
@@ -520,9 +369,9 @@
       },
       "icon": "icons/lumenfall.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/lumenfall-bild-1-hoch.jpg"
+          "src": "images/lumenfall-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -535,7 +384,7 @@
       ]
     },
     {
-      "id": "drop-match-bild-1",
+      "id": "drop-match-bild-2",
       "kind": "game",
       "title": {
         "de": "Drop & Match",
@@ -547,9 +396,9 @@
       },
       "icon": "icons/drop-match.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/drop-match-bild-1-hoch.jpg"
+          "src": "images/drop-match-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -562,7 +411,7 @@
       ]
     },
     {
-      "id": "feierabend-rush-bild-1",
+      "id": "feierabend-rush-bild-2",
       "kind": "game",
       "title": {
         "de": "Feierabend Rush",
@@ -574,9 +423,9 @@
       },
       "icon": "icons/feierabend-rush.png",
       "media": {
-        "portrait": {
+        "landscape": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-1-hoch.jpg"
+          "src": "images/feierabend-rush-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -589,61 +438,7 @@
       ]
     },
     {
-      "id": "pop-order-bild-2",
-      "kind": "game",
-      "title": {
-        "de": "Pop Order",
-        "en": "Pop Order"
-      },
-      "tagline": {
-        "de": "Tippe die Bubbles in der richtigen Reihenfolge – 155 knifflige Rätsel!",
-        "en": "Tap the bubbles in the right order – 155 clever what-comes-first puzzles!"
-      },
-      "icon": "icons/pop-order.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/pop-order-bild-2-hoch.jpg"
-        }
-      },
-      "target": {
-        "android": "com.patrickuhl.poporder"
-      },
-      "accent": "#5ea2ff",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
-      "id": "seifen-atelier-bild-2",
-      "kind": "game",
-      "title": {
-        "de": "Seifen-Atelier",
-        "en": "Soap Atelier"
-      },
-      "tagline": {
-        "de": "Schnitze Seife, sortiere duftende Späne. Ein ruhiges Puzzle ohne Zeitdruck.",
-        "en": "Carve soap, sort scented shavings. A calm puzzle with no time pressure."
-      },
-      "icon": "icons/seifen-atelier.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/seifen-atelier-bild-2-hoch.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.seifenatelier"
-      },
-      "accent": "#f4a6c1",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
-      "id": "tiefsee-tempel-bild-2",
+      "id": "tiefsee-tempel-bild-1",
       "kind": "game",
       "title": {
         "de": "Tiefsee-Tempel",
@@ -657,11 +452,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "images/tiefsee-tempel-bild-2-hoch.jpg"
+          "src": "images/tiefsee-tempel-bild-1-hoch.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "images/tiefsee-tempel-bild-2-quer.jpg"
+          "src": "images/tiefsee-tempel-bild-1-quer.jpg"
         }
       },
       "target": {
