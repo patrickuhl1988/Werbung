@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -190,10 +190,6 @@
         "portrait": {
           "type": "image",
           "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_01_What-Comes-First_EN.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Pop-Order_Advertisement_02_Small-To-Big_EN.png"
         }
       },
       "target": {
@@ -221,10 +217,6 @@
         "portrait": {
           "type": "image",
           "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-01_One-More-Slice_EN.png"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Seifen-Atelier_Ad-02_Your-Happy-Place_EN.png"
         }
       },
       "target": {
@@ -250,10 +242,6 @@
       "icon": "icons/sort-rush.png",
       "media": {
         "portrait": {
-          "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
-        },
-        "landscape": {
           "type": "image",
           "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Sort-Rush_Advertisement_02_So-Satisfying_EN.png"
         }
@@ -372,6 +360,10 @@
         "portrait": {
           "type": "image",
           "src": "images/arrow-puzzle-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/arrow-puzzle-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -399,6 +391,10 @@
         "portrait": {
           "type": "image",
           "src": "images/muehle-meister-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/muehle-meister-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -426,6 +422,10 @@
         "portrait": {
           "type": "image",
           "src": "images/kiosk-simulator-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kiosk-simulator-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -453,6 +453,10 @@
         "portrait": {
           "type": "image",
           "src": "images/lucky-catch-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/lucky-catch-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -480,6 +484,10 @@
         "portrait": {
           "type": "image",
           "src": "images/sonaris-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/sonaris-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -507,6 +515,10 @@
         "portrait": {
           "type": "image",
           "src": "images/dame-meister-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/dame-meister-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -534,6 +546,10 @@
         "portrait": {
           "type": "image",
           "src": "images/lumenfall-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/lumenfall-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -561,6 +577,10 @@
         "portrait": {
           "type": "image",
           "src": "images/drop-match-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/drop-match-bild-2-quer.jpg"
         }
       },
       "target": {
@@ -588,6 +608,10 @@
         "portrait": {
           "type": "image",
           "src": "images/feierabend-rush-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/feierabend-rush-bild-2-quer.jpg"
         }
       },
       "target": {
