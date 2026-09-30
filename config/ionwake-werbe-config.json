@@ -54,11 +54,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Bridge-Royale_Advertisement_EN_Portrait.png"
+          "src": "images/kampagne-bridge-royale_advertisement_en_portrait.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Bridge-Royale_Advertisement_EN_Landscape.png"
+          "src": "images/kampagne-bridge-royale_advertisement_en_landscape.jpg"
         }
       },
       "target": {
@@ -85,11 +85,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Kettro_Find-Your-Path_EN_Portrait.png"
+          "src": "images/kampagne-kettro_find-your-path_en_portrait.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Kettro_Aha-Moment_EN_Landscape.png"
+          "src": "images/kampagne-kettro_aha-moment_en_landscape.jpg"
         }
       },
       "target": {
@@ -116,11 +116,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Nova-Knock_Advertisement_01_Chain-Reaction_EN_Portrait.png"
+          "src": "images/kampagne-nova-knock_advertisement_01_chain-reaction_en_portrait.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Nova-Knock_Advertisement_02_Orbital-Empire_EN_Landscape.png"
+          "src": "images/kampagne-nova-knock_advertisement_02_orbital-empire_en_landscape.jpg"
         }
       },
       "target": {
@@ -147,11 +147,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Tiefsee-Tempel_Deep-Sea-Temple_Ad-01_Match-3_EN_Mobile-9x16.png"
+          "src": "images/kampagne-tiefsee-tempel_deep-sea-temple_ad-01_match-3_en_mobile-9x16.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Tiefsee-Tempel_Deep-Sea-Temple_Ad-02_Your-Reef_EN.png"
+          "src": "images/kampagne-tiefsee-tempel_deep-sea-temple_ad-02_your-reef_en.jpg"
         }
       },
       "target": {
@@ -178,11 +178,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Wuerfel-Dungeon_Ad-02_Adventure_EN.png"
+          "src": "images/kampagne-wuerfel-dungeon_ad-02_adventure_en.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/images/campaign-2026-09-23/2026-09-23_Wuerfel-Dungeon_Ad-01_Boss_EN.png"
+          "src": "images/kampagne-wuerfel-dungeon_ad-01_boss_en.jpg"
         }
       },
       "target": {
@@ -425,13 +425,13 @@
       "media": {
         "portrait": {
           "type": "video",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/videos/feierabend-rush-hoch.mp4",
-          "poster": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/posters/feierabend-rush-hoch.jpg"
+          "src": "videos/feierabend-rush-hoch.mp4",
+          "poster": "posters/feierabend-rush-hoch.jpg"
         },
         "landscape": {
           "type": "video",
-          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/videos/feierabend-rush-quer.mp4",
-          "poster": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/posters/feierabend-rush-quer.jpg"
+          "src": "videos/feierabend-rush-quer.mp4",
+          "poster": "posters/feierabend-rush-quer.jpg"
         }
       },
       "target": {
