@@ -4,7 +4,7 @@
   "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["bridge-royale", "zip", "nova-knock", "nullweave", "pop-order", "seifen-atelier", "sort-rush", "tiefsee-tempel", "wuerfel-dungeon", "quiznova-bild", "arrow-puzzle-bild-1", "muehle-meister-bild-1", "kiosk-simulator-bild-1", "lucky-catch-bild-1", "sonaris-bild-1", "dame-meister-bild-1", "lumenfall-bild-1", "drop-match-bild-1", "feierabend-rush-bild-1", "pop-order-bild-2", "seifen-atelier-bild-2", "tiefsee-tempel-bild-2"],
+    "selectedIds": ["bridge-royale", "zip", "nova-knock", "nullweave", "pop-order", "seifen-atelier", "sort-rush", "tiefsee-tempel", "wuerfel-dungeon", "quiznova-bild", "arrow-puzzle-bild-1", "muehle-meister-bild-1", "kiosk-simulator-bild-1", "lucky-catch-bild-1", "sonaris-bild-1", "dame-meister-bild-1", "lumenfall-bild-1", "drop-match-bild-1", "feierabend-rush", "pop-order-bild-2", "seifen-atelier-bild-2", "tiefsee-tempel-bild-2"],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -590,6 +590,39 @@
       "status": "live",
       "tags": [
         "werbebild"
+      ]
+    },
+    {
+      "id": "feierabend-rush",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
+        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
+      },
+      "icon": "icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "video",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/videos/feierabend-rush-hoch.mp4",
+          "poster": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/posters/feierabend-rush-hoch.jpg"
+        },
+        "landscape": {
+          "type": "video",
+          "src": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/videos/feierabend-rush-quer.mp4",
+          "poster": "https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/posters/feierabend-rush-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "arcade"
       ]
     },
     {
