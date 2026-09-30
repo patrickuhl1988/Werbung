@@ -24,7 +24,7 @@
         "game_start",
         "menu_return"
       ],
-      "everyMinutes": 10,
+      "everyMinutes": 6,
       "minutesBehavior": "onEvent",
       "minuteEvents": [
         "game_end_offline",
