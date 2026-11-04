@@ -38,12 +38,7 @@
     "excludeSelf": true,
     "frequencyCapMinutes": 2,
     "graceGames": 1,
-    "muted": true,
-    "rewarded": {
-      "selectedIds": [
-        "arrow-puzzle-playable"
-      ]
-    }
+    "muted": true
   },
   "creatives": [
     {
@@ -769,5 +764,10 @@
         "puzzle"
       ]
     }
-  ]
+  ],
+  "rewarded": {
+    "selectedIds": [
+      "arrow-puzzle-playable"
+    ]
+  }
 }
