@@ -1,0 +1,773 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-04",
+  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "config": {
+    "enabled": true,
+    "selectedIds": [
+      "arrow-puzzle-playable"
+    ],
+    "defaultUnlockSeconds": 5,
+    "advancedTimings": false,
+    "perAdUnlockSeconds": {},
+    "sequenceLength": 1,
+    "rotation": "random",
+    "trigger": {
+      "mode": "games",
+      "everyGames": 2,
+      "gameEvents": [
+        "game_end_offline",
+        "game_end_online"
+      ],
+      "gameEndBehavior": "onDismiss",
+      "dismissMinSeconds": 3,
+      "releaseEvents": [
+        "result_action",
+        "game_start",
+        "menu_return"
+      ],
+      "everyMinutes": 10,
+      "minutesBehavior": "onEvent",
+      "minuteEvents": [
+        "game_end_offline",
+        "game_end_online",
+        "good_move"
+      ],
+      "playTimeOnlyDuringGame": false
+    },
+    "excludeSelf": true,
+    "frequencyCapMinutes": 2,
+    "graceGames": 1,
+    "muted": true,
+    "rewarded": {
+      "selectedIds": [
+        "arrow-puzzle-playable"
+      ]
+    }
+  },
+  "creatives": [
+    {
+      "id": "bridge-royale",
+      "kind": "game",
+      "title": {
+        "de": "Bridge Royale",
+        "en": "Bridge Royale"
+      },
+      "tagline": {
+        "de": "Vollwertiges Kontrakt-Bridge gegen starke KI – mit 30 Lektionen",
+        "en": "Full contract bridge against strong AI – with 30 lessons"
+      },
+      "icon": "icons/bridge-royale.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-bridge-royale_advertisement_en_portrait.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-bridge-royale_advertisement_en_landscape.jpg"
+        }
+      },
+      "target": {
+        "android": "de.bridgeroyale.app"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "card"
+      ]
+    },
+    {
+      "id": "zip",
+      "kind": "game",
+      "title": {
+        "de": "Kettro",
+        "en": "Kettro"
+      },
+      "tagline": {
+        "de": "Eine Linie, alle Zahlen, jede Zelle genau einmal – jeden Tag ein neues Rätsel",
+        "en": "One line, all numbers, every cell exactly once – a fresh puzzle every day"
+      },
+      "icon": "icons/zip.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-kettro_find-your-path_en_portrait.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-kettro_aha-moment_en_landscape.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.zip"
+      },
+      "accent": "#37d6e8",
+      "status": "live",
+      "tags": [
+        "daily"
+      ]
+    },
+    {
+      "id": "nova-knock",
+      "kind": "game",
+      "title": {
+        "de": "Nova Knock",
+        "en": "Nova Knock"
+      },
+      "tagline": {
+        "de": "Physik-Puzzle im Orbit: Railgun ausrichten, Schwerkraft nutzen – 100 Level",
+        "en": "Physics puzzler in orbit: line up the railgun, use gravity wells – 100 levels"
+      },
+      "icon": "icons/nova-knock.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-nova-knock_advertisement_01_chain-reaction_en_portrait.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-nova-knock_advertisement_02_orbital-empire_en_landscape.jpg"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#37d6e8",
+      "status": "live",
+      "tags": [
+        "physics"
+      ]
+    },
+    {
+      "id": "nullweave",
+      "kind": "game",
+      "title": {
+        "de": "Null Weave",
+        "en": "Null Weave"
+      },
+      "tagline": {
+        "de": "Tower Defense neu gedacht: leuchtende Fäden spannen statt Türme bauen",
+        "en": "Tower defense reimagined: stretch glowing threads instead of building towers"
+      },
+      "icon": "icons/nullweave.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-null-weave_advertisement_en_portrait.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-null-weave_advertisement_en_square.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.nullweave"
+      },
+      "accent": "#37d6e8",
+      "status": "live",
+      "tags": [
+        "td"
+      ]
+    },
+    {
+      "id": "pop-order",
+      "kind": "game",
+      "title": {
+        "de": "Pop Order",
+        "en": "Pop Order"
+      },
+      "tagline": {
+        "de": "Entspanntes Logik-Puzzle: Bubbles in der richtigen Reihenfolge tippen",
+        "en": "Relaxed logic puzzle: tap bubbles in the right order"
+      },
+      "icon": "icons/pop-order.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-pop-order_advertisement_01_what-comes-first_en.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.poporder"
+      },
+      "accent": "#5ea2ff",
+      "status": "live",
+      "tags": [
+        "logic"
+      ]
+    },
+    {
+      "id": "seifen-atelier",
+      "kind": "game",
+      "title": {
+        "de": "Seifen Atelier",
+        "en": "Seifen Atelier"
+      },
+      "tagline": {
+        "de": "ASMR-Puzzle zum Runterkommen: Seifenschichten schnitzen, 120 Level ohne Zeitdruck",
+        "en": "ASMR puzzle to unwind: carve soap layers, 120 levels with no time pressure"
+      },
+      "icon": "icons/seifen-atelier.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-seifen-atelier_ad-01_one-more-slice_en.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.seifenatelier"
+      },
+      "accent": "#f4a6c1",
+      "status": "live",
+      "tags": [
+        "zen"
+      ]
+    },
+    {
+      "id": "sort-rush",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Ball-Sortier-Puzzle mit Twist: gegen eine KI im selben Level statt gegen die Uhr",
+        "en": "Ball sorting puzzle with a twist: race an AI solving the same level"
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-sort-rush_advertisement_02_so-satisfying_en.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#4ade80",
+      "status": "live",
+      "tags": [
+        "sort"
+      ]
+    },
+    {
+      "id": "tiefsee-tempel",
+      "kind": "game",
+      "title": {
+        "de": "Tiefsee Tempel",
+        "en": "Tiefsee Tempel"
+      },
+      "tagline": {
+        "de": "Triple-Tile-Matching auf Tauchgang: fünf Tiefenzonen, 100 faire Level",
+        "en": "Triple-tile matching on a deep-sea dive: five depth zones, 100 fair levels"
+      },
+      "icon": "icons/tiefsee-tempel.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-tiefsee-tempel_deep-sea-temple_ad-01_match-3_en_mobile-9x16.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-tiefsee-tempel_deep-sea-temple_ad-02_your-reef_en.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.tiefseetempel"
+      },
+      "accent": "#2ec4b6",
+      "status": "live",
+      "tags": [
+        "match"
+      ]
+    },
+    {
+      "id": "wuerfel-dungeon",
+      "kind": "game",
+      "title": {
+        "de": "Würfel Dungeon",
+        "en": "Würfel Dungeon"
+      },
+      "tagline": {
+        "de": "Dice-Roguelite: würfeln, Kombos schmieden, den Dungeon in 10 Minuten bezwingen",
+        "en": "Dice roguelite: roll, forge combos and beat the dungeon in crisp 10-minute runs"
+      },
+      "icon": "icons/wuerfel-dungeon.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kampagne-wuerfel-dungeon_ad-02_adventure_en.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kampagne-wuerfel-dungeon_ad-01_boss_en.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.wuerfeldungeon"
+      },
+      "accent": "#a06be0",
+      "status": "live",
+      "tags": [
+        "roguelite"
+      ]
+    },
+    {
+      "id": "quiznova-bild",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "Quiz Nova"
+      },
+      "tagline": {
+        "de": "Über 1.000 Fragen, 6 Kategorien, 5 Modi – komplett offline",
+        "en": "Over 1,000 questions, 6 categories, 5 modes – fully offline"
+      },
+      "icon": "icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/quiznova-bild-hoch.jpg"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "quiz"
+      ]
+    },
+    {
+      "id": "arrow-puzzle-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Arrow Puzzle",
+        "en": "Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Entspanntes ASMR-Puzzle: Pfeile befreien und über 100 ruhige Bilder lösen.",
+        "en": "Relaxing ASMR puzzle: free the arrows and reveal over 100 calming pictures."
+      },
+      "icon": "icons/arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/arrow-puzzle-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/arrow-puzzle-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "app.arrowpuzzle"
+      },
+      "accent": "#f4a6c1",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "muehle-meister-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Mühle Meister",
+        "en": "Nine Men's Morris Master"
+      },
+      "tagline": {
+        "de": "Mühle offline gegen KI oder online mit Freunden. 5 Stufen, Karriere und Rätsel.",
+        "en": "Play Morris offline vs AI or online with friends. 5 levels, career and puzzles."
+      },
+      "icon": "icons/muehle-meister.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/muehle-meister-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/muehle-meister-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "app.muehle.muehle"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "kiosk-simulator-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Büdchenbaron",
+        "en": "Büdchenbaron"
+      },
+      "tagline": {
+        "de": "Dein Kiosk, dein Run: Kunden bedienen, Joker sammeln – schaffst du 20 Tage?",
+        "en": "Your kiosk, your run: serve customers, stack jokers - can you survive 20 days?"
+      },
+      "icon": "icons/kiosk-simulator.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/kiosk-simulator-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/kiosk-simulator-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.kiosksimulator"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "lucky-catch-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Lucky Catch",
+        "en": "Lucky Catch"
+      },
+      "tagline": {
+        "de": "140 Arten entdecken, seltene Fänge sammeln und dein Aquarium gestalten.",
+        "en": "Discover 140 species, collect rare catches and create your own aquarium."
+      },
+      "icon": "icons/lucky-catch.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/lucky-catch-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/lucky-catch-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.luckycatch"
+      },
+      "accent": "#3fa7f5",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "sonaris-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Unterwasserspiel offline: Schwimm als Delfin durch eine Neon-Stadt. Ohne Käufe.",
+        "en": "Offline underwater game: swim as a dolphin in a sunken neon city. No purchases."
+      },
+      "icon": "icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/sonaris-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/sonaris-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#5ea2ff",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "dame-meister-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Dame Meister",
+        "en": "Checkers Master"
+      },
+      "tagline": {
+        "de": "Klassisch Dame: starker Computer, offline oder online per Code gegen Freunde.",
+        "en": "Classic checkers: strong AI, play offline or online with a friend by code."
+      },
+      "icon": "icons/dame-meister.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/dame-meister-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/dame-meister-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.damemeister.app"
+      },
+      "accent": "#c9a15a",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "lumenfall-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Offline-Roguelite: Fallen, Dashen, Bosse besiegen. Einhändig, ohne In-App-Käufe.",
+        "en": "Offline falling game: dash, smash & beat bosses. One hand. No in-app purchases."
+      },
+      "icon": "icons/lumenfall.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/lumenfall-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/lumenfall-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#ffd98a",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "drop-match-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Drop & Match",
+        "en": "Drop & Match"
+      },
+      "tagline": {
+        "de": "Sortiere bunte Bälle in die richtigen Röhren – 60 knifflige Puzzle-Level!",
+        "en": "Sort colourful balls into the right tubes – 60 tricky puzzle levels!"
+      },
+      "icon": "icons/drop-match.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/drop-match-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/drop-match-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.dropandmatch"
+      },
+      "accent": "#4ade80",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "feierabend-rush",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
+        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
+      },
+      "icon": "icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "video",
+          "src": "videos/feierabend-rush-hoch.mp4",
+          "poster": "posters/feierabend-rush-hoch.jpg"
+        },
+        "landscape": {
+          "type": "video",
+          "src": "videos/feierabend-rush-quer.mp4",
+          "poster": "posters/feierabend-rush-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "arcade"
+      ]
+    },
+    {
+      "id": "feierabend-rush-bild-1",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
+        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
+      },
+      "icon": "icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/feierabend-rush-bild-1-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/feierabend-rush-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "pop-order-bild-2",
+      "kind": "game",
+      "title": {
+        "de": "Pop Order",
+        "en": "Pop Order"
+      },
+      "tagline": {
+        "de": "Tippe die Bubbles in der richtigen Reihenfolge – 155 knifflige Rätsel!",
+        "en": "Tap the bubbles in the right order – 155 clever what-comes-first puzzles!"
+      },
+      "icon": "icons/pop-order.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/pop-order-bild-2-hoch.jpg"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.poporder"
+      },
+      "accent": "#5ea2ff",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "seifen-atelier-bild-2",
+      "kind": "game",
+      "title": {
+        "de": "Seifen-Atelier",
+        "en": "Soap Atelier"
+      },
+      "tagline": {
+        "de": "Schnitze Seife, sortiere duftende Späne. Ein ruhiges Puzzle ohne Zeitdruck.",
+        "en": "Carve soap, sort scented shavings. A calm puzzle with no time pressure."
+      },
+      "icon": "icons/seifen-atelier.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/seifen-atelier-bild-2-hoch.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.seifenatelier"
+      },
+      "accent": "#f4a6c1",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "tiefsee-tempel-bild-2",
+      "kind": "game",
+      "title": {
+        "de": "Tiefsee-Tempel",
+        "en": "Deep Sea Temple"
+      },
+      "tagline": {
+        "de": "Sammle drei gleiche Spielsteine, verdiene Perlen und baue dein Riff aus.",
+        "en": "Match three tiles, earn pearls and build your own underwater coral reef."
+      },
+      "icon": "icons/tiefsee-tempel.png",
+      "media": {
+        "portrait": {
+          "type": "image",
+          "src": "images/tiefsee-tempel-bild-2-hoch.jpg"
+        },
+        "landscape": {
+          "type": "image",
+          "src": "images/tiefsee-tempel-bild-2-quer.jpg"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.tiefseetempel"
+      },
+      "accent": "#2ec4b6",
+      "status": "live",
+      "tags": [
+        "werbebild"
+      ]
+    },
+    {
+      "id": "arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Arrow Puzzle",
+        "en": "Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Probier es gleich hier: Tippe die freien Pfeile an und löse den Fuchs.",
+        "en": "Try it right here: tap the free arrows and solve the fox."
+      },
+      "icon": "icons/arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "playables/arrow-puzzle-fox.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "playables/arrow-puzzle-fox.html"
+        }
+      },
+      "target": {
+        "android": "app.arrowpuzzle"
+      },
+      "accent": "#FF9A4D",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    }
+  ]
+}
