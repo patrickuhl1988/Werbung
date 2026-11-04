@@ -1,10 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-11-04",
   "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
-    "selectedIds": ["bridge-royale", "zip", "nova-knock", "nullweave", "pop-order", "seifen-atelier", "sort-rush", "tiefsee-tempel", "wuerfel-dungeon", "quiznova-bild", "arrow-puzzle-bild-1", "muehle-meister-bild-1", "kiosk-simulator-bild-1", "lucky-catch-bild-1", "sonaris-bild-1", "dame-meister-bild-1", "lumenfall-bild-1", "drop-match-bild-1", "feierabend-rush", "pop-order-bild-2", "seifen-atelier-bild-2", "tiefsee-tempel-bild-2"],
+    "selectedIds": [
+      "arrow-puzzle-playable"
+    ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -36,7 +38,12 @@
     "excludeSelf": true,
     "frequencyCapMinutes": 2,
     "graceGames": 1,
-    "muted": true
+    "muted": true,
+    "rewarded": {
+      "selectedIds": [
+        "arrow-puzzle-playable"
+      ]
+    }
   },
   "creatives": [
     {
@@ -728,6 +735,38 @@
       "status": "live",
       "tags": [
         "werbebild"
+      ]
+    },
+    {
+      "id": "arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Arrow Puzzle",
+        "en": "Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Probier es gleich hier: Tippe die freien Pfeile an und löse den Fuchs.",
+        "en": "Try it right here: tap the free arrows and solve the fox."
+      },
+      "icon": "icons/arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "playables/arrow-puzzle-fox.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "playables/arrow-puzzle-fox.html"
+        }
+      },
+      "target": {
+        "android": "app.arrowpuzzle"
+      },
+      "accent": "#FF9A4D",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]
