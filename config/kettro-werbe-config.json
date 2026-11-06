@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-06",
   "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -747,11 +747,11 @@
       "media": {
         "portrait": {
           "type": "playable",
-          "src": "playables/arrow-puzzle-fox.html"
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
         },
         "landscape": {
           "type": "playable",
-          "src": "playables/arrow-puzzle-fox.html"
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
         }
       },
       "target": {
