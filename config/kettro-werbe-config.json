@@ -1,11 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06",
-  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "updatedAt": "2026-11-08",
+  "_hinweis": "Kettro: 50% Arrow Puzzle, 50% Sort Rush. Beide spielbar. Godot benoetigt den Adapter mit Zwei-Spiele-Auswahl; alte Builds erlauben nur Arrow Puzzle.",
   "config": {
     "enabled": true,
     "selectedIds": [
-      "arrow-puzzle-playable"
+      "arrow-puzzle-playable",
+      "sort-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -763,11 +764,44 @@
         "playable",
         "puzzle"
       ]
+    },
+    {
+      "id": "sort-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Jetzt ausprobieren: Sortiere die Farben in ihre Röhren.",
+        "en": "Try it now: sort the colours into their tubes."
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#63d9ae",
+      "status": "live",
+      "tags": [
+        "playable",
+        "sort"
+      ]
     }
   ],
   "rewarded": {
     "selectedIds": [
-      "arrow-puzzle-playable"
+      "arrow-puzzle-playable",
+      "sort-rush-playable"
     ]
   }
 }
