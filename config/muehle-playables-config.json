@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-08",
+  "config": {
+    "enabled": true,
+    "selectedIds": [
+      "arrow-puzzle-playable",
+      "sort-rush-playable",
+      "koeniginnen-playable"
+    ],
+    "defaultUnlockSeconds": 5,
+    "advancedTimings": false,
+    "perAdUnlockSeconds": {},
+    "sequenceLength": 1,
+    "rotation": "sequential",
+    "trigger": {
+      "mode": "games",
+      "everyGames": 3,
+      "gameEvents": [
+        "game_end_offline",
+        "game_end_online"
+      ],
+      "gameEndBehavior": "onDismiss",
+      "dismissMinSeconds": 3,
+      "releaseEvents": [
+        "result_action",
+        "game_start",
+        "menu_return"
+      ],
+      "everyMinutes": 10,
+      "minutesBehavior": "onEvent",
+      "minuteEvents": [
+        "game_end_offline",
+        "game_end_online",
+        "good_move"
+      ],
+      "playTimeOnlyDuringGame": false
+    },
+    "excludeSelf": true,
+    "frequencyCapMinutes": 2,
+    "graceGames": 1,
+    "muted": true
+  },
+  "creatives": [
+    {
+      "id": "arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Arrow Puzzle",
+        "en": "Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Befreie die Pfeile. Spiele direkt los.",
+        "en": "Free the arrows. Try it now."
+      },
+      "icon": "icons/arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
+        }
+      },
+      "target": {
+        "android": "app.arrowpuzzle"
+      },
+      "accent": "#ffffff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "sort-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Jetzt ausprobieren: Sortiere die Farben in ihre Röhren.",
+        "en": "Try it now: sort the colours into their tubes."
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#ffffff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "sort"
+      ]
+    },
+    {
+      "id": "koeniginnen-playable",
+      "kind": "game",
+      "title": {
+        "de": "Königinnen",
+        "en": "Queens"
+      },
+      "tagline": {
+        "de": "Setze die Kronen. Ein echtes Rätsel – direkt hier spielen.",
+        "en": "Place the crowns. A real puzzle — play it right here."
+      },
+      "icon": "icons/koeniginnen.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.koeniginnen"
+      },
+      "accent": "#ffffff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    }
+  ]
+}
