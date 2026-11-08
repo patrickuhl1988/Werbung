@@ -1,21 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "updatedAt": "2026-11-08",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 (neuer App-Build) nur die spielbaren Demos von Sort Rush und Koeniginnen, zufaellig je zur Haelfte; laedt eine Demo nicht, springt das Sort-Rush-Bild ein. Die App sperrt die Auswahl im Code (lockedConfig) - diese Datei liefert vor allem die Anzeigen selbst. Installierte aeltere Builds zeigen weiter ihre bisherigen Bildanzeigen. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
-      "sort-rush",
-      "quiznova-bild",
-      "pop-order",
-      "wuerfel-dungeon",
-      "drop-match-bild-1",
-      "dame-meister-bild-1",
-      "muehle-meister-bild-1",
-      "sonaris-bild-1",
-      "kiosk-simulator-bild-1",
-      "tvfussball",
-      "tvkinderprogramm"
+      "sort-rush-playable",
+      "koeniginnen-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -379,6 +370,70 @@
       "status": "live",
       "tags": [
         "lang:de"
+      ]
+    },
+    {
+      "id": "sort-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Jetzt ausprobieren: Sortiere die Farben in ihre Röhren.",
+        "en": "Try it now: sort the colours into their tubes."
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#63d9ae",
+      "status": "live",
+      "tags": [
+        "playable",
+        "sort"
+      ]
+    },
+    {
+      "id": "koeniginnen-playable",
+      "kind": "game",
+      "title": {
+        "de": "Königinnen",
+        "en": "Queens"
+      },
+      "tagline": {
+        "de": "Setze die Kronen. Ein echtes Rätsel – direkt hier spielen.",
+        "en": "Place the crowns. A real puzzle — play it right here."
+      },
+      "icon": "icons/koeniginnen.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.koeniginnen"
+      },
+      "accent": "#527E58",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]
