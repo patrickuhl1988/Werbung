@@ -1,12 +1,13 @@
 {
   "version": 1,
   "updatedAt": "2026-11-08",
-  "_hinweis": "Kettro: 50% Arrow Puzzle, 50% Sort Rush. Beide spielbar. Godot benoetigt den Adapter mit Zwei-Spiele-Auswahl; alte Builds erlauben nur Arrow Puzzle.",
+  "_hinweis": "Kettro: je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Alle drei spielbar. Benötigt den Drei-Spiele-Adapter (Build 2.1.8/24 oder neuer); alte Builds kennen nur ihre bisher erlaubten Spiele.",
   "config": {
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
-      "sort-rush-playable"
+      "sort-rush-playable",
+      "koeniginnen-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -796,12 +797,45 @@
         "playable",
         "sort"
       ]
+    },
+    {
+      "id": "koeniginnen-playable",
+      "kind": "game",
+      "title": {
+        "de": "Königinnen",
+        "en": "Queens"
+      },
+      "tagline": {
+        "de": "Setze die Kronen. Ein echtes Rätsel – direkt hier spielen.",
+        "en": "Place the crowns. A real puzzle — play it right here."
+      },
+      "icon": "icons/koeniginnen.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.koeniginnen"
+      },
+      "accent": "#527E58",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
     }
   ],
   "rewarded": {
     "selectedIds": [
       "arrow-puzzle-playable",
-      "sort-rush-playable"
+      "sort-rush-playable",
+      "koeniginnen-playable"
     ]
   }
 }
