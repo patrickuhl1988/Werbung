@@ -60,8 +60,8 @@ anderen Anzeigen. Außerhalb unserer Apps fällt der Store-Knopf auf `mraid.open
 
 Eingetragen (Creative + `selectedIds`, bei Kettro auch `rewarded.selectedIds`) seit 09.11.2026 in:
 `arrow-puzzle-werbe-config.json`, `claw-machine-heroes-playables-config.json`, `claw-machine-heroes-werbe-config.json`,
-`kettro-werbe-config.json` (wie Königinnen) sowie `dame-playables-config.json` und `drop-match-playables-config.json`
-(dort ersetzt sie die Endspiel-Variante). Akzentfarbe `#e0b15e` wie im Katalog des Werbemoduls.
+`kettro-werbe-config.json` (wie Königinnen) sowie `dame-playables-config.json`, `drop-match-playables-config.json` und
+`calm-arrow-puzzle-playables-config.json` (dort ersetzt sie die Endspiel-Variante). Akzentfarbe `#e0b15e` wie im Katalog des Werbemoduls.
 
 Neue Configs wie `koeniginnen-playable`: Eintrag in `creatives`, ID in `selectedIds` (und bei Kettro zusätzlich in
 `rewarded.selectedIds`). In der Mühle-Meister-App selbst nicht eintragen (`excludeSelf`).
