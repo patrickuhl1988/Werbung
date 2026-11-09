@@ -85,5 +85,5 @@ Neue Configs wie `koeniginnen-playable`: Eintrag in `creatives`, ID in `selected
 ```
 
 Kettro lädt Playables aus der Config ohne neuen Build
-(seit dem Drei-Spiele-Adapter genügt die Origin-Allowlist). Arrow Puzzle (ab 1.14.0) und Claw Machine Heroes (ab dem nächsten Build)
+(seit dem Drei-Spiele-Adapter genügt die Origin-Allowlist). Arrow Puzzle (ab dem Build nach 1.14.0) und Claw Machine Heroes (ab dem nächsten Build)
 übernehmen die Auswahl aus ihrer Config; ältere Builds sperren sie im Code (`lockedConfig`).

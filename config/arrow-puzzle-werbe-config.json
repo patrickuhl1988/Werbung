@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 nur spielbare Demos, zufaellig gleich oft: Sort Rush, Koeniginnen, Calm Arrow Puzzle, Mühle Meister (Zwickmühle), Claw Machine Heroes und TOWER 100 (je ein Sechstel). Ab Arrow Puzzle 1.14.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Timing und Takt bleiben im Code gesperrt. Aeltere Builds sperren die Auswahl im Code (lockedConfig) und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 nur spielbare Demos, zufaellig gleich oft: Sort Rush, Koeniginnen, Calm Arrow Puzzle, Mühle Meister (Zwickmühle), Claw Machine Heroes und TOWER 100 (je ein Sechstel). Ab dem naechsten Arrow-Puzzle-Build nach 1.14.0 (versionCode 25) bestimmt diese Datei die Auswahl (selectedIds, rotation); Timing und Takt bleiben im Code gesperrt. Aeltere Builds sperren die Auswahl im Code (lockedConfig) und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [

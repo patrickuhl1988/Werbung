@@ -33,7 +33,7 @@ Seit 09.11.2026 als `calm-arrow-puzzle-playable` in `selectedIds` von:
 | `dame-playables-config.json` | in Dame Meister ab 1.8.0, sofern die App die Auswahl aus der Config liest (im App-Code nicht geprüft) |
 | `muehle-playables-config.json` | erst mit einem neuen Mühle-Build: die App sperrt die Auswahl per `lockedConfig` (`lib/ads/adDefaultConfig.ts`) |
 | `zip-werbe-config.json` | in Zip neben Arrow Puzzle, sofern die App Playables kennt (im App-Code nicht geprüft) |
-| `arrow-puzzle-werbe-config.json` | ab Arrow Puzzle 1.14.0, das die Auswahl aus der Config übernimmt (ältere Builds sperren sie per `lockedConfig`) |
+| `arrow-puzzle-werbe-config.json` | ab dem Arrow-Puzzle-Build nach 1.14.0, der die Auswahl aus der Config übernimmt (ältere Builds sperren sie per `lockedConfig`) |
 
 Nicht eingetragen: Kettro (`integrations/kettro/promo.gd` lädt nur fest freigegebene Dateien je Paket); dafür braucht es einen neuen Kettro-Build. Claw Machine Heroes führt die Demo in `claw-machine-heroes-playables-config.json`; wirksam ab dem CMH-Build, der die Auswahl aus der Config übernimmt. In Calm Arrow Puzzle selbst nie eintragen (`excludeSelf`).
 
