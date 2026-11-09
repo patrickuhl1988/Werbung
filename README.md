@@ -46,6 +46,7 @@ merkt sich die zuletzt geladene Fassung für Starts ohne Netz. Änderungen hier 
 | `config/arrow-puzzle-werbe-config.json` | Arrow Puzzle | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/arrow-puzzle-werbe-config.json` |
 | `config/sort-rush-werbe-config.json` | Sort Rush | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/sort-rush-werbe-config.json` |
 | `config/kiosk-simulator-werbe-config.json` | Kiosk Simulator | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/kiosk-simulator-werbe-config.json` |
+| `config/calm-arrow-puzzle-playables-config.json` | Calm Arrow Puzzle (ab Build mit Plugin `NeonAds`) | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/calm-arrow-puzzle-playables-config.json` |
 |  | Tiefsee-Tempel (Deep Sea Temple) |  |
 |  | Feierabend Rush |  |
 |  | Bridge Royale |  |

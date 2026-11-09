@@ -30,9 +30,9 @@ Seit 09.11.2026 als `calm-arrow-puzzle-playable` in `selectedIds` von:
 
 | Config | Wirkt |
 |---|---|
-| `dame-playables-config.json` | sofort in Dame Meister ab 1.8.0 (je ein Fünftel mit Arrow Puzzle, Sort Rush, Königinnen, Mühle) |
-| `muehle-playables-config.json` | sofort in Mühle Meister mit Werbemodul 1.2.0 |
-| `zip-werbe-config.json` | sofort in Zip (neben Arrow Puzzle) |
+| `dame-playables-config.json` | in Dame Meister ab 1.8.0, sofern die App die Auswahl aus der Config liest (im App-Code nicht geprüft) |
+| `muehle-playables-config.json` | erst mit einem neuen Mühle-Build: die App sperrt die Auswahl per `lockedConfig` (`lib/ads/adDefaultConfig.ts`) |
+| `zip-werbe-config.json` | in Zip neben Arrow Puzzle, sofern die App Playables kennt (im App-Code nicht geprüft) |
 | `arrow-puzzle-werbe-config.json` | erst mit einem Build, der die Auswahl aus der Config übernimmt (App sperrt sie per `lockedConfig`) |
 
 Nicht eingetragen: Kettro (`integrations/kettro/promo.gd` lädt nur fest freigegebene Dateien je Paket) und Claw Machine Heroes (Auswahl im Adapter gesperrt). Beide brauchen dafür einen neuen Build. In Calm Arrow Puzzle selbst nie eintragen (`excludeSelf`).
@@ -58,3 +58,7 @@ Das Icon liegt als volle Adresse `https://patrickuhl1988.github.io/Werbung/image
 ```
 
 Playables nie über jsDelivr oder raw.githubusercontent.com laden (liefern `text/plain`).
+
+## In Calm Arrow Puzzle selbst
+
+Ab dem nächsten App-Build zeigt Calm Arrow Puzzle die Playables der anderen Spiele als freiwillige Belohnungsanzeige (Herz zurück). Auswahl: `config/calm-arrow-puzzle-playables-config.json`. Integration im Spielprojekt unter `game/android/neon_ads/` (Plugin `NeonAds`, Werbemodul 1.2.0-cmh.3 aus Claw Machine Heroes).
