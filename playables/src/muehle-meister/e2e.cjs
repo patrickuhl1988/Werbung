@@ -70,7 +70,10 @@ function connect(wsUrl) {
 async function main() {
   if (!EDGE) throw new Error('Edge nicht gefunden');
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'muehle-e2e-'));
-  const edge = spawn(EDGE, ['--headless=new', '--remote-debugging-port=' + PORT, '--user-data-dir=' + profile, '--no-first-run', '--autoplay-policy=no-user-gesture-required', 'about:blank'], { stdio: 'ignore' });
+  const edge = spawn(EDGE, ['--headless=new', '--remote-debugging-port=' + PORT, '--user-data-dir=' + profile, '--no-first-run', '--autoplay-policy=no-user-gesture-required',
+    // Headless gilt die Seite als verdeckt: nach ~5 min bündelt Chrome Timer sonst auf eine Minute.
+    '--disable-background-timer-throttling', '--disable-renderer-backgrounding', '--disable-backgrounding-occluded-windows',
+    '--disable-features=IntensiveWakeUpThrottling', 'about:blank'], { stdio: 'ignore' });
   let cdp;
   const failures = [];
   try {
