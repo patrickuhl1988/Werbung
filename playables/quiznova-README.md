@@ -23,7 +23,7 @@ Geprüft (09.11.2026, Browser-Wirt): Hochformat 390×780 und Querformat 740×360
 
 ## Einbinden
 
-Aktiv (09.11.2026) in `dame-playables-config.json`, `muehle-playables-config.json`, `zip-werbe-config.json` und `kettro-werbe-config.json` (dort auch `rewarded`; wirksam ab dem Kettro-Build mit Ordner-Freigabe). Arrow Puzzle und Claw Machine Heroes sperren ihre Auswahl im Code/Adapter; dort braucht die Demo einen neuen App-Build. In QuizNova selbst nie eintragen (`excludeSelf`). Das Icon liegt unter `images/icons/quiznova.png`, weil ältere App-Bundles keinen Eintrag `quiznova-playable` kennen. Eintrag für `creatives`:
+Aktiv (09.11.2026) in `dame-playables-config.json`, `muehle-playables-config.json`, `zip-werbe-config.json` und `kettro-werbe-config.json` (dort auch `rewarded`; wirksam ab dem Kettro-Build mit Ordner-Freigabe). Außerdem in `claw-machine-heroes-playables-config.json`. Arrow Puzzle (ab 1.14.0) und Claw Machine Heroes (ab dem nächsten Build) übernehmen die Auswahl aus ihrer Config; ältere Builds sperren sie im Code. In QuizNova selbst nie eintragen (`excludeSelf`). Das Icon liegt unter `images/icons/quiznova.png`, weil ältere App-Bundles keinen Eintrag `quiznova-playable` kennen. Eintrag für `creatives`:
 
 ```json
 {

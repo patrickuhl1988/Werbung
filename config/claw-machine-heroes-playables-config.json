@@ -1,14 +1,18 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (neuer App-Build): nur die spielbaren Demos von Arrow Puzzle, Sort Rush, Königinnen und Mühle Meister (Zwickmühle, seit 09.11.2026), zufällig je ein Viertel; Builds mit gesperrter Auswahl zeigen Mühle Meister erst mit dem nächsten Build. Werbung nur als freiwillige Belohnungsanzeige; Auswahl und Timing sind zusätzlich im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds lesen weiter claw-machine-heroes-werbe-config.json.",
+  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (neuer App-Build): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova und TOWER 100, zufällig je ein Achtel (seit 09.11.2026). Ab dem nächsten CMH-Build bestimmt diese Datei die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Builds mit gesperrter Auswahl zeigen weiter nur Arrow Puzzle, Sort Rush und Königinnen. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds lesen weiter claw-machine-heroes-werbe-config.json.",
   "config": {
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
       "sort-rush-playable",
       "koeniginnen-playable",
-      "muehle-meister-playable"
+      "muehle-meister-playable",
+      "calm-arrow-puzzle-playable",
+      "dame-meister-playable",
+      "quiznova-playable",
+      "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -140,7 +144,7 @@
         "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
         "en": "Close the mill, master the double mill – play it right here."
       },
-      "icon": "icons/muehle-meister.png",
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/muehle-meister.png",
       "media": {
         "portrait": {
           "type": "playable",
@@ -159,6 +163,135 @@
       "tags": [
         "playable",
         "board"
+      ]
+    },
+    {
+      "id": "calm-arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Calm Arrow Puzzle",
+        "en": "Calm Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Pfeile wegtippen, Bild entdecken – direkt hier spielen.",
+        "en": "Tap the arrows away, reveal the picture – play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        }
+      },
+      "target": {
+        "android": "com.neondrift.nightrun"
+      },
+      "accent": "#63784F",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "dame-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Dame Meister",
+        "en": "Checkers Master"
+      },
+      "tagline": {
+        "de": "Schlag zu: Drei echte Dame-Rätsel – direkt hier spielen.",
+        "en": "Strike now: three real checkers puzzles – play them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/dame-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        }
+      },
+      "target": {
+        "android": "de.damemeister.app"
+      },
+      "accent": "#206A65",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle",
+        "board"
+      ]
+    },
+    {
+      "id": "quiznova-playable",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "QuizNova"
+      },
+      "tagline": {
+        "de": "Drei Fragen, ein Versuch: Wie viel weißt du? Direkt hier spielen.",
+        "en": "Three questions, one shot: how much do you know? Play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "quiz"
+      ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]

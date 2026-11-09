@@ -22,7 +22,7 @@ Geprüft: 223 statische Prüfungen (Größe, keine externen Adressen, Brücke, s
 
 ## Einbinden
 
-Aktiv in `config/kettro-werbe-config.json` (`claw-machine-heroes-playable`, je ein Viertel) – wirksam ab dem Kettro-Build mit Ordner-Freigabe. Arrow Puzzle und Mühle Meister sperren ihre Auswahl im App-Code (`lockedConfig`); dort braucht die Demo einen neuen App-Build mit der ID in der festen Auswahl. Eintrag für `creatives`:
+Aktiv in `config/kettro-werbe-config.json` (`claw-machine-heroes-playable`, je ein Viertel) – wirksam ab dem Kettro-Build mit Ordner-Freigabe. Außerdem in `arrow-puzzle-werbe-config.json`: wirksam ab Arrow Puzzle 1.14.0, das die Auswahl aus der Config übernimmt. Mühle Meister sperrt seine Auswahl im App-Code (`lockedConfig`). Eintrag für `creatives`:
 
 ```json
 {
