@@ -1,13 +1,14 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08",
-  "_hinweis": "Kettro: je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Alle drei spielbar. Benötigt den Drei-Spiele-Adapter (Build 2.1.8/24 oder neuer); alte Builds kennen nur ihre bisher erlaubten Spiele.",
+  "updatedAt": "2026-11-09",
+  "_hinweis": "Kettro: je 1/4 Arrow Puzzle, Sort Rush, Königinnen und Claw Machine Heroes, alle spielbar. Claw Machine Heroes erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
   "config": {
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
       "sort-rush-playable",
-      "koeniginnen-playable"
+      "koeniginnen-playable",
+      "claw-machine-heroes-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -829,13 +830,46 @@
         "playable",
         "puzzle"
       ]
+    },
+    {
+      "id": "claw-machine-heroes-playable",
+      "kind": "game",
+      "title": {
+        "de": "Claw Machine Heroes",
+        "en": "Claw Machine Heroes"
+      },
+      "tagline": {
+        "de": "Greifen, ausrüsten, siegen – probier den Greifautomaten direkt hier.",
+        "en": "Grab, gear up, win – try the claw machine right here."
+      },
+      "icon": "icons/claw-machine-heroes.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        }
+      },
+      "target": {
+        "android": "com.uhl.clawmachineheroes"
+      },
+      "accent": "#ff3f8e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "idle"
+      ]
     }
   ],
   "rewarded": {
     "selectedIds": [
       "arrow-puzzle-playable",
       "sort-rush-playable",
-      "koeniginnen-playable"
+      "koeniginnen-playable",
+      "claw-machine-heroes-playable"
     ]
   }
 }
