@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#171d26"><title>TOWER 100 · Play now</title>
+<style>
+@font-face{font-family:Nunito;src:url(data:font/woff2;base64,/*__FONT__*/) format('woff2');font-weight:200 1000;font-display:block}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overscroll-behavior:none}
+/* Farben aus assets/style/palette.svg (ArtPalette) */
+body{background:#171d26;color:#f5ebdd;font-family:Nunito,system-ui,sans-serif;font-weight:650;-webkit-user-select:none;user-select:none}
+button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;border:0}
+button:focus-visible{outline:3px solid #ffb547;outline-offset:2px}
+button:active:not(:disabled){transform:scale(.96)}
+main{position:relative;height:100%;height:100dvh;max-width:900px;margin:auto;display:flex;flex-direction:column;padding:10px 12px 10px;gap:8px;overflow:hidden}
+header{display:flex;align-items:center;gap:10px;flex:none}
+.logo{width:42px;height:42px;border-radius:11px;flex:none;background:center/cover}
+.head{flex:1;min-width:0}
+.over{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#cc8658;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+h1{margin:0;font-size:19px;font-weight:900;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib{width:44px;height:44px;flex:none;border-radius:14px;background:#303d4b;border:1px solid #647487;display:grid;place-items:center}
+.ib svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.play{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+.stage{position:relative;flex:1;min-height:0;display:grid;place-items:center;border-radius:18px;background:radial-gradient(ellipse at 50% 35%,#cc865833,#171d26 72%)}
+.room{position:relative;width:200px;height:256px}
+.room canvas{display:block;width:100%;height:100%;border-radius:6px;box-shadow:0 18px 40px #000a,0 0 0 1px #ffffff14;touch-action:none}
+.dock{flex:none;display:flex;flex-direction:column;gap:8px}
+.msg{min-height:54px;background:#222c38;border:1px solid #64748740;border-radius:12px;padding:8px 12px;display:flex;align-items:center;font-size:14px;line-height:1.3}
+.msg span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.msg.note{border-color:#ffb54780}
+.inv{min-height:62px;background:#222c38;border:1px solid #64748740;border-radius:16px;padding:4px 6px;display:flex;gap:6px;align-items:center;overflow-x:auto}
+.inv .empty{flex:1;text-align:center;font-size:12px;color:#b7c3cf;line-height:1.35;white-space:pre-line}
+.slot{width:54px;height:54px;flex:none;border-radius:12px;background:#303d4b;border:1px solid #647487;display:grid;place-items:center;touch-action:none}
+.slot img{width:40px;height:40px;pointer-events:none}
+.slot.on{border:2px solid #ffb547;background:#ffb54733}
+.ghost{position:fixed;width:56px;height:56px;pointer-events:none;z-index:9;transform:translate(-50%,-50%) scale(1.1);filter:drop-shadow(0 6px 10px #000a)}
+.nextb{width:100%;min-height:44px;border-radius:14px;background:#303d4b;border:1px solid #ffb547;color:#ffb547;font-weight:900}
+.nextb[hidden]{display:none}
+.cta{flex:none;width:100%;min-height:48px;background:#ffb547;color:#171d26;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:16px;font-weight:900;box-shadow:0 6px 18px #ffb54733}
+.cta b{font-size:20px}
+.done .cta{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035);box-shadow:0 6px 26px #ffb54780}}
+small.ad{display:block;text-align:center;font-size:9px;color:#b7c3cf;letter-spacing:.5px;opacity:.75;margin-top:-3px}
+/* Ergebnis-Karte wie floor_view.gd (_result_panel) */
+.result{position:absolute;inset:0;display:grid;place-items:center;background:#0b111699;z-index:5;padding:14px}
+.result[hidden]{display:none}
+.card{width:min(100%,360px);background:#222c38;border:1px solid #647487;border-radius:20px;padding:16px;text-align:center;box-shadow:0 20px 50px #000c;animation:card .28s cubic-bezier(.34,1.56,.64,1)}
+@keyframes card{from{transform:scale(.8);opacity:0}}
+.card .ov{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#ffb547}
+.card h2{margin:4px 0 8px;font-size:24px;font-weight:900}
+.stars{display:flex;justify-content:center;gap:18px;margin:4px 0 10px}
+.stars svg{width:46px;height:46px}
+.card p{margin:0 0 12px;color:#b7c3cf;font-size:13px;line-height:1.4}
+.card .row{display:flex;gap:8px}
+.card button{flex:1;min-height:44px;border-radius:14px;background:#303d4b;border:1px solid #647487;font-weight:800}
+.card button.pri{background:#ffb547;color:#171d26;border:0;width:100%;margin-bottom:8px}
+.sheet{position:absolute;inset:0;background:#0b1116cc;z-index:6;display:flex;align-items:flex-end;justify-content:center}
+.sheet[hidden]{display:none}
+.sheet .in{width:100%;max-width:520px;max-height:80%;overflow:auto;background:#222c38;border:1px solid #647487;border-radius:20px 20px 0 0;padding:16px}
+.sheet h3{margin:0 0 8px;font-size:18px;font-weight:900}
+.sheet li{margin:0 0 8px;font-size:14px;line-height:1.35;color:#f5ebdd}
+.sheet ul{padding-left:18px;margin:0 0 12px}
+.sheet button{width:100%;min-height:44px;border-radius:14px;background:#303d4b;border:1px solid #647487;font-weight:800}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:8}
+.confetti i{position:absolute;left:var(--x);top:-10px;width:7px;height:13px;background:var(--c);animation:fall 1.6s var(--d) ease-in forwards}
+@keyframes fall{to{transform:translateY(100dvh) rotate(500deg);opacity:0}}
+@media(orientation:landscape) and (min-width:560px){
+main{display:grid;grid-template-columns:min(55vw,calc((100dvh - 16px) * 0.7826)) minmax(220px,1fr);grid-template-rows:auto 1fr auto;column-gap:16px;padding:8px 16px}
+header{grid-column:2;grid-row:1}
+.play{display:contents}
+.stage{grid-column:1;grid-row:1/4;background:none}
+.dock{grid-column:2;grid-row:2;justify-content:flex-end}
+.foot{grid-column:2;grid-row:3}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><main>
+<header><div id="logo" class="logo" role="img"></div><div class="head"><div id="over" class="over"></div><h1 id="title"></h1></div><button id="hint" class="ib"></button><button id="sound" class="ib"></button></header>
+<div class="play"><div class="stage"><div class="room"><canvas id="cv" width="540" height="690"></canvas>
+<div id="result" class="result" hidden><div class="card"><div id="r-over" class="ov"></div><h2 id="r-title"></h2><div id="r-stars" class="stars"></div><p id="r-text"></p><button id="r-main" class="pri"></button><div class="row"><button id="r-look"></button></div></div></div>
+<div id="sheet" class="sheet" hidden><div class="in"><h3 id="s-title"></h3><ul id="s-list"></ul><button id="s-close"></button></div></div></div></div>
+<div class="dock"><div id="msg" class="msg" role="status" aria-live="polite"><span></span></div><div id="inv" class="inv"></div><button id="next" class="nextb" hidden></button></div></div>
+<div class="foot"><button id="cta" class="cta"><span id="cta-label"></span><b>↗</b></button><small id="ad" class="ad"></small></div>
+</main><div id="confetti" class="confetti" aria-hidden="true"></div>
+<script>
+"use strict";
+(function () {
+  var DATA = /*__DATA__*/;
+  var STORE = "https://play.google.com/store/apps/details?id=org.relictower.awakening";
+  var Q = new URLSearchParams(location.search);
+  var lang = (Q.get("lang") || navigator.language || "en").toLowerCase().split(/[-_]/)[0] === "de" ? "de" : "en";
+  document.documentElement.lang = lang;
+  function L(de, en) { return Array.isArray(de) ? de[lang === "de" ? 0 : 1] : lang === "de" ? de : en; }
+  var $ = function (id) { return document.getElementById(id); };
+  var TAU = Math.PI * 2;
+
+  /* ---------- Brücke zur App (wie Königinnen, Sort Rush, Mühle) ---------- */
+  function send(m) {
+    try {
+      if (window.ReactNativeWebView) { window.ReactNativeWebView.postMessage(JSON.stringify(m)); return true; }
+      if (parent !== window) { parent.postMessage(m, "*"); return true; }
+    } catch (e) {}
+    return false;
+  }
+
+  /* ---------- Klänge: dieselben Formeln wie scripts/sfx.gd (synthetisiert, 22 050 Hz) ---------- */
+  var RATE = 22050, MATERIALS = ["wood", "metal", "glass", "paper", "plastic", "stone", "plant", "fabric"];
+  function env(t, a, d) { return t < a ? t / a : Math.exp(-(t - a) / d); }
+  function noise() { return Math.random() * 2 - 1; }
+  var sn = Math.sin, sgn = Math.sign;
+  var SYNTH = {
+    wood: [0.14, function (t) { return env(t, 0.002, 0.05) * (sn(TAU * 170 * t) * 0.7 + noise() * 0.25); }],
+    metal: [0.45, function (t) { return env(t, 0.001, 0.14) * (sn(TAU * 523 * t) * 0.4 + sn(TAU * 1317 * t) * 0.3 + sn(TAU * 2151 * t) * 0.2); }],
+    glass: [0.5, function (t) { return env(t, 0.001, 0.16) * (sn(TAU * 1760 * t) * 0.35 + sn(TAU * 2963 * t) * 0.25); }],
+    paper: [0.16, function (t) { return env(t, 0.01, 0.05) * noise() * 0.35; }],
+    plastic: [0.07, function (t) { return env(t, 0.0005, 0.015) * (sn(TAU * 900 * t) * 0.5 + noise() * 0.3); }],
+    stone: [0.18, function (t) { return env(t, 0.001, 0.04) * (sn(TAU * 95 * t) * 0.6 + noise() * 0.35); }],
+    plant: [0.25, function (t) { return env(t, 0.02, 0.07) * noise() * 0.25 * (0.6 + 0.4 * sn(TAU * 31 * t)); }],
+    fabric: [0.12, function (t) { return env(t, 0.01, 0.04) * noise() * 0.18; }],
+    empty: [0.09, function (t) { return env(t, 0.001, 0.02) * sn(TAU * 420 * t) * 0.18; }],
+    discover: [0.7, function (t) { return env(t, 0.005, 0.25) * sn(TAU * [660, 880, 1320][Math.min(2, Math.floor(t / 0.12))] * t) * 0.45; }],
+    wrong: [0.28, function (t) { return env(t, 0.002, 0.12) * sgn(sn(TAU * 110 * t)) * 0.25; }],
+    partial: [0.25, function (t) { return env(t, 0.001, 0.06) * (sn(TAU * 140 * t) * 0.7 + noise() * 0.15); }],
+    pickup: [0.28, function (t) { return env(t, 0.003, 0.1) * sn(TAU * (500 + 1400 * t) * t) * 0.4; }],
+    bounce: [0.25, function (t) { return env(t, 0.002, 0.09) * sn(TAU * (380 - 500 * t) * t) * 0.45; }],
+    "switch": [0.12, function (t) { return env(t, 0.0005, 0.02) * (noise() * 0.5 + sn(TAU * 220 * t) * 0.5); }],
+    key: [0.06, function (t) { return env(t, 0.0005, 0.02) * sn(TAU * 1250 * t) * 0.3; }],
+    dial: [0.05, function (t) { return env(t, 0.0002, 0.008) * (noise() * 0.6 + sn(TAU * 2400 * t) * 0.3); }],
+    hum: [0.8, function (t) { return env(t, 0.05, 0.4) * (sn(TAU * 100 * t) * 0.15 + sn(TAU * 200 * t) * 0.08 + noise() * 0.03); }],
+    fuse: [0.6, function (t) { return env(t, 0.0005, 0.12) * noise() * 0.9; }],
+    relay: [0.1, function (t) { return env(t, 0.0005, 0.015) * (noise() * 0.4 + sn(TAU * 1600 * t) * 0.4); }],
+    door: [0.9, function (t) { return env(t, 0.05, 0.4) * (sn(TAU * (90 + 40 * sn(TAU * 3 * t)) * t) * 0.4 + noise() * 0.08); }],
+    gong: [1.4, function (t) { return env(t, 0.002, 0.5) * (sn(TAU * (t < 0.45 ? 784 : 659) * t) * 0.4 + sn(TAU * (t < 0.45 ? 1568 : 1318) * t) * 0.1); }],
+    solved: [1.2, function (t) { return (t < 0.15 ? env(t, 0.001, 0.05) * noise() * 0.5 : 0) + env(t, 0.15, 0.45) * (sn(TAU * 523 * t) + sn(TAU * 659 * t) + sn(TAU * 784 * t)) * 0.16; }],
+    purr: [0.8, function (t) { return env(t, 0.05, 0.3) * noise() * 0.35 * Math.max(0, sn(TAU * 26 * t)); }],
+    blub: [0.45, function (t) { return env(t % 0.15, 0.002, 0.05) * sn(TAU * (300 + 900 * (t % 0.15)) * t) * 0.4; }],
+    hoot: [0.7, function (t) { return (t < 0.3 ? env(t, 0.03, 0.12) : env(t - 0.3, 0.03, 0.15)) * sn(TAU * 380 * t) * 0.4; }],
+    unlock: [0.5, function (t) { return env(t, 0.003, 0.15) * sn(TAU * [988, 1319][Math.min(1, Math.floor(t / 0.12))] * t) * 0.4; }],
+  };
+  var ctx = null, soundOn = Q.get("muted") !== "1", paused = false, bufs = {}, live = [];
+  function wake() {
+    if (!soundOn || paused || document.hidden) return;
+    try { if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)(); if (ctx.state === "suspended") ctx.resume().catch(function () {}); } catch (e) {}
+  }
+  function stopAll() { live.forEach(function (s) { try { s.stop(); } catch (e) {} }); live = []; }
+  function buffer(name) {
+    if (bufs[name]) return bufs[name];
+    var d = SYNTH[name], n = Math.floor(d[0] * RATE), b = ctx.createBuffer(1, n, RATE), a = b.getChannelData(0);
+    for (var i = 0; i < n; i++) { var v = Math.max(-1, Math.min(1, d[1](i / RATE))); a[i] = v * Math.min(1, (n - i) / 200) * (32000 / 32768); }
+    return (bufs[name] = b);
+  }
+  function play(name, db, pitch, vary) {
+    wake();
+    if (!ctx || !soundOn || paused || document.hidden || !SYNTH[name]) return;
+    try {
+      var s = ctx.createBufferSource(), g = ctx.createGain();
+      s.buffer = buffer(name);
+      s.playbackRate.value = (pitch || 1) * (vary === false ? 1 : 0.94 + Math.random() * 0.12);
+      g.gain.value = Math.pow(10, (db || 0) / 20);
+      s.connect(g); g.connect(ctx.destination); live.push(s);
+      s.onended = function () { live = live.filter(function (x) { return x !== s; }); s.disconnect(); g.disconnect(); };
+      s.start();
+    } catch (e) {}
+  }
+  function material(kind) { play(MATERIALS.indexOf(kind) >= 0 ? kind : "wood", -4); }
+  function wrong() { play("wrong", -3); }
+  function buzz(ms) { try { var ua = navigator.userActivation; if (navigator.vibrate && (!ua || ua.hasBeenActive)) navigator.vibrate(ms); } catch (e) {} }
+
+  /* ---------- Zeichnen auf 540×690 wie die Etage (Control-Koordinaten) ---------- */
+  var W = 540, H = 690, cv = $("cv"), g = cv.getContext("2d");
+  function rgba(c, a) {
+    if (Array.isArray(c)) return "rgba(" + Math.round(c[0] * 255) + "," + Math.round(c[1] * 255) + "," + Math.round(c[2] * 255) + "," + (a == null ? (c[3] == null ? 1 : c[3]) : a) + ")";
+    var h = c.replace("#", ""), r = parseInt(h.slice(0, 2), 16), gg = parseInt(h.slice(2, 4), 16), b = parseInt(h.slice(4, 6), 16);
+    return "rgba(" + r + "," + gg + "," + b + "," + (a == null ? 1 : a) + ")";
+  }
+  function fill(c) { g.fillStyle = typeof c === "string" && c.indexOf("rgba") === 0 ? c : rgba(c); }
+  function rect(x, y, w, h, c) { fill(c); g.fillRect(x, y, w, h); }
+  function rectLine(x, y, w, h, c, lw) { g.strokeStyle = rgba(c); g.lineWidth = lw || 1; g.strokeRect(x, y, w, h); }
+  function rr(x, y, w, h, r) { r = Math.min(r, w / 2, h / 2); g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+  function rounded(x, y, w, h, r, c) { rr(x, y, w, h, r); fill(c); g.fill(); }
+  function roundedBorder(x, y, w, h, r, f, b, lw) { rr(x + lw / 2, y + lw / 2, w - lw, h - lw, r); if (f) { fill(f); g.fill(); } g.strokeStyle = rgba(b); g.lineWidth = lw; g.stroke(); }
+  function circle(x, y, r, c) { g.beginPath(); g.arc(x, y, Math.max(0, r), 0, TAU); fill(c); g.fill(); }
+  function arc(x, y, r, a0, a1, c, lw) { g.beginPath(); g.arc(x, y, Math.max(0, r), a0, a1); g.strokeStyle = rgba(c); g.lineWidth = lw || 1; g.lineCap = "butt"; g.stroke(); }
+  function line(x1, y1, x2, y2, c, lw) { g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.strokeStyle = rgba(c); g.lineWidth = lw || 1; g.lineCap = "butt"; g.stroke(); }
+  function poly(pts, c) { g.beginPath(); pts.forEach(function (p, i) { if (i) g.lineTo(p[0], p[1]); else g.moveTo(p[0], p[1]); }); g.closePath(); fill(c); g.fill(); }
+  function polyline(pts, c, lw) { g.beginPath(); pts.forEach(function (p, i) { if (i) g.lineTo(p[0], p[1]); else g.moveTo(p[0], p[1]); }); g.strokeStyle = rgba(c); g.lineWidth = lw; g.lineJoin = "round"; g.lineCap = "round"; g.stroke(); }
+  function font(size, weight) { g.font = (weight || 600) + " " + size + "px Nunito,system-ui,sans-serif"; }
+  /* UI.text: Grundlinie links; UI.text_center: Grundlinie bei Mitte + 0,35 · Größe */
+  function text(s, x, y, size, c, maxW, weight) {
+    font(size, weight); fill(c); g.textAlign = "left"; g.textBaseline = "alphabetic";
+    if (maxW && maxW > 0 && g.measureText(s).width > maxW) { while (s.length > 1 && g.measureText(s + "…").width > maxW) s = s.slice(0, -1); s += "…"; }
+    g.fillText(s, x, y);
+  }
+  function textC(s, x, y, size, c, weight) { font(size, weight); fill(c); g.textAlign = "center"; g.textBaseline = "alphabetic"; g.fillText(s, x, y + size * 0.35); g.textAlign = "left"; }
+  /* UI.glow: konzentrische Kreise */
+  function glow(x, y, r, c, steps) {
+    steps = steps || 8;
+    for (var i = 0; i < steps; i++) { var k = 1 - i / steps; circle(x, y, r * k, rgba(c, c[3] * 0.12 * (1 - k * 0.5))); }
+  }
+  function star(x, y, r, c) {
+    var pts = [];
+    for (var i = 0; i < 10; i++) { var a = -Math.PI / 2 + i * Math.PI / 5, q = i % 2 ? r * 0.45 : r; pts.push([x + Math.cos(a) * q, y + Math.sin(a) * q]); }
+    poly(pts, c);
+  }
+  var ICONS = {};
+  Object.keys(DATA.items).forEach(function (k) { var im = new Image(); im.src = "data:image/svg+xml;base64," + btoa(DATA.items[k]); ICONS[k] = im; });
+  function icon(id, x, y, s, alpha) { var im = ICONS[id]; if (!im || !im.complete) return; if (alpha != null) g.globalAlpha = alpha; g.drawImage(im, x - s / 2, y - s / 2, s, s); g.globalAlpha = 1; }
+  var BACK = [];
+  DATA.rooms.forEach(function (b, i) { var im = new Image(); im.src = "data:image/webp;base64," + b; BACK[i] = im; });
+  function now() { return performance.now() / 1000; }
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+  /* ---------- Neigung (Tilt): Streiflicht auf dem PIN-Feld, wenn das Gerät sie liefert ---------- */
+  var tilt = { x: 0, y: 0, base: null };
+  window.addEventListener("deviceorientation", function (e) {
+    if (e.beta == null) return;
+    if (!tilt.base) tilt.base = [e.beta, e.gamma];
+    tilt.x = clamp((e.gamma - tilt.base[1]) / 30, -1, 1); tilt.y = clamp((e.beta - tilt.base[0]) / 30, -1, 1);
+  });
+  function tiltAmount() { return Math.min(1, Math.hypot(tilt.x, tilt.y)); }
+
+  /* ---------- Tweens ---------- */
+  var tweens = [];
+  var EASE = {
+    lin: function (t) { return t; },
+    quadIn: function (t) { return t * t; },
+    quadOut: function (t) { return 1 - (1 - t) * (1 - t); },
+    sine: function (t) { return 0.5 - Math.cos(Math.PI * t) / 2; },
+    backOut: function (t) { var c = 1.70158; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); },
+    bounceOut: function (t) { var n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + 0.75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + 0.9375; return n * (t -= 2.625 / d) * t + 0.984375; },
+  };
+  function tween(obj, key, to, dur, ease, done) {
+    tweens = tweens.filter(function (t) { return !(t.o === obj && t.k === key); });
+    tweens.push({ o: obj, k: key, a: obj[key], b: to, d: dur, t: 0, e: EASE[ease || "lin"], done: done });
+  }
+  function seq(obj, key, steps) { // [[to, dur, ease], …]
+    var i = 0;
+    (function next() { if (i >= steps.length) return; var s = steps[i++]; tween(obj, key, s[0], s[1], s[2], next); })();
+  }
+  function stepTweens(dt) {
+    var fin = [];
+    tweens.forEach(function (t) { t.t += dt; var p = Math.min(1, t.t / t.d); t.o[t.k] = t.a + (t.b - t.a) * t.e(p); if (p >= 1) fin.push(t); });
+    tweens = tweens.filter(function (t) { return fin.indexOf(t) < 0; });
+    fin.forEach(function (t) { if (t.done) t.done(); });
+  }
+
+  /* ---------- Raum: Hot-Spots (scripts/ui/hot.gd) und FloorRoom-Grundlagen ---------- */
+  var room = null, gen = 0;
+  function later(sec, fn) { var my = gen; setTimeout(function () { if (my === gen) fn(); }, sec * 1000); }
+  function Room(n) {
+    this.n = n; this.layers = []; this.state = {}; this.done = false; this.inv = []; this.notes = []; this.fx = []; this.detail = null; this.uv = null; this.idle = 0; this.taps = 0;
+  }
+  Room.prototype.paint = function (x, y, w, h, draw, parent) { var p = { kind: "paint", x: x, y: y, w: w, h: h, draw: draw, parent: parent || null }; this.layers.push(p); return p; };
+  Room.prototype.hot = function (id, x, y, w, h, draw, mat, parent) {
+    var o = { kind: "hot", id: id, x: x, y: y, w: w, h: h, draw: draw, mat: mat == null ? "wood" : mat, bounce: true, parent: parent || null, dx: 0, dy: 0, rot: 0, sc: 1, hidden: false, when: null, springT: -9, shakeT: -9, shakePx: 0, press: [0, 0] };
+    this.layers.push(o); return o;
+  };
+  function origin(o) { var x = 0, y = 0, p = o.parent; while (p) { x += p.x + (p.dx || 0); y += p.y + (p.dy || 0); p = p.parent; } return [x, y]; }
+  function shown(o) { var p = o; while (p) { if (p.hidden || (p.when && !p.when())) return false; p = p.parent; } return true; }
+  function shake(o, px) { if (now() - o.shakeT < 0.2) return; o.shakeT = now(); o.shakePx = px || 8; }
+  function spring(o) { o.springT = now(); }
+  function hotScale(o) {
+    var t = now() - o.springT;
+    if (t < 0.06) return 1 - 0.08 * t / 0.06;
+    if (t < 0.31) { var p = (t - 0.06) / 0.25; return 1 - 0.08 * Math.pow(2, -10 * p) * Math.cos(p * 10 * Math.PI / 3); }
+    return 1;
+  }
+  function shakeOff(o) { var t = now() - o.shakeT; if (t >= 0.2) return 0; var i = Math.floor(t / 0.04); return i >= 4 ? 0 : (i % 2 ? -1 : 1) * o.shakePx; }
+  function drawLayer(o) {
+    if (!shown(o)) return;
+    var or = origin(o), x = or[0] + o.x + (o.dx || 0), y = or[1] + o.y + (o.dy || 0);
+    g.save();
+    if (o.kind === "hot") {
+      x += shakeOff(o);
+      var s = hotScale(o) * (o.sc || 1);
+      g.translate(x + o.w / 2, y + o.h / 2); if (o.rot) g.rotate(o.rot); g.scale(s, s); g.translate(-o.w / 2, -o.h / 2);
+    } else g.translate(x, y);
+    if (o.alpha != null) g.globalAlpha = o.alpha;
+    o.draw(o.w, o.h, o);
+    g.restore();
+  }
+  function hitAt(px, py) {
+    for (var i = room.layers.length - 1; i >= 0; i--) {
+      var o = room.layers[i];
+      if (o.kind !== "hot" || !shown(o)) continue;
+      var or = origin(o), x = or[0] + o.x + (o.dx || 0), y = or[1] + o.y + (o.dy || 0);
+      if (px >= x && px <= x + o.w && py >= y && py <= y + o.h) return { o: o, lx: px - x, ly: py - y };
+    }
+    return null;
+  }
+  function say(de, en) { message(en == null ? de : L(de, en), false); }
+  function message(t, note) { var m = $("msg"); m.firstChild.textContent = t; m.classList.toggle("note", !!note); }
+  Room.prototype.note = function (key, de, en, at) {
+    if (at) this.sparkle(at[0], at[1]);
+    if (this.notes.some(function (n) { return n.key === key; })) return;
+    this.notes.push({ key: key, text: L(de, en) });
+    play("discover", -4); buzz(20);
+    message(L("Logbuch: ", "Logbook: ") + L(de, en), true);
+  };
+  Room.prototype.has = function (key) { return this.notes.some(function (n) { return n.key === key; }); };
+  Room.prototype.sparkle = function (x, y) { this.fx.push({ k: "sparkle", x: x, y: y, t: 0 }); };
+  var TOOLS = ["phone", "keycard"], tools = [];
+  Room.prototype.hasItem = function (id) { return this.inv.indexOf(id) >= 0 || tools.indexOf(id) >= 0; };
+  Room.prototype.give = function (id, from) {
+    if (this.hasItem(id)) return;
+    if (TOOLS.indexOf(id) >= 0) tools.push(id); else this.inv.push(id);
+    play("pickup", -3); buzz(15);
+    if (from) this.fx.push({ k: "fly", id: id, x: from[0], y: from[1], t: 0 });
+    drawInventory();
+  };
+  Room.prototype.take = function (id) { this.inv = this.inv.filter(function (x) { return x !== id; }); if (selected === id) selected = null; drawInventory(); };
+  Room.prototype.dropItem = function (id, target) {
+    if (this.done || !this.useItem || !this.useItem(id, target)) {
+      play("bounce", -4); if (target) shake(target, 5);
+      var i = Math.floor(Math.random() * 3);
+      say(["Das bringt hier nichts.", "Nope. Nicht damit.", "Passt nicht."][i], ["That does nothing here.", "Nope. Not with that.", "Doesn't fit."][i]);
+    }
+  };
+  Room.prototype.finish = function () { if (this.done) return; this.done = true; solvedFloor(); };
+  /* Detailansicht (FloorRoom.open_detail): Abdunkeln, Blatt 500×570 springt auf, Schließen oben rechts */
+  Room.prototype.openDetail = function (draw) { this.detail = { draw: draw, at: now() }; play("paper", -8); };
+  Room.prototype.closeDetail = function () { this.detail = null; };
+  /* Goldener Schlüssel: ein verstecktes Sammelobjekt pro Etage */
+  var golden = 0;
+  Room.prototype.goldenKey = function (x, y, w, h, visible) {
+    var r = this, k = this.hot("golden", x, y, w, h, function (w2, h2) {
+      if (visible && !visible()) return;
+      var t = now();
+      glow(w2 / 2, h2 / 2, w2 * 0.7, [1, 0.85, 0.3, 0.6 + 0.3 * Math.sin(t * 3)]);
+      icon("key_small", w2 / 2, h2 / 2, w2 * 0.9);
+      circle(w2 / 2 - w2 * 0.18, h2 / 2, w2 * 0.16, "ffd34d");
+    }, "");
+    k.when = function () { return !k.taken && (!visible || visible()); };
+    k.onTap = function () {
+      k.taken = true; golden++;
+      play("unlock", -2); buzz(30); r.sparkle(x + w / 2, y + h / 2);
+      say("Ein goldener Schlüssel! (" + golden + " gefunden)", "A golden key! (" + golden + " found)");
+    };
+    return k;
+  };
+  /* Hintergrund (FloorRoom.draw_backdrop): schon auf 540×690 zugeschnitten */
+  function backdrop(n) { var im = BACK[n - 1]; if (im && im.complete) g.drawImage(im, 0, 0, W, H); }
+
+  /* =====================================================================
+     Etage 1 „Gesperrt“ – scripts/floors/floor_01.gd
+     ===================================================================== */
+  function floor1(r) {
+    var PHONE = [110, 26, 320, 638], SCREEN = [12, 16, 296, 606], KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "<"], SMUDGED = ["0", "3", "6"];
+    var pin = lang === "de" ? "0306" : "0603", dateText = lang === "de" ? "Mittwoch, 21.10." : "Wednesday, 10/21";
+    var s = { entry: "", fails: 0, wait: 0, torch: false, expanded: false, shakeDots: 0, streak: [], streakFade: 0, home: 0, pad: null };
+    r.state = s;
+    var phone = { x: PHONE[0], y: PHONE[1] };
+    function drawPhoto(x, y, w, h, sharp) {
+      var k = w / 296;
+      rect(x, y, w, h, "d9b98c");
+      rect(x, y + h * 0.7, w, h * 0.3, "8a5a3a");
+      var cx = x + w * 0.62, cy = y + h * 0.27, cw = w * 0.32, ch = h * 0.2;
+      rect(cx, cy, cw, ch, "fbf7ee"); rect(cx, cy, cw, ch * 0.22, "b33a3a");
+      if (sharp) {
+        textC(L("06 · JUNI", "06 · JUNE"), cx + cw / 2, cy + ch * 0.12, Math.floor(14 * k), "#ffffff");
+        for (var d = 0; d < 30; d++) {
+          var px = cx + 8 * k + (d % 7) * cw / 7.6, py = cy + ch * 0.34 + Math.floor(d / 7) * ch * 0.15;
+          text(String(d + 1), px, py + 10 * k, Math.floor(9 * k), "444444");
+          if (d === 2) { arc(px + 5 * k, py + 6 * k, 9 * k, 0, TAU, "e02020", 2.5 * k); text("Lena!", px - 4 * k, py + 26 * k, Math.floor(10 * k), "e02020"); }
+        }
+      } else circle(cx + cw * 0.32, cy + ch * 0.45, 4, "e02020");
+      for (var i = 0; i < 2; i++) {
+        var fx = x + w * (0.22 + i * 0.3);
+        rounded(fx - 34 * k, y + h * 0.42, 68 * k, h * 0.34, 28 * k, ["4f6d8f", "9c4f6d"][i]);
+        circle(fx, y + h * 0.38, 26 * k, "f0c9a0");
+        arc(fx, y + h * 0.37, 27 * k, Math.PI, TAU, ["3a2a1a", "c07a3a"][i], 10 * k);
+        arc(fx, y + h * 0.4, 10 * k, 0.3, Math.PI - 0.3, "7a3a2a", 2 * k);
+      }
+      var kx = x + w * 0.28, ky = y + h * 0.64, kw = w * 0.4, kh = h * 0.1;
+      rect(kx, ky, kw, kh, "f5e1e9"); rect(kx, ky, kw, kh * 0.3, "e98fb0");
+      for (var j = 0; j < 2; j++) {
+        var c2 = kx + kw * (0.35 + j * 0.3);
+        textC(["1", "9"][j], c2, ky - 14 * k, Math.floor(26 * k), "4aa0e0");
+        circle(c2, ky - 34 * k, 4 * k, "ffcc33");
+      }
+    }
+    r.paint(0, 0, W, H, function () {
+      var light = s.torch ? 1 : 0;
+      backdrop(1);
+      g.save(); g.translate(470, 160); g.rotate(0.2); text(L("Für A.", "For A."), -30, -18, 15, [0.2, 0.2, 0.3, 1]); g.restore();
+      if (s.torch) glow(270, 330, 330, [1, 0.95, 0.8, 0.75]);
+      rect(0, 0, W, H, rgba([0, 0, 0], 0.6 * (1 - light)));
+    });
+    r.goldenKey(452, 560, 64, 64, function () { return s.torch || r.done; });
+    r.paint(0, 0, PHONE[2], PHONE[3], function (w, h) {
+      rounded(6, 10, w, h, 40, rgba([0, 0, 0], 0.4));
+      rounded(0, 0, w, h, 40, "15161a");
+      roundedBorder(3, 3, w - 6, h - 6, 37, null, "3a3d45", 2);
+      if (s.torch) circle(60, 6, 6, [1, 1, 0.9, 1]);
+    }, phone);
+    var screen = r.hot("screen", SCREEN[0], SCREEN[1], SCREEN[2], SCREEN[3], function (w, h) {
+      var t = now();
+      drawPhoto(0, 0, w, h, false);
+      rect(0, 0, w, h, rgba([0, 0, 0], 0.25));
+      textC("07:42", w / 2, 82, 64, "#ffffff");
+      textC(dateText, w / 2, 136, 20, [1, 1, 1, 0.9]);
+      if (s.home > 0) {
+        rect(0, 0, w, h, rgba([0.06, 0.08, 0.1], s.home * 0.92));
+        textC(L("Nachrichten", "Messages"), w / 2, 190, 20, [1, 1, 1, s.home]);
+        rounded(18, 220, w - 50, 110, 18, [0.2, 0.25, 0.3, s.home]);
+        text(L("Unbekannt", "Unknown"), 34, 248, 15, rgba("b7c3cf", s.home));
+        text(L("Willkommen im Turm.", "Welcome to the tower."), 34, 276, 19, [1, 1, 1, s.home], w - 80);
+        text(L("100 Etagen. Du hast Zeit.", "100 floors. You have time."), 34, 304, 19, [1, 1, 1, s.home], w - 80);
+      } else {
+        textC("^", w / 2, h - 74 + Math.sin(t * 3) * 4, 26, [1, 1, 1, 0.8]);
+        textC(L("Zum Entsperren wischen", "Swipe up to unlock"), w / 2, h - 44, 15, [1, 1, 1, 0.8]);
+      }
+      if (s.streak.length > 1) polyline(s.streak, [1, 1, 1, 0.25 * s.streakFade], 18);
+    }, "", phone);
+    screen.bounce = false;
+    screen.onTap = function (lx, ly) {
+      if (r.done || s.pad) return;
+      if (ly > 270 && ly < SCREEN[3] - 110) openPhoto();
+      else { material("glass"); say("Nach oben wischen zum Entsperren.", "Swipe up to unlock."); }
+    };
+    screen.onDrag = function (rel, total, lx, ly) { s.streak.push([lx, ly]); s.streakFade = 1; if (total[1] < -110 && !r.done && !s.pad) openPad(); };
+    var notice = r.hot("notification", SCREEN[0] + 14, SCREEN[1] + 170, SCREEN[2] - 28, 86, function (w) {
+      var h = 86 + (s.expanded ? 40 : 0);
+      rounded(0, 0, w, h, 18, [0.95, 0.95, 0.97, 0.88]);
+      circle(30, 30, 16, "3fbf6f"); textC("L", 30, 30, 18, "#ffffff");
+      text(L("Lena · vor 2 Min.", "Lena · 2 min ago"), 56, 26, 14, "555555");
+      if (s.expanded) {
+        text(L("Neuer Code ist mein Geburtstag,", "New code is my birthday,"), 16, 62, 16, "111111", w - 24);
+        text(L("damit du ihn nie vergisst", "so you never forget it"), 16, 86, 16, "111111", w - 24);
+        text(L("Gedrückt gehalten · Vorschau", "Held · preview"), 16, 114, 12, "777777");
+      } else text(L("Neuer Code ist mein Geburt…", "New code is my birth…"), 16, 62, 16, "111111", w - 24);
+    }, "glass", phone);
+    notice.onTap = function () { if (!s.expanded) say("Zum Öffnen entsperren.", "Unlock to open."); };
+    notice.onLong = function () {
+      s.expanded = true;
+      r.note("lena", "Lena: „Neuer Code ist mein Geburtstag, damit du ihn nie vergisst“", "Lena: \"New code is my birthday, so you never forget it\"", [PHONE[0] + SCREEN[0] + 150, PHONE[1] + SCREEN[1] + 210]);
+    };
+    function roundButton(kind) {
+      return function (w, h) {
+        var on = kind === "torch" && s.torch, m = [w / 2, h / 2];
+        circle(m[0], m[1], 28, on ? [1, 1, 1, 0.85] : [0, 0, 0, 0.45]);
+        var c = on ? "222222" : "#ffffff";
+        if (kind === "torch") { rect(m[0] - 6, m[1] - 4, 12, 18, c); poly([[m[0] - 10, m[1] - 14], [m[0] + 10, m[1] - 14], [m[0] + 6, m[1] - 4], [m[0] - 6, m[1] - 4]], c); }
+        else { rect(m[0] - 13, m[1] - 8, 26, 18, c); circle(m[0], m[1] + 1, 6, on ? "#ffffff" : [0, 0, 0, 0.6]); }
+      };
+    }
+    var torch = r.hot("torch", SCREEN[0] + 24, SCREEN[1] + SCREEN[3] - 92, 64, 64, roundButton("torch"), "plastic", phone);
+    torch.onTap = function () { s.torch = !s.torch; play("switch", -6); if (s.torch) say("Die Taschenlampe leuchtet hinter dem Handy auf den Tisch.", "The torch lights up the desk behind the phone."); };
+    var cam = r.hot("camera", SCREEN[0] + SCREEN[2] - 88, SCREEN[1] + SCREEN[3] - 92, 64, 64, roundButton("camera"), "plastic", phone);
+    cam.onTap = function () { say("Die Kamera braucht das Handy entsperrt.", "The camera needs the phone unlocked."); };
+    function openPhoto() {
+      r.openDetail(function (w, h) { drawPhoto(0, 0, w, h, true); });
+      r.note("photo", "Hintergrundfoto: Torte mit den Kerzen 1 und 9. Am Kalender ist der 3. Juni (Monat 06) rot eingekreist: „Lena!“", "Wallpaper: a cake with the candles 1 and 9. On the calendar, 3 June (month 06) is circled in red: \"Lena!\"");
+    }
+    var padLayer = null, padItems = [];
+    function openPad() {
+      if (s.pad || r.done) return;
+      s.entry = ""; play("glass", -8);
+      padLayer = { x: SCREEN[0], y: SCREEN[1], parent: phone, alpha: 0 };
+      s.pad = padLayer;
+      padItems.push(r.paint(0, 0, SCREEN[2], SCREEN[3], function (w, h) {
+        g.globalAlpha = padLayer.alpha;
+        rect(0, 0, w, h, [0.05, 0.07, 0.1, 0.9]);
+        var msg = s.wait > 0 ? L("Bitte " + Math.ceil(s.wait) + " s warten", "Please wait " + Math.ceil(s.wait) + " s") : L("PIN eingeben", "Enter PIN");
+        textC(msg, w / 2, 120, 22, s.wait > 0 ? "f08b70" : "#ffffff");
+        var off = Math.sin(s.shakeDots * 60) * 10 * s.shakeDots / 0.4;
+        for (var i = 0; i < 4; i++) {
+          var px = w / 2 - 54 + i * 36 + off;
+          if (i < s.entry.length) circle(px, 175, 9, "#ffffff"); else arc(px, 175, 9, 0, TAU, "#ffffff", 2);
+        }
+        var band = h * (0.5 + tilt.y * 0.8) + tilt.x * 120;
+        for (var j = 0; j < 6; j++) line(0, band - 120 + j * 8, w, band + 40 + j * 8, [1, 1, 1, 0.025 * tiltAmount()], 14);
+      }, padLayer));
+      KEYS.forEach(function (k, i) {
+        if (!k) return;
+        var key = r.hot("key_" + k, 38 + (i % 3) * 78, 238 + Math.floor(i / 3) * 82, 66, 66, function (w, h, o) {
+          g.globalAlpha = padLayer.alpha;
+          var m = [w / 2, h / 2], pressed = now() - o.springT < 0.12;
+          circle(m[0], m[1], 32, [1, 1, 1, pressed ? 0.28 : 0.12]);
+          if (k === "<") { poly([[m[0] - 16, m[1]], [m[0] - 6, m[1] - 10], [m[0] + 14, m[1] - 10], [m[0] + 14, m[1] + 10], [m[0] - 6, m[1] + 10]], "#ffffff"); textC("x", m[0] + 4, m[1] - 1, 16, "20242a"); }
+          else textC(k, m[0], m[1], 30, "#ffffff");
+          if (SMUDGED.indexOf(k) >= 0) {
+            var a = clamp((tiltAmount() - 0.15) * 1.6, 0, 0.75), n = +k;
+            for (var j = 0; j < 7; j++) circle(m[0] + Math.sin(j * 2.3 + n) * 14, m[1] + Math.cos(j * 1.7 + n) * 12, 9 - j, [0.95, 0.9, 0.7, a * 0.35]);
+          }
+        }, "", padLayer);
+        key.onTap = function () { press(k); };
+        padItems.push(key);
+      });
+      var cancel = r.hot("cancel", SCREEN[2] / 2 - 70, SCREEN[3] - 64, 140, 44, function (w, h) { g.globalAlpha = padLayer.alpha; textC(L("Abbrechen", "Cancel"), w / 2, h / 2, 18, "f5ebdd"); }, "", padLayer);
+      cancel.onTap = closePad;
+      padItems.push(cancel);
+      tween(padLayer, "alpha", 1, 0.2);
+      say("Tippe die PIN ein. Vier Ziffern.", "Type the PIN. Four digits.");
+    }
+    function closePad() {
+      r.layers = r.layers.filter(function (o) { return padItems.indexOf(o) < 0; });
+      padItems = []; s.pad = null; padLayer = null;
+    }
+    function press(k) {
+      if (r.done || s.wait > 0) return;
+      play("key", -4); buzz(10);
+      if (k === "<") { s.entry = s.entry.slice(0, -1); return; }
+      s.entry += k;
+      if (s.entry.length === 4) check();
+    }
+    function check() {
+      var code = s.entry; s.entry = "";
+      if (code === pin) { unlock(); return; }
+      s.shakeDots = 0.4;
+      if (code === pin.slice(2) + pin.slice(0, 2)) {
+        play("partial", -3);
+        say("Fast! Die Ziffern stimmen, nur Tag und Monat sind vertauscht. Schau, wie das Handy das Datum schreibt.", "Close! Right digits, but day and month are swapped. Look how the phone writes the date.");
+        return;
+      }
+      wrong(); s.fails++;
+      if (s.fails >= 5) { s.fails = 0; s.wait = 10; say("Bitte 10 s warten. Das Handy ist geduldiger als du.", "Please wait 10 s. The phone is more patient than you."); }
+      else say("Falsche PIN · " + (5 - s.fails) + " Versuche übrig", "Wrong PIN · " + (5 - s.fails) + " attempts left");
+    }
+    function unlock() {
+      play("unlock", -2); buzz(30);
+      closePad();
+      notice.hidden = torch.hidden = cam.hidden = true;
+      tween(s, "home", 1, 0.4);
+      r.note("welcome", "Unbekannt: „Willkommen im Turm. 100 Etagen. Du hast Zeit.“", "Unknown: \"Welcome to the tower. 100 floors. You have time.\"");
+      later(2.2, function () {
+        r.give("phone", [PHONE[0] + PHONE[2] / 2, PHONE[1] + PHONE[3] / 2]);
+        say("Das Handy kommt mit. Die Tür zum Treppenhaus ist offen.", "The phone comes along. The door to the stairwell is open.");
+        later(0.8, function () { r.finish(); });
+      });
+    }
+    r.process = function (dt) {
+      s.wait = Math.max(0, s.wait - dt);
+      s.shakeDots = Math.max(0, s.shakeDots - dt);
+      s.streakFade = Math.max(0, s.streakFade - dt * 1.5);
+      if (s.streakFade <= 0) s.streak = [];
+      if (s.pad && tiltAmount() > 0.45) r.note("smudge", "Im Streiflicht: Fettspuren auf den Tasten 0, 3 und 6.", "In the glancing light: grease smudges on keys 0, 3 and 6.");
+    };
+    r.hintStart = L("Ein fremdes Handy. Sieh dich um.", "Someone else's phone. Look around.");
+  }
+
+  /* =====================================================================
+     Etage 2 „Kurzschluss“ – scripts/floors/floor_02.gd
+     ===================================================================== */
+  function floor2(r) {
+    var WIRES = [[0, 1], [1, 2], [2, 3], [0, 3]], START = [false, true, false, true], LETTERS = ["A", "B", "C", "D"], LAMP_X = [90, 210, 330, 450], BOX = [214, 300, 196, 236], OWL = 5;
+    var s = { sw: [false, false, false, false], flicker: [0, 0, 0, 0], blackout: 0, flips: [], doorOpen: 0, solving: false };
+    r.state = s;
+    function lampsFor(sw) { var on = START.slice(); for (var i = 0; i < 4; i++) if (sw[i]) WIRES[i].forEach(function (l) { on[l] = !on[l]; }); return on; }
+    function lamps() { return s.blackout > 0 ? [false, false, false, false] : lampsFor(s.sw); }
+    function lit() { return lamps().filter(Boolean).length; }
+    r.paint(0, 0, W, H, function () { backdrop(2); });
+    var door = r.hot("door", 24, 250, 150, 360, function (w, h) {
+      if (s.doorOpen > 0) { glow(w / 2, h / 2, h * 0.6, [1, 0.9, 0.6, s.doorOpen]); rect(0, 0, w, h, [1, 0.88, 0.6, 0.6 * s.doorOpen]); }
+      var dw = w * (1 - 0.8 * s.doorOpen);
+      rect(0, 0, dw, h, "5a4634");
+      rect(10, 16, dw - 20, h * 0.4, "4e3c2c"); rect(10, h * 0.5, dw - 20, h * 0.42, "4e3c2c");
+      line(0, 1, dw, 1, [1, 1, 1, 0.12], 2); line(dw - 1, 0, dw - 1, h, [0, 0, 0, 0.35], 3);
+      circle(dw - 18, h * 0.52, 7, "b9a36a");
+    }, "metal");
+    door.onTap = function () {
+      if (r.done) { say("Die Tür ist offen. Weiter nach oben!", "The door is open. Onwards and upwards!"); return; }
+      shake(door, 6); say("Verschlossen. Zu dunkel hier.", "Locked. Too dark in here.");
+    };
+    r.paint(0, 0, W, H, function () {
+      var a = r.done ? 1 : s.solving ? clamp((lit() / 4 - 0.75) * 4, 0, 1) : 0;
+      if (a <= 0) return;
+      var m = [420, 610], c = [1, 1, 1, 0.75 * a];
+      arc(m[0], m[1], 34, 0, TAU, c, 3);
+      arc(m[0] - 13, m[1] - 8, 10, 0, TAU, c, 2.5); arc(m[0] + 13, m[1] - 8, 10, 0, TAU, c, 2.5);
+      circle(m[0] - 13, m[1] - 8, 3, c); circle(m[0] + 13, m[1] - 8, 3, c);
+      polyline([[m[0] - 5, m[1] + 4], [m[0], m[1] + 12], [m[0] + 5, m[1] + 4]], c, 2.5);
+      line(m[0] - 22, m[1] - 28, m[0] - 14, m[1] - 40, c, 3); line(m[0] + 22, m[1] - 28, m[0] + 14, m[1] - 40, c, 3);
+      textC(String(OWL), m[0] + 56, m[1] + 10, 34, c);
+    });
+    var notice = r.hot("notice", 196, 590, 120, 80, function (w, h) {
+      g.translate(w / 2, h / 2); g.rotate(-0.06);
+      rect(-56, -36, 112, 72, "f1ead2");
+      text(L("Hausordnung", "House rules"), -48, -14, 13, "333333");
+      for (var i = 0; i < 3; i++) line(-48, i * 10, 40, i * 10, "999999", 1);
+    }, "paper");
+    notice.onTap = function () { r.note("rules", "Aushang: „Hausordnung. Licht aus ab 22 Uhr. – Die Verwaltung, A.“", "Notice: \"House rules. Lights out after 10 pm. – The management, A.\""); };
+    r.paint(BOX[0] - 10, BOX[1] - 10, BOX[2] + 20, BOX[3] + 20, function () {
+      textC(L("SICHERUNGEN", "FUSES"), 10 + BOX[2] / 2, 40, 16, "d8d2c0");
+      textC("230 V", 10 + BOX[2] / 2, 73, 14, "#ffffff");
+    });
+    var plan = r.hot("plan", BOX[0] + BOX[2] + 8, BOX[1] + 10, 110, 150, function (w, h) {
+      poly([[0, 50], [18, 42], [34, 56], [56, 40], [80, 54], [110, 44], [110, h], [0, h]], "e9e2c8");
+      for (var k = 0; k < 2; k++) {
+        var y = 80 + k * 34;
+        text(["C", "D"][k], 10, y + 6, 16, "223355");
+        WIRES[2 + k].forEach(function (t) { line(26, y, 62 + t * 12, y - 8 + t * 4, "223355", 1.5); });
+        text((WIRES[2 + k][0] + 1) + " " + (WIRES[2 + k][1] + 1), 70, y + 6, 14, "223355");
+      }
+    }, "paper");
+    plan.onTap = function () {
+      r.openDetail(function (w, h) {
+        poly([[20, 180], [80, 160], [140, 196], [220, 150], [300, 190], [380, 160], [w - 20, 184], [w - 20, h - 60], [20, h - 60]], "ece6cd");
+        textC(L("Schaltplan (abgerissen)", "Wiring diagram (torn)"), w / 2, 230, 20, "553322");
+        for (var k = 0; k < 2; k++) {
+          var y = 320 + k * 130;
+          rounded(50, y - 30, 60, 60, 8, "223355"); textC(["C", "D"][k], 80, y, 30, "#ffffff");
+          for (var l = 0; l < 4; l++) {
+            var lx = 200 + l * 66, hit = WIRES[2 + k].indexOf(l) >= 0;
+            circle(lx, y, 22, hit ? "223355" : [0.13, 0.2, 0.33, 0.15]);
+            textC(String(l + 1), lx, y, 20, hit ? "#ffffff" : "223355");
+            if (hit) line(110, y, lx - 22, y, "223355", 3);
+          }
+        }
+      });
+      r.note("plan", "Schaltplan, halb abgerissen: C schaltet Lampe 3 und 4, D schaltet Lampe 1 und 4. A und B fehlen.", "Wiring diagram, half torn off: C switches lamps 3 and 4, D switches lamps 1 and 4. A and B are missing.");
+    };
+    [0, 1, 2, 3].forEach(function (i) {
+      var sw = r.hot("switch_" + i, BOX[0] + 18 + i * 42, BOX[1] + 92, 36, 110, function (w) {
+        var up = s.sw[i], m = [w / 2, 50];
+        rounded(4, 10, w - 8, 80, 6, "1a1c1e");
+        var tip = [m[0], m[1] + (up ? -26 : 26)];
+        line(m[0], m[1], tip[0], tip[1], "d0d0d0", 10); circle(tip[0], tip[1], 7, "e8e8e8");
+        textC(up ? "I" : "0", m[0], up ? 80 : 22, 12, "888888");
+        textC(LETTERS[i], m[0], 102, 20, "e8e2d0");
+      }, "");
+      sw.onTap = function () { flip(i); };
+    });
+    r.goldenKey(64, 196, 60, 50, function () { return lit() === 4; });
+    r.paint(0, 0, W, H, function () {
+      var dark = 0.86 - 0.18 * lit();
+      if (s.blackout > 0) dark = 0.97;
+      if (s.doorOpen > 0) dark *= 1 - s.doorOpen * 0.6;
+      rect(0, 0, W, H, [0.02, 0.02, 0.04, Math.max(0, dark)]);
+    });
+    [0, 1, 2, 3].forEach(function (i) {
+      var lamp = r.hot("lamp_" + i, LAMP_X[i] - 44, 20, 88, 130, function (w) {
+        var on = lamps()[i], m = [w / 2, 52], f = s.flicker[i];
+        if (on && f > 0 && (f * 37) % 1 < 0.4) on = false;
+        line(m[0], 0, m[0], m[1] - 26, "222222", 3);
+        rect(m[0] - 12, m[1] - 30, 24, 10, "555555");
+        if (on) {
+          glow(m[0], m[1], 80, [1, 0.85, 0.45, 0.9]);
+          for (var k = 0; k < 8; k++) { var a = k * TAU / 8; line(m[0] + Math.cos(a) * 26, m[1] + Math.sin(a) * 26, m[0] + Math.cos(a) * 38, m[1] + Math.sin(a) * 38, [1, 0.9, 0.5, 0.8], 3); }
+          circle(m[0], m[1], 20, "ffe79a");
+        } else arc(m[0], m[1], 20, 0, TAU, "8a8f94", 3);
+        rounded(m[0] - 18, 92, 36, 30, 6, "d8d2c0");
+        textC(String(i + 1), m[0], 107, 20, "222222");
+      }, "glass");
+      lamp.onTap = function () { say("Lampe " + (i + 1) + ": " + (lamps()[i] ? "an" : "aus"), "Lamp " + (i + 1) + ": " + (lamps()[i] ? "on" : "off")); };
+    });
+    function flip(i) {
+      if (r.done || s.solving || s.blackout > 0) return;
+      var before = lamps();
+      s.sw[i] = !s.sw[i];
+      play("switch", 0); buzz(18);
+      var after = lamps();
+      for (var l = 0; l < 4; l++) if (after[l] && !before[l]) { s.flicker[l] = 0.5; play("hum", -10); }
+      var t = now();
+      s.flips.push(t); s.flips = s.flips.filter(function (x) { return t - x < 3; });
+      if (s.flips.length >= 8) {
+        s.flips = []; s.blackout = 2; play("fuse", 0); buzz(80);
+        s.sw = [false, false, false, false];
+        say("Peng! Die Hauptsicherung ist rausgeflogen. Alles auf Anfang.", "Bang! The main fuse blew. Back to the start.");
+        return;
+      }
+      if (lit() === 4) solve();
+    }
+    function solve() {
+      s.solving = true; play("relay", 0);
+      later(0.5, function () {
+        play("door", -3);
+        tween(s, "doorOpen", 1, 0.8, "backOut");
+        r.note("owl", "Kreidezeichnung im Licht: eine Eule mit der Zahl " + OWL + ".", "Chalk drawing in the light: an owl with the number " + OWL + ".", [420, 610]);
+        later(1.4, function () { r.finish(); });
+      });
+    }
+    r.process = function (dt) {
+      for (var l = 0; l < 4; l++) s.flicker[l] = Math.max(0, s.flicker[l] - dt);
+      if (s.blackout > 0) s.blackout -= dt;
+    };
+    r.hintStart = L("Vier Schalter, vier Lampen. Bring Licht ins Treppenhaus.", "Four switches, four lamps. Bring light to the stairwell.");
+  }
+
+  /* =====================================================================
+     Etage 3 „Hausmeisterzimmer“ – scripts/floors/floor_03.gd
+     ===================================================================== */
+  function floor3(r) {
+    var CODE = [7, 4, 2], ANIMALS = ["cat", "owl", "fish"], DIGITS = { cat: 4, owl: 7, fish: 2 }, NAMES = { cat: ["Katze", "cat"], owl: ["Eule", "owl"], fish: ["Fisch", "fish"] };
+    var FIG_X = [70, 150, 230], SHELF_Y = 190, SAFE = [318, 226, 200, 200], DRAWER = [54, 560, 220, 76], PHOTO = [330, 34, 134, 168], SNAIL = 8;
+    var s = { dials: [0, 0, 0], flags: {}, uvPos: [270, 345], safeOpen: 0, owlTurn: 0, catWiggle: 0, bubbles: 0, klonk: false, wrongs: 0, acc: [0, 0, 0] };
+    r.state = s;
+    function flag(k) { return !!s.flags[k]; }
+    function cat(m, sz) {
+      var c = "2f2f35";
+      circle(m[0], m[1] + sz * 0.3, sz * 0.8, c); circle(m[0], m[1] - sz * 0.5, sz * 0.55, c);
+      poly([[m[0] - sz * 0.5, m[1] - sz * 0.7], [m[0] - sz * 0.35, m[1] - sz * 1.25], [m[0] - sz * 0.1, m[1] - sz * 0.9]], c);
+      poly([[m[0] + sz * 0.5, m[1] - sz * 0.7], [m[0] + sz * 0.35, m[1] - sz * 1.25], [m[0] + sz * 0.1, m[1] - sz * 0.9]], c);
+      circle(m[0] - sz * 0.2, m[1] - sz * 0.55, sz * 0.09, "d8e060"); circle(m[0] + sz * 0.2, m[1] - sz * 0.55, sz * 0.09, "d8e060");
+      arc(m[0] + sz * 0.9, m[1] + sz * 0.6, sz * 0.5, -Math.PI * 0.6, Math.PI * 0.4, c, sz * 0.18);
+    }
+    function owl(m, sz, turn) {
+      var c = "8a6a44";
+      circle(m[0], m[1] + sz * 0.3, sz * 0.75, c);
+      var face = [m[0] + sz * 0.25 * turn, m[1] - sz * 0.45];
+      circle(m[0], m[1] - sz * 0.45, sz * 0.6, "9b7f5d");
+      [-1, 1].forEach(function (side) { circle(face[0] + side * sz * 0.25, face[1], sz * 0.2, "f2e8c8"); circle(face[0] + side * sz * 0.25, face[1], sz * 0.09, "1a1a1a"); });
+      poly([[face[0] - sz * 0.08, face[1] + sz * 0.12], [face[0] + sz * 0.08, face[1] + sz * 0.12], [face[0], face[1] + sz * 0.3]], "d8a030");
+    }
+    function fish(m, sz) {
+      var c = "f08a30";
+      poly([[m[0] - sz, m[1]], [m[0] - sz * 0.2, m[1] - sz * 0.6], [m[0] + sz * 0.7, m[1] - sz * 0.2], [m[0] + sz * 0.7, m[1] + sz * 0.2], [m[0] - sz * 0.2, m[1] + sz * 0.6]], c);
+      poly([[m[0] + sz * 0.6, m[1]], [m[0] + sz * 1.1, m[1] - sz * 0.5], [m[0] + sz * 1.1, m[1] + sz * 0.5]], "c06e26");
+      circle(m[0] - sz * 0.55, m[1] - sz * 0.1, sz * 0.1, "111111");
+    }
+    function photoScene(x, y, w, h, big) {
+      var k = Math.min(w, h) / 100;
+      rect(x, y, w, h, "9fb7c4");
+      var ax = x + w * 0.12, ay = y + h * 0.76, aw = w * 0.76, ah = h * 0.22;
+      rect(ax, ay, aw, ah, "4f90b8"); rectLine(ax, ay, aw, ah, "cfe8f0", 1.5 * k);
+      fish([ax + aw / 2, ay + ah / 2], 9 * k);
+      if (big) for (var b = 0; b < 3; b++) arc(ax + aw / 2 - 14 * k - b * 3 * k, ay + ah / 2 - 6 * k - b * 5 * k, (1.5 + b) * k * 0.6, 0, TAU, [1, 1, 1, 0.7], 1);
+      var head = [x + w * 0.5, y + h * 0.2];
+      rounded(head[0] - 20 * k, head[1] + 11 * k, 40 * k, 36 * k, 10 * k, "c0603a");
+      circle(head[0], head[1], 12 * k, "f0c9a0"); arc(head[0], head[1], 12 * k, Math.PI, TAU, "5a3a1a", 5 * k);
+      owl([head[0] + 23 * k, head[1] + 4 * k], 8 * k, 0);
+      cat([head[0], head[1] + 40 * k], 9 * k);
+    }
+    r.paint(0, 0, W, H, function () {
+      backdrop(3);
+      var d = SAFE.slice();
+      if (s.safeOpen > 0) {
+        rect(SAFE[0], SAFE[1], SAFE[2], SAFE[3], "1c1e20");
+        glow(SAFE[0] + SAFE[2] / 2, SAFE[1] + SAFE[3] / 2, 110, [1, 0.85, 0.5, s.safeOpen]);
+        d = [SAFE[0] - SAFE[2] * 0.75 * s.safeOpen, SAFE[1], SAFE[2] * (1 - 0.75 * s.safeOpen), SAFE[3]];
+      }
+      rounded(d[0], d[1], d[2], d[3], 8, "6f777d"); rectLine(d[0] + 10, d[1] + 10, d[2] - 20, d[3] - 20, "5c6368", 2);
+      line(d[0] + 6, d[1] + 2, d[0] + d[2] - 6, d[1] + 2, [1, 1, 1, 0.18], 2);
+      if (s.safeOpen < 0.2) textC("SAFE · 0-9", SAFE[0] + SAFE[2] / 2, SAFE[1] + 30, 15, "2b2f33");
+      rect(PHOTO[0] + 6, PHOTO[1] + 6, PHOTO[2] - 12, PHOTO[3] - 12, [1, 1, 1, 0.06]);
+    });
+    r.goldenKey(PHOTO[0] + PHOTO[2] / 2 - 30, PHOTO[1] + PHOTO[3] / 2 - 24, 60, 48, function () { return flag("photo_off"); });
+    var photo = r.hot("photo", PHOTO[0], PHOTO[1], PHOTO[2], PHOTO[3], function (w, h) {
+      rect(0, 0, w, h, "3a2a1c"); rect(10, 10, w - 20, h - 20, "e8ddc0");
+      photoScene(16, 16, w - 32, h - 32, false);
+    }, "wood");
+    photo.onTap = openPhoto;
+    photo.onDrag = function (rel, total) { if (!flag("photo_off")) photo.dy = Math.max(0, total[1]) * 0.5; };
+    photo.onDragEnd = function (total) { if (total[1] > 60) takePhotoDown(); else if (!flag("photo_off")) photo.dy = 0; };
+    ANIMALS.forEach(function (a, i) {
+      var fig = r.hot(a, FIG_X[i] - 36, SHELF_Y - 86, 72, 86, function (w, h) {
+        var base = [w / 2, h - 4];
+        if (a === "cat") { g.save(); g.translate(Math.sin(s.catWiggle * 30) * 3 * s.catWiggle, 0); cat([base[0], base[1] - 30], 26); g.restore(); }
+        if (a === "owl") owl([base[0], base[1] - 34], 26, s.owlTurn);
+        if (a === "fish") {
+          rect(base[0] - 30, base[1] - 60, 60, 60, [0.6, 0.85, 0.95, 0.5]);
+          fish([base[0], base[1] - 28], 20);
+          if (s.bubbles > 0) for (var b = 0; b < 3; b++) arc(base[0] + 8 + b * 4, base[1] - 48 - (1 - s.bubbles) * 30 - b * 10, 3 + b, 0, TAU, [1, 1, 1, s.bubbles], 1.5);
+        }
+      }, "stone");
+      fig.onTap = function () {
+        if (a === "cat") { play("purr", -2); s.catWiggle = 1; }
+        if (a === "owl") { play("hoot", -4); tween(s, "owlTurn", s.owlTurn > 0.5 ? 0 : 1, 0.35); }
+        if (a === "fish") { play("blub", -2); s.bubbles = 1; }
+      };
+    });
+    var book = r.hot("notebook", 280, 440, 110, 40, function (w, h) {
+      g.translate(w / 2, h / 2); g.rotate(0.12);
+      rect(-48, -14, 96, 28, "2f4a6a"); line(-40, -14, -40, 14, "dddddd", 2);
+    }, "paper");
+    book.onTap = function () { r.note("janitor", "Notizbuch des Hausmeisters: „Der Architekt kam wieder nachts. Er zählt die Etagen, immer wieder.“", "Caretaker's notebook: \"The architect came again at night. He counts the floors, over and over.\""); };
+    var drawer = r.hot("drawer", DRAWER[0], DRAWER[1], DRAWER[2], DRAWER[3], function (w, h) {
+      if (flag("drawer")) {
+        rect(0, 0, w, h, "2a1d12");
+        if (!flag("uv_taken")) icon("uv_lamp", w / 2, h / 2, 70);
+        rect(0, h - 16, w, 16, "8a6440");
+      } else {
+        rect(0, 0, w, h, "8a6440"); rectLine(6, 6, w - 12, h - 12, "7a5636", 2);
+        circle(w / 2, h / 2 - 6, 6, "222222"); rect(w / 2 - 2, h / 2 - 2, 4, 14, "222222");
+      }
+    }, "wood");
+    drawer.onTap = function () {
+      if (flag("drawer")) { if (!r.hasItem("uv_lamp") && !flag("uv_taken")) takeUv(); }
+      else { shake(drawer, 4); say("Abgeschlossen. Da ist ein kleines Schlüsselloch.", "Locked. There's a small keyhole."); }
+    };
+    var key = r.hot("key", 180, 436, 70, 40, function (w, h) { icon("key_small", w / 2, h / 2, 54); }, "");
+    key.when = function () { return flag("plant_moved") && !flag("key_taken"); };
+    key.onTap = function () { if (!flag("plant_moved") || flag("key_taken")) return; s.flags.key_taken = true; r.give("key_small", [215, 456]); say("Ein kleiner Schlüssel. Zieh ihn auf etwas im Raum.", "A small key. Drag it onto something in the room."); };
+    var plant = r.hot("plant", 160, 318, 110, 160, function (w, h) {
+      poly([[20, h - 70], [w - 20, h - 70], [w - 32, h], [32, h]], "b0603a");
+      rect(14, h - 80, w - 28, 14, "c0704a");
+      for (var i = 0; i < 7; i++) {
+        var a = -Math.PI / 2 + (i - 3) * 0.32, len = 60 + (i % 2) * 18, tx = w / 2 + Math.cos(a) * len, ty = h - 78 + Math.sin(a) * len;
+        line(w / 2, h - 78, tx, ty, "3d7a3a", 10); circle(tx, ty, 8, "4f9a48");
+      }
+    }, "plant");
+    plant.onTap = function () {
+      if (flag("plant_moved")) return;
+      seq(plant, "rot", [[0.08, 0.08], [-0.06, 0.08], [0.03, 0.08], [0, 0.08]]);
+      say("Der Topf ist schwer … aber er bewegt sich ein Stück.", "The pot is heavy … but it budges a little.");
+    };
+    plant.onDrag = function (rel, total) { if (!flag("plant_moved")) plant.dx = clamp(total[0], -120, 60); };
+    plant.onDragEnd = function (total) {
+      if (flag("plant_moved")) return;
+      if (Math.abs(total[0]) > 50) {
+        s.flags.plant_moved = true; play("stone", -2);
+        tween(plant, "dx", -120, 0.25);
+        r.note("key", "Unter dem Blumentopf lag ein kleiner Schlüssel.", "A small key was hidden under the flower pot.", [215, 456]);
+      } else plant.dx = 0;
+    };
+    [0, 1, 2].forEach(function (i) {
+      var dial = r.hot("dial_" + i, SAFE[0] + 22 + i * 54, SAFE[1] + 56, 48, 82, function (w) {
+        if (s.safeOpen > 0.05) return;
+        rounded(0, 0, w, 82, 8, "33373b");
+        rounded(6, 20, w - 12, 42, 4, "e8e2d0");
+        textC(String(s.dials[i]), w / 2, 41, 30, "1a1a1a");
+        var mx = w / 2;
+        poly([[mx - 6, 14], [mx + 6, 14], [mx, 6]], "aaaaaa"); poly([[mx - 6, 68], [mx + 6, 68], [mx, 76]], "aaaaaa");
+      }, "");
+      dial.when = function () { return s.safeOpen <= 0.05; };
+      dial.onTap = function (lx, ly) { turn(i, ly < 41 ? 1 : -1); };
+      dial.onDrag = function (rel) {
+        s.acc[i] += rel[1];
+        while (Math.abs(s.acc[i]) > 22) { var st = s.acc[i] > 0 ? -1 : 1; s.acc[i] -= 22 * -st; turn(i, st); }
+      };
+    });
+    var handle = r.hot("handle", SAFE[0] + 64, SAFE[1] + 146, 72, 44, function (w, h) {
+      if (s.safeOpen > 0.05) return;
+      circle(w / 2, h / 2, 14, "2b2f33"); line(8, h / 2, w - 8, h / 2, "c9cfd4", 10);
+    }, "metal");
+    handle.onTap = tryOpen;
+    var card = r.hot("keycard", SAFE[0] + 50, SAFE[1] + 70, 100, 70, function (w, h) { icon("keycard", w / 2, h / 2, 90); }, "");
+    card.when = function () { return s.safeOpen > 0.6 && !flag("card"); };
+    card.onTap = function () {
+      if (s.safeOpen < 0.6 || flag("card")) return;
+      s.flags.card = true; r.give("keycard", [SAFE[0] + 100, SAFE[1] + 100]);
+      r.note("snail", "Im Licht des Tresors: eine Kreideschnecke mit der Zahl " + SNAIL + " an der Wand.", "In the safe's light: a chalk snail with the number " + SNAIL + " on the wall.");
+      say("Eine Schlüsselkarte für den Aufzug.", "A key card for the lift.");
+      later(1.2, function () { r.finish(); });
+    };
+    r.paint(0, 0, W, H, function () {
+      if (!flag("card") && !r.done) return;
+      var m = [470, 520], c = [1, 1, 1, 0.7];
+      for (var i = 0; i < 3; i++) arc(m[0], m[1], 26 - i * 8, 0, TAU * 0.9, c, 2.5);
+      line(m[0] - 26, m[1] + 22, m[0] + 34, m[1] + 22, c, 3); line(m[0] + 30, m[1] + 22, m[0] + 38, m[1] - 4, c, 2.5);
+      textC(String(SNAIL), m[0], m[1] + 60, 32, c);
+    });
+    /* UV-Lampe: dunkler Raum mit Lichtkegel (shaders/spot.gdshader), Schrift nur im Kegel */
+    var uvOff = r.hot("uv_off", W - 120, 10, 110, 44, function (w, h) { rounded(0, 0, w, h, 10, [0.2, 0.1, 0.3, 0.8]); textC(L("UV aus", "UV off"), w / 2, h / 2, 17, "d9b8ff"); }, "plastic");
+    uvOff.when = function () { return !!r.uv; };
+    uvOff.onTap = function () { setUv(false); };
+    r.drawUv = function () {
+      var c = s.uvPos, rad = 95;
+      var grd = g.createRadialGradient(c[0], c[1], 0, c[0], c[1], rad);
+      grd.addColorStop(0, "rgba(115,38,217,0.22)"); grd.addColorStop(0.55, "rgba(115,38,217,0.22)");
+      grd.addColorStop(0.78, "rgba(56,18,110,0.6)"); grd.addColorStop(1, "rgba(5,0,15,0.9)");
+      g.fillStyle = grd; g.fillRect(0, 0, W, H);
+      var marks = [[FIG_X[0], SHELF_Y + 34, "4", 40], [FIG_X[1], SHELF_Y + 34, "7", 40], [FIG_X[2], SHELF_Y + 34, "2", 40], [130, 300, L("Hausmeister war hier :)", "The caretaker was here :)"), 18]];
+      marks.forEach(function (m) { var a = clamp(1 - Math.hypot(c[0] - m[0], c[1] - m[1]) / 95, 0, 1); if (a > 0) textC(m[2], m[0], m[1], m[3], [0.75, 1, 0.55, a]); });
+      drawLayer(uvOff);
+    };
+    r.shine = function (p) {
+      s.uvPos = p;
+      ANIMALS.forEach(function (a, i) {
+        if (Math.hypot(p[0] - FIG_X[i], p[1] - SHELF_Y - 22) < 60)
+          r.note("uv_" + a, "Unter UV-Licht: Unter " + { cat: "der Katze", owl: "der Eule", fish: "dem Fisch" }[a] + " leuchtet eine " + DIGITS[a] + ".", "Under UV light: a " + DIGITS[a] + " glows beneath the " + NAMES[a][1] + ".", [FIG_X[i], SHELF_Y + 22]);
+      });
+      if (Math.hypot(p[0] - 130, p[1] - 300) < 70) r.note("uv_joke", "Unter UV-Licht an der Wand: „Hausmeister war hier :)“", "Under UV light on the wall: \"The caretaker was here :)\"");
+    };
+    r.uvOff = uvOff;
+    function setUv(on) {
+      r.uv = on ? true : null; play("switch", -6); drawInventory();
+      if (on) say("Wisch über den Raum, der Lichtkegel folgt deinem Finger.", "Swipe across the room, the beam follows your finger.");
+    }
+    function openPhoto() {
+      if (flag("photo_off")) spring(photo);
+      r.openDetail(function (w, h) {
+        var x = 10, y = 0, pw = w - 20, ph = h - 40;
+        rect(x, y, pw, ph, "3a2a1c"); rect(x + 18, y + 18, pw - 36, ph - 36, "efe6cc");
+        photoScene(x + 34, y + 34, pw - 68, ph - 140, true);
+        textC(L("„Von oben nach unten:", "\"Top to bottom:"), x + pw / 2, y + ph - 84, 22, "3a2a1c");
+        textC(L("meine drei Freunde“", "my three friends\""), x + pw / 2, y + ph - 54, 22, "3a2a1c");
+      });
+      r.note("photo", "Foto: Eule auf der Schulter, Katze auf dem Schoß, Fisch im Aquarium. „Von oben nach unten: meine drei Freunde.“", "Photo: owl on the shoulder, cat on the lap, fish in the aquarium. \"Top to bottom: my three friends.\"");
+    }
+    function takePhotoDown() {
+      if (flag("photo_off")) return;
+      s.flags.photo_off = true; play("wood", 0);
+      photo.dy = Math.max(0, photo.dy);
+      tween(photo, "dx", 30, 0.35, "bounceOut"); tween(photo, "dy", 470 - PHOTO[1], 0.35, "bounceOut"); tween(photo, "rot", 0.25, 0.35);
+      say("Das Foto lehnt jetzt am Tisch. Dahinter glänzt etwas.", "The photo now leans against the desk. Something glints behind where it hung.");
+    }
+    function takeUv() {
+      s.flags.uv_taken = true; r.give("uv_lamp", [DRAWER[0] + DRAWER[2] / 2, DRAWER[1] + DRAWER[3] / 2]);
+      say("Eine UV-Taschenlampe. Tippe sie im Inventar an, um sie einzuschalten.", "A UV torch. Tap it in the inventory to switch it on.");
+    }
+    function turn(i, step) {
+      if (s.safeOpen > 0) return;
+      s.dials[i] = (s.dials[i] + step + 10) % 10;
+      play("dial", -2); buzz(8);
+      var right = s.dials[0] === CODE[0];
+      if (right && !s.klonk) later(0.12, function () { play("partial", -6); });
+      s.klonk = right;
+    }
+    function tryOpen() {
+      if (s.safeOpen > 0) return;
+      if (s.dials.join() === CODE.join()) {
+        s.flags.safe_open = true; play("unlock", -1); play("door", -4);
+        tween(s, "safeOpen", 1, 0.9, "backOut");
+        say("Der Tresor schwingt auf!", "The safe swings open!");
+        return;
+      }
+      wrong(); s.wrongs++;
+      var i = Math.min(s.wrongs - 1, 2);
+      say(["Der Griff bewegt sich keinen Millimeter.", "Nichts. Der Tresor bleibt stur.", "Versuch " + s.wrongs + ". Der Tresor gähnt."][i], ["The handle won't budge.", "Nothing. The safe stays stubborn.", "Attempt " + s.wrongs + ". The safe yawns."][i]);
+    }
+    r.useItem = function (item, target) {
+      if (!target) return false;
+      if (item === "key_small" && target.id === "drawer") { r.take("key_small"); s.flags.drawer = true; play("unlock", -3); say("Klick. Die Schublade geht auf.", "Click. The drawer opens."); return true; }
+      if (item === "key_small" && (target.id.indexOf("dial") === 0 || target.id === "handle")) { play("bounce", -4); shake(target, 5); say("Passt nicht. Zu klein.", "Doesn't fit. Too small."); return true; }
+      return false;
+    };
+    r.useTool = function (item) { if (item !== "uv_lamp") return false; setUv(!r.uv); return true; };
+    r.process = function (dt) { s.catWiggle = Math.max(0, s.catWiggle - dt * 1.5); s.bubbles = Math.max(0, s.bubbles - dt); };
+    r.hintStart = L("Ein Tresor mit drei Rädchen. Sieh dich gründlich um.", "A safe with three little wheels. Look around carefully.");
+  }
+
+  /* ---------- Ablauf ---------- */
+  var FLOORS = [floor1, floor2, floor3], level = 0, cleared = {}, hintNr = 0, selected = null, last = now(), cardOpen = false;
+  var SECTION = L("Wohnung und Treppenhaus", "Apartment and Stairwell");
+  function load(i) {
+    gen++;
+    level = i; hintNr = 0; selected = null; tweens = [];
+    room = new Room(i + 1);
+    FLOORS[i](room);
+    room.titleAt = now();
+    $("over").textContent = L("Etage ", "Floor ") + (i + 1) + " · " + SECTION;
+    $("title").textContent = L(DATA.titles[i]);
+    $("result").hidden = true; cardOpen = false; $("next").hidden = true;
+    document.body.classList.remove("done");
+    message(room.hintStart, false);
+    drawInventory();
+  }
+  function solvedFloor() {
+    var first = !cleared[level];
+    cleared[level] = true;
+    play("solved", -2); buzz(60);
+    var all = Object.keys(cleared).length === FLOORS.length;
+    message(L("Etage geschafft! Du kannst weiter nach Geheimnissen suchen.", "Floor cleared! You can keep looking for secrets."), false);
+    if (first) send({ type: "wm:cleared", game: "tower100", level: level + 1, moves: room.taps });
+    later(0.9, function () { showResult(all); confetti(); });
+  }
+  function showResult(all) {
+    cardOpen = true;
+    $("r-over").textContent = L("Etage " + (level + 1) + " geschafft", "Floor " + (level + 1) + " cleared");
+    $("r-title").textContent = L(DATA.titles[level]);
+    var st = '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.2 6.1 20.4l1.3-6.5L2.5 9.3l6.6-.8z" fill="#ffb547" stroke="#ffb547" stroke-width="1.2" stroke-linejoin="round"/></svg>';
+    $("r-stars").innerHTML = st + st + st;
+    if (all) {
+      document.body.classList.add("done");
+      $("r-text").textContent = L("Alle 3 Etagen geschafft! 97 weitere Etagen warten im Turm – jede ein neues Rätsel.", "All 3 floors cleared! 97 more floors wait in the tower – each one a new puzzle.");
+      $("r-main").textContent = L("TOWER 100 kostenlos spielen", "Play TOWER 100 free");
+      $("r-look").textContent = L("Noch einmal von vorn", "Play again");
+    } else {
+      $("r-text").textContent = L("Noch " + (100 - level - 1) + " Etagen bis ganz oben.", (100 - level - 1) + " floors to go to the top.");
+      $("r-main").textContent = L("Nächste Etage", "Next floor");
+      $("r-look").textContent = L("Raum ansehen", "Look around");
+    }
+    $("result").hidden = false;
+  }
+  $("r-main").onclick = function () {
+    wake(); play("plastic", -6);
+    if (Object.keys(cleared).length === FLOORS.length) { openStore(); return; }
+    load(level + 1); play("gong", -8);
+  };
+  $("r-look").onclick = function () {
+    wake(); play("plastic", -6);
+    if (Object.keys(cleared).length === FLOORS.length) { cleared = {}; tools = []; golden = 0; load(0); play("gong", -8); return; }
+    $("result").hidden = true; cardOpen = false;
+    $("next").textContent = L("Nächste Etage →", "Next floor →"); $("next").hidden = false;
+    message(L("Sieh dich ruhig noch um.", "Feel free to look around."), false);
+  };
+  $("next").onclick = function () { wake(); play("plastic", -6); load(level + 1); play("gong", -8); };
+  /* Raum im Seitenverhältnis 540:690 in die freie Fläche einpassen */
+  var stageEl = document.querySelector(".stage"), roomEl = document.querySelector(".room");
+  function fit() {
+    var b = stageEl.getBoundingClientRect(), h = b.height, w = h * W / H;
+    if (w > b.width) { w = b.width; h = w * H / W; }
+    roomEl.style.width = Math.floor(w) + "px"; roomEl.style.height = Math.floor(h) + "px";
+  }
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(stageEl); else window.addEventListener("resize", fit);
+  fit();
+  function confetti() {
+    var box = $("confetti"), cols = ["#ffb547", "#f5ebdd", "#89c9a3", "#cc8658", "#78c5ce"];
+    box.innerHTML = "";
+    for (var i = 0; i < 46; i++) { var c = document.createElement("i"); c.style.setProperty("--x", Math.random() * 100 + "%"); c.style.setProperty("--c", cols[i % cols.length]); c.style.setProperty("--d", Math.random() * 0.5 + "s"); box.appendChild(c); }
+    setTimeout(function () { box.innerHTML = ""; }, 2400);
+  }
+
+  /* ---------- Inventar (floor_view.gd: Werkzeuge + Gegenstände der Etage) ---------- */
+  function drawInventory() {
+    var bar = $("inv"), items = tools.concat(room ? room.inv : []);
+    bar.innerHTML = "";
+    if (!items.length) { var e = document.createElement("div"); e.className = "empty"; e.textContent = L("INVENTAR\nNoch keine Fundstücke", "INVENTORY\nNo items yet"); bar.appendChild(e); return; }
+    items.forEach(function (id) {
+      var b = document.createElement("button");
+      b.className = "slot" + (selected === id || (id === "uv_lamp" && room && room.uv) ? " on" : "");
+      b.setAttribute("aria-label", L(DATA.itemNames[id]));
+      var im = document.createElement("img"); im.src = ICONS[id].src; im.alt = ""; b.appendChild(im);
+      b.addEventListener("pointerdown", function (e) { slotDown(e, id); });
+      bar.appendChild(b);
+    });
+  }
+  var drag = null;
+  function slotDown(e, id) {
+    wake(); e.preventDefault();
+    drag = { id: id, x: e.clientX, y: e.clientY, moved: false, ghost: null };
+  }
+  window.addEventListener("pointermove", function (e) {
+    if (!drag) return;
+    if (!drag.moved && Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 10) {
+      drag.moved = true;
+      var gimg = document.createElement("img"); gimg.className = "ghost"; gimg.src = ICONS[drag.id].src; document.body.appendChild(gimg); drag.ghost = gimg;
+    }
+    if (drag.ghost) { drag.ghost.style.left = e.clientX + "px"; drag.ghost.style.top = e.clientY + "px"; }
+  });
+  window.addEventListener("pointerup", function (e) {
+    if (!drag) return;
+    var d = drag; drag = null;
+    if (d.ghost) d.ghost.remove();
+    if (!d.moved) { tapItem(d.id); return; }
+    var p = roomPoint(e);
+    if (!p || room.detail || cardOpen) return;
+    var h = hitAt(p[0], p[1]);
+    room.taps++;
+    room.dropItem(d.id, h ? h.o : null);
+  });
+  function tapItem(id) {
+    play("fabric", -6);
+    if (room.useTool && room.useTool(id)) { drawInventory(); return; }
+    if (id === "phone") { openLog(); return; }
+    if (id === "keycard") { say("Schlüsselkarte: Damit fährt der Aufzug.", "Key card: this runs the lift."); return; }
+    selected = selected === id ? null : id;
+    drawInventory();
+    if (selected) say(L(DATA.itemNames[id]) + L(" · Zieh es auf etwas im Raum – oder tippe jetzt das Ziel an.", " · Drag it onto something in the room – or tap the target now."));
+  }
+  function openLog() {
+    var list = $("s-list"); list.innerHTML = "";
+    var notes = room.notes.length ? room.notes : [{ text: L("Noch leer. Wichtige Funde landen hier.", "Still empty. Important finds land here.") }];
+    notes.forEach(function (n) { var li = document.createElement("li"); li.textContent = n.text; list.appendChild(li); });
+    $("s-title").textContent = L("Logbuch · Etage ", "Logbook · Floor ") + (level + 1);
+    $("s-close").textContent = L("Schließen", "Close");
+    $("sheet").hidden = false;
+  }
+  $("s-close").onclick = function () { $("sheet").hidden = true; };
+  $("hint").onclick = function () {
+    wake(); play("plastic", -6);
+    var h = DATA.hints[level];
+    message(L("Hinweis ", "Hint ") + (hintNr + 1) + "/3: " + L(h[hintNr]), true);
+    hintNr = (hintNr + 1) % 3;
+  };
+
+  /* ---------- Eingabe im Raum ---------- */
+  function roomPoint(e) {
+    var b = cv.getBoundingClientRect();
+    if (e.clientX < b.left || e.clientX > b.right || e.clientY < b.top || e.clientY > b.bottom) return null;
+    return [(e.clientX - b.left) / b.width * W, (e.clientY - b.top) / b.height * H];
+  }
+  var down = null;
+  function capture(e) { try { cv.setPointerCapture(e.pointerId); } catch (x) {} }
+  cv.addEventListener("pointerdown", function (e) {
+    wake(); e.preventDefault();
+    var p = roomPoint(e);
+    if (!p || cardOpen) return;
+    room.idle = 0; room.hotsShown = false;
+    if (room.detail) {
+      var inClose = p[0] >= W - 74 && p[0] <= W - 14 && p[1] >= 8 && p[1] <= 68;
+      var inPanel = p[0] >= 20 && p[0] <= W - 20 && p[1] >= 60 && p[1] <= H - 60;
+      if (inClose || !inPanel) { material("plastic"); room.closeDetail(); }
+      return;
+    }
+    if (room.uv) {
+      var uh = hitAt(p[0], p[1]);
+      if (uh && uh.o === room.uvOff) { down = { h: uh, t0: now(), start: p, last: p, drag: false, long: false }; capture(e); return; }
+      down = { uv: true }; room.shine(p); capture(e); return;
+    }
+    var h = hitAt(p[0], p[1]);
+    if (selected && h && !room.done) { var it = selected; selected = null; drawInventory(); room.taps++; room.dropItem(it, h.o); return; }
+    if (!h) { room.fx.push({ k: "ripple", x: p[0], y: p[1], t: 0 }); play("empty", -10); return; }
+    down = { h: h, t0: now(), start: p, last: p, drag: false, long: false };
+    capture(e);
+    // Langes Drücken (Hot.LONG_PRESS = 0,5 s) per Timer, unabhängig vom Bildaufbau
+    var mine = down;
+    setTimeout(function () { if (down === mine && !mine.drag && !mine.long) { mine.long = true; buzz(25); if (mine.h.o.onLong) mine.h.o.onLong(); } }, 500);
+  });
+  cv.addEventListener("pointermove", function (e) {
+    if (!down) return;
+    var b = cv.getBoundingClientRect(), p = [(e.clientX - b.left) / b.width * W, (e.clientY - b.top) / b.height * H];
+    if (down.uv) { room.shine(p); return; }
+    var total = [p[0] - down.start[0], p[1] - down.start[1]], rel = [p[0] - down.last[0], p[1] - down.last[1]];
+    down.last = p;
+    if (!down.drag && !down.long && Math.hypot(total[0], total[1]) > 14) { down.drag = true; if (down.h.o.onDragStart) down.h.o.onDragStart(); }
+    if (down.drag && down.h.o.onDrag) down.h.o.onDrag(rel, total, down.h.lx + total[0], down.h.ly + total[1]);
+  });
+  function up() {
+    if (!down) return;
+    var d = down; down = null;
+    if (d.uv) return;
+    var o = d.h.o, total = [d.last[0] - d.start[0], d.last[1] - d.start[1]];
+    room.taps++;
+    if (d.drag) { if (o.onDragEnd) o.onDragEnd(total); return; }
+    if (d.long) return;
+    if (o.bounce) spring(o);
+    if (o.mat) material(o.mat);
+    if (o.onTap) o.onTap(d.h.lx, d.h.ly);
+  }
+  cv.addEventListener("pointerup", up);
+  cv.addEventListener("pointercancel", function () { down = null; });
+
+  /* ---------- Bildlauf ---------- */
+  function frame() {
+    var t = now(), dt = Math.min(1, t - last); last = t;
+    stepTweens(dt);
+    if (room) {
+      if (room.process) room.process(dt);
+      room.idle += dt;
+      if (room.idle > 15 && !room.hotsShown && !room.done && !room.detail && !cardOpen) { room.hotsShown = true; showHots(); }
+      render(dt);
+    }
+    requestAnimationFrame(frame);
+  }
+  function showHots() {
+    room.layers.forEach(function (o) {
+      if (o.kind !== "hot" || !shown(o) || o.w < 24 || o.id === "golden" || o.id === "uv_off") return;
+      var or = origin(o);
+      room.fx.push({ k: "hot", x: or[0] + o.x + o.dx + o.w / 2, y: or[1] + o.y + o.dy + o.h / 2, r: clamp(Math.min(o.w, o.h) * 0.45, 18, 60), t: 0 });
+    });
+  }
+  function render(dt) {
+    var dpr = Math.min(3, window.devicePixelRatio || 1), cw = Math.round(cv.clientWidth * dpr), ch = Math.round(cv.clientHeight * dpr);
+    if (cw && (cv.width !== cw || cv.height !== ch)) { cv.width = cw; cv.height = ch; }
+    g.setTransform(cv.width / W, 0, 0, cv.height / H, 0, 0);
+    g.clearRect(0, 0, W, H);
+    room.layers.forEach(drawLayer);
+    if (room.uv && room.drawUv) room.drawUv();
+    if (room.detail) {
+      var d = room.detail; d.t = now() - d.at;
+      rect(0, 0, W, H, [0, 0, 0, 0.78]);
+      var p = Math.min(1, d.t / 0.22), s = 0.6 + 0.4 * EASE.backOut(p);
+      g.save(); g.globalAlpha = Math.min(1, d.t / 0.15);
+      g.translate(270, 345); g.scale(s, s); g.translate(-250, -285);
+      d.draw(500, 570);
+      g.restore();
+      circle(W - 44, 38, 24, [1, 1, 1, 0.12]);
+      line(W - 54, 28, W - 34, 48, "f5ebdd", 3); line(W - 54, 48, W - 34, 28, "f5ebdd", 3);
+    }
+    // Effekte (FloorRoom._draw_fx): Wellen, Funkeln, Hinweis-Puls, Flug ins Inventar
+    room.fx.forEach(function (f) { f.t += dt; });
+    room.fx = room.fx.filter(function (f) { return f.t < (f.k === "hot" ? 1.6 : f.k === "fly" ? 0.55 : 0.7); });
+    room.fx.forEach(function (f) {
+      var k = f.t / 0.7;
+      if (f.k === "ripple") arc(f.x, f.y, 8 + 30 * k, 0, TAU, [1, 1, 1, 0.35 * (1 - k)], 2);
+      else if (f.k === "hot") { var q = f.t / 1.6, a = Math.sin(q * Math.PI); arc(f.x, f.y, f.r * (0.8 + 0.3 * q), 0, TAU, [1, 0.85, 0.5, 0.55 * a], 2.5); glow(f.x, f.y, f.r, [1, 0.85, 0.5, 0.5 * a], 5); }
+      else if (f.k === "sparkle") for (var i = 0; i < 6; i++) { var an = i * TAU / 6 + k * 2; star(f.x + Math.cos(an) * (10 + 40 * k), f.y + Math.sin(an) * (10 + 40 * k), 7 * (1 - k) + 1, [1, 0.9, 0.5, 1 - k]); }
+      else if (f.k === "fly") { var fp = EASE.quadIn(f.t / 0.55); icon(f.id, f.x + (W / 2 - f.x) * fp, f.y + (H + 40 - f.y) * fp, 56 * (1 - 0.4 * fp)); }
+    });
+    // Einblendung beim Betreten: Etagennummer und Titel (FloorView._title_card)
+    var tt = now() - room.titleAt;
+    if (tt < 1.65) {
+      var al = tt < 0.25 ? tt / 0.25 : tt < 1.15 ? 1 : 1 - (tt - 1.15) / 0.5;
+      g.save(); g.globalAlpha = al;
+      font(30, 900); var tw = Math.max(g.measureText(L(DATA.titles[level])).width, 120) + 44;
+      roundedBorder(W / 2 - tw / 2, H * 0.36 - 44, tw, 92, 24, [0.03, 0.05, 0.07, 0.9], [1, 1, 1, 0.08], 1);
+      textC((L("Etage ", "Floor ") + (level + 1)).toUpperCase(), W / 2, H * 0.36 - 16, 13, "e0aa8a", 800);
+      textC(L(DATA.titles[level]), W / 2, H * 0.36 + 18, 30, "f5ebdd", 900);
+      g.restore();
+    }
+  }
+
+  /* ---------- Ton-Knopf, App-Brücke, Start ---------- */
+  function svgIcon(p) { return '<svg viewBox="0 0 24 24" aria-hidden="true">' + p + "</svg>"; }
+  function drawSound() {
+    var b = $("sound");
+    b.setAttribute("aria-pressed", String(soundOn));
+    b.setAttribute("aria-label", soundOn ? L("Ton aus", "Sound off") : L("Ton an", "Sound on"));
+    b.innerHTML = svgIcon('<path d="M11 4 5 9H2v6h3l6 5Z"/>' + (soundOn ? '<path d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>' : '<path d="m16 9 6 6m0-6-6 6"/>'));
+  }
+  $("sound").onclick = function () { soundOn = !soundOn; stopAll(); drawSound(); if (soundOn) { wake(); play("plastic", -6); } };
+  $("hint").innerHTML = svgIcon('<path d="M9 18h6M10 22h4M9 15c0-3-4-3-4-7a7 7 0 0 1 14 0c0 4-4 4-4 7"/>');
+  $("hint").setAttribute("aria-label", L("Hinweis", "Hint"));
+  document.addEventListener("visibilitychange", function () { if (document.hidden) { stopAll(); if (ctx) ctx.suspend(); } else if (soundOn && !paused && ctx) ctx.resume().catch(function () {}); });
+  window.addEventListener("pagehide", stopAll);
+  window.addEventListener("message", function (ev) {
+    if (ev.source !== parent) return;
+    var m = ev.data;
+    try { if (typeof m === "string") m = JSON.parse(m); } catch (e) { return; }
+    if (!m) return;
+    if (m.type === "wm:mute") { soundOn = !m.muted; stopAll(); drawSound(); }
+    if (m.type === "wm:pause") { paused = true; stopAll(); if (ctx) ctx.suspend(); }
+    if (m.type === "wm:resume") { paused = false; wake(); }
+  });
+  function openStore() {
+    stopAll();
+    if (send({ type: "wm:cta", url: STORE })) return;
+    var w = window;
+    if (w.mraid && w.mraid.open) { w.mraid.open(STORE); return; }
+    if (w.FbPlayableAd && w.FbPlayableAd.onCTAClick) { w.FbPlayableAd.onCTAClick(); return; }
+    if (w.dapi && w.dapi.openStoreUrl) { w.dapi.openStoreUrl(); return; }
+    window.open(STORE, "_blank", "noopener");
+  }
+  $("cta").onclick = openStore;
+  $("cta-label").textContent = L("TOWER 100 kostenlos spielen", "Play TOWER 100 free");
+  $("ad").textContent = L("Spielbare Anzeige · JOCULUS", "Playable ad · JOCULUS");
+  $("logo").style.backgroundImage = "url(data:image/webp;base64," + DATA.icon + ")";
+  $("logo").setAttribute("aria-label", "TOWER 100");
+  document.title = "TOWER 100 · " + L("Jetzt spielen", "Play now");
+  drawSound();
+  load(clamp((+Q.get("floor") || 1) - 1, 0, FLOORS.length - 1));  // floor=2|3 nur zum Prüfen
+  var readySent = false;
+  function ready() { if (readySent) return; readySent = true; send({ type: "wm:ready", game: "tower100" }); }
+  function start() { requestAnimationFrame(frame); requestAnimationFrame(function () { requestAnimationFrame(ready); }); setTimeout(ready, 300); }
+  var pending = BACK.concat(Object.keys(ICONS).map(function (k) { return ICONS[k]; })).filter(function (im) { return !im.complete; });
+  var fontReady = document.fonts && document.fonts.load ? document.fonts.load("700 20px Nunito") : Promise.resolve();
+  Promise.all(pending.map(function (im) { return new Promise(function (ok) { im.onload = im.onerror = ok; }); }).concat([fontReady.catch(function () {})])).then(start);
+})();
+</script></body></html>
