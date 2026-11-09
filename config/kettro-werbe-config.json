@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Kettro: je 1/6 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova und Mühle Meister, alle spielbar. Claw Machine Heroes, QuizNova und Mühle Meister erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
+  "_hinweis": "Kettro: je 1/7 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister und TOWER 100, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister und TOWER 100 erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,8 @@
       "koeniginnen-playable",
       "claw-machine-heroes-playable",
       "quiznova-playable",
-      "muehle-meister-playable"
+      "muehle-meister-playable",
+      "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -928,6 +929,38 @@
         "playable",
         "quiz"
       ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
     }
   ],
   "rewarded": {
@@ -937,7 +970,8 @@
       "koeniginnen-playable",
       "claw-machine-heroes-playable",
       "quiznova-playable",
-      "muehle-meister-playable"
+      "muehle-meister-playable",
+      "tower100-playable"
     ]
   }
 }

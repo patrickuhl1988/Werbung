@@ -240,7 +240,7 @@
         "de": "Drei echte Escape-Rooms – direkt hier lösen.",
         "en": "Three real escape rooms – solve them right here."
       },
-      "icon": "icons/tower100.png",
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
       "media": {
         "portrait": {
           "type": "playable",

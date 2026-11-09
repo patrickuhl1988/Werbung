@@ -8,7 +8,8 @@
       "sort-rush-playable",
       "koeniginnen-playable",
       "calm-arrow-puzzle-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -202,6 +203,38 @@
       "tags": [
         "playable",
         "quiz"
+      ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]

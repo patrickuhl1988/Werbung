@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
+  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -9,7 +9,8 @@
       "sort-rush-playable",
       "koeniginnen-playable",
       "muehle-meister-playable",
-      "calm-arrow-puzzle-playable"
+      "calm-arrow-puzzle-playable",
+      "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -199,6 +200,38 @@
         "android": "com.neondrift.nightrun"
       },
       "accent": "#63784F",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
       "status": "live",
       "tags": [
         "playable",

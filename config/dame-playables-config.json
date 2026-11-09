@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Dame Meister ab Version 1.8.0 (versionCode 10, Werbemodul 1.2.0): nur die spielbaren Demos von Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle und QuizNova, zufällig je ein Sechstel. Timing wie bisher (alle 3 Partien nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erste Partie werbefrei). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter dame-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
+  "_hinweis": "Dame Meister ab Version 1.8.0 (versionCode 10, Werbemodul 1.2.0): nur die spielbaren Demos von Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, QuizNova und TOWER 100, zufällig je ein Siebtel. Timing wie bisher (alle 3 Partien nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erste Partie werbefrei). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter dame-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,8 @@
       "koeniginnen-playable",
       "muehle-meister-playable",
       "calm-arrow-puzzle-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -236,6 +237,38 @@
       "tags": [
         "playable",
         "quiz"
+      ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]

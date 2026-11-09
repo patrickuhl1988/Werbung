@@ -30,7 +30,7 @@ Geprüft: Tests für Lösungen gegen die Etagen-Skripte, die Schalter-Kombinatio
 
 ## Einbinden
 
-Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedIds` aufnehmen:
+Aktiv (`tower100-playable`, zufällig gleichverteilt mit den anderen Demos) in `calm-arrow-puzzle-playables`, `dame-playables`, `drop-match-playables`, `muehle-playables`, `zip-werbe` und `kettro-werbe` (dort auch bei den Belohnungsanzeigen, erst ab dem Kettro-Build mit Ordner-Freigabe). Nicht in Arrow Puzzle, das seine Auswahl im Code sperrt, und nicht in Claw Machine Heroes, das auf Arrow Puzzle, Sort Rush und Königinnen festgelegt ist. Das Symbol liegt unter `images/icons/tower100.png`, weil die Apps es nicht mitliefern. Eintrag für weitere Configs:
 
 ```json
 {
@@ -38,7 +38,7 @@ Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedI
   "kind": "game",
   "title": { "de": "TOWER 100", "en": "TOWER 100" },
   "tagline": { "de": "Drei echte Escape-Rooms – direkt hier lösen.", "en": "Three real escape rooms – solve them right here." },
-  "icon": "icons/tower100.png",
+  "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
   "media": {
     "portrait": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html" },
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html" }
@@ -50,4 +50,4 @@ Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedI
 }
 ```
 
-In TOWER 100 selbst nicht eintragen (`excludeSelf`). Kettro braucht wie bei Königinnen einen neuen Build, weil `integrations/kettro/promo.gd` nur fest freigegebene Playable-Dateien lädt.
+In TOWER 100 selbst nicht eintragen (`excludeSelf`).
