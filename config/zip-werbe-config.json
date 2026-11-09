@@ -6,7 +6,8 @@
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
-      "calm-arrow-puzzle-playable"
+      "calm-arrow-puzzle-playable",
+      "quiznova-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -795,6 +796,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "quiznova-playable",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "QuizNova"
+      },
+      "tagline": {
+        "de": "Drei Fragen, ein Versuch: Wie viel weißt du? Direkt hier spielen.",
+        "en": "Three questions, one shot: how much do you know? Play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "quiz"
       ]
     }
   ],

@@ -1,14 +1,15 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Kettro: je 1/4 Arrow Puzzle, Sort Rush, Königinnen und Claw Machine Heroes, alle spielbar. Claw Machine Heroes erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
+  "_hinweis": "Kettro: je 1/5 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes und QuizNova, alle spielbar. Claw Machine Heroes und QuizNova erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
   "config": {
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
       "sort-rush-playable",
       "koeniginnen-playable",
-      "claw-machine-heroes-playable"
+      "claw-machine-heroes-playable",
+      "quiznova-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -862,6 +863,38 @@
         "playable",
         "idle"
       ]
+    },
+    {
+      "id": "quiznova-playable",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "QuizNova"
+      },
+      "tagline": {
+        "de": "Drei Fragen, ein Versuch: Wie viel weißt du? Direkt hier spielen.",
+        "en": "Three questions, one shot: how much do you know? Play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "quiz"
+      ]
     }
   ],
   "rewarded": {
@@ -869,7 +902,8 @@
       "arrow-puzzle-playable",
       "sort-rush-playable",
       "koeniginnen-playable",
-      "claw-machine-heroes-playable"
+      "claw-machine-heroes-playable",
+      "quiznova-playable"
     ]
   }
 }
