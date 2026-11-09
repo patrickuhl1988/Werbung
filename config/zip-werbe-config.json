@@ -1,11 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-09",
   "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
     "selectedIds": [
-      "arrow-puzzle-playable"
+      "arrow-puzzle-playable",
+      "calm-arrow-puzzle-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -758,6 +759,38 @@
         "android": "app.arrowpuzzle"
       },
       "accent": "#FF9A4D",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "calm-arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Calm Arrow Puzzle",
+        "en": "Calm Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Pfeile wegtippen, Bild entdecken – direkt hier spielen.",
+        "en": "Tap the arrows away, reveal the picture – play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        }
+      },
+      "target": {
+        "android": "com.neondrift.nightrun"
+      },
+      "accent": "#63784F",
       "status": "live",
       "tags": [
         "playable",

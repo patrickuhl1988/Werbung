@@ -26,7 +26,18 @@ Geprüft am 09.11.2026: alle drei Level lösbar, Regeltest, sieben Sprachen voll
 
 ## Einbinden
 
-Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedIds` aufnehmen:
+Seit 09.11.2026 als `calm-arrow-puzzle-playable` in `selectedIds` von:
+
+| Config | Wirkt |
+|---|---|
+| `dame-playables-config.json` | sofort in Dame Meister ab 1.8.0 (je ein Fünftel mit Arrow Puzzle, Sort Rush, Königinnen, Mühle) |
+| `muehle-playables-config.json` | sofort in Mühle Meister mit Werbemodul 1.2.0 |
+| `zip-werbe-config.json` | sofort in Zip (neben Arrow Puzzle) |
+| `arrow-puzzle-werbe-config.json` | erst mit einem Build, der die Auswahl aus der Config übernimmt (App sperrt sie per `lockedConfig`) |
+
+Nicht eingetragen: Kettro (`integrations/kettro/promo.gd` lädt nur fest freigegebene Dateien je Paket) und Claw Machine Heroes (Auswahl im Adapter gesperrt). Beide brauchen dafür einen neuen Build. In Calm Arrow Puzzle selbst nie eintragen (`excludeSelf`).
+
+Das Icon liegt als volle Adresse `https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png` im Eintrag, weil es in den App-Paketen noch fehlt. Eintrag für weitere Configs:
 
 ```json
 {
@@ -34,7 +45,7 @@ Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedI
   "kind": "game",
   "title": { "de": "Calm Arrow Puzzle", "en": "Calm Arrow Puzzle" },
   "tagline": { "de": "Pfeile wegtippen, Bild entdecken – direkt hier spielen.", "en": "Tap the arrows away, reveal the picture – play it right here." },
-  "icon": "icons/calm-arrow-puzzle.png",
+  "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png",
   "media": {
     "portrait": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html" },
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html" }
@@ -46,4 +57,4 @@ Noch in keiner Config aktiv. Eintrag für `creatives`, dann die ID in `selectedI
 }
 ```
 
-Das Icon `icons/calm-arrow-puzzle.png` fehlt noch im Asset-Ordner des Werbemoduls. Bis es dort liegt, zeigt das Modul im Fehlerfall die farbige Ersatzkachel. In Calm Arrow Puzzle selbst nicht eintragen (`excludeSelf`). Kettro und Claw Machine Heroes brauchen wie bei Königinnen einen neuen Build, weil ihre Adapter nur fest freigegebene Playable-Dateien laden. Playables nie über jsDelivr oder raw.githubusercontent.com laden (liefern `text/plain`).
+Playables nie über jsDelivr oder raw.githubusercontent.com laden (liefern `text/plain`).

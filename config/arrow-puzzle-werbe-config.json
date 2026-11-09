@@ -1,12 +1,13 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 (neuer App-Build) nur die spielbaren Demos von Sort Rush und Koeniginnen, zufaellig je zur Haelfte; laedt eine Demo nicht, springt das Sort-Rush-Bild ein. Die App sperrt die Auswahl im Code (lockedConfig) - diese Datei liefert vor allem die Anzeigen selbst. Installierte aeltere Builds zeigen weiter ihre bisherigen Bildanzeigen. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "updatedAt": "2026-11-09",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 (neuer App-Build) nur die spielbaren Demos von Sort Rush und Koeniginnen, zufaellig je zur Haelfte; Calm Arrow Puzzle steht ab 09.11.2026 bereit und erscheint, sobald ein Build die Auswahl aus dieser Datei uebernimmt (lockedConfig); laedt eine Demo nicht, springt das Sort-Rush-Bild ein. Die App sperrt die Auswahl im Code (lockedConfig) - diese Datei liefert vor allem die Anzeigen selbst. Installierte aeltere Builds zeigen weiter ihre bisherigen Bildanzeigen. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
       "sort-rush-playable",
-      "koeniginnen-playable"
+      "koeniginnen-playable",
+      "calm-arrow-puzzle-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -430,6 +431,38 @@
         "android": "de.patrickuhl.koeniginnen"
       },
       "accent": "#527E58",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "calm-arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Calm Arrow Puzzle",
+        "en": "Calm Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Pfeile wegtippen, Bild entdecken – direkt hier spielen.",
+        "en": "Tap the arrows away, reveal the picture – play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        }
+      },
+      "target": {
+        "android": "com.neondrift.nightrun"
+      },
+      "accent": "#63784F",
       "status": "live",
       "tags": [
         "playable",
