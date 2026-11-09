@@ -1,0 +1,16 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QA-Host Calm Arrow Puzzle</title>
+<style>body{margin:0;font:13px system-ui;padding:8px;background:#ddd}iframe{border:1px solid #888;background:#fff;margin:4px;vertical-align:top}#log{white-space:pre-wrap;font-family:monospace;margin-top:6px}</style></head>
+<body><div id="frames"></div><div><button id="mute">wm:mute an</button> <button id="unmute">wm:mute aus</button> <button id="pause">wm:pause</button> <button id="resume">wm:resume</button></div><div id="log"></div>
+<script>
+// Prüft die Nachrichtenbrücke wie das Werbemodul (PlayableAd.tsx): wm:ready / wm:cleared / wm:cta hinein, wm:mute / wm:pause / wm:resume hinaus.
+const sizes=(new URLSearchParams(location.search).get('sizes')||'390x780').split(',');
+const lang=new URLSearchParams(location.search).get('lang')||'de';
+const frames=[];
+for (const s of sizes){const [w,h]=s.split('x');const f=document.createElement('iframe');f.style.width=w+'px';f.style.height=h+'px';f.src='../../calm-arrow-puzzle.html?lang='+lang+'&muted=1';f.sandbox='allow-scripts allow-same-origin';f.allow='autoplay';document.getElementById('frames').append(f);frames.push(f);}
+window.__log=[];
+const log=(t)=>{document.getElementById('log').textContent+=new Date().toISOString().slice(11,19)+' '+t+'\n';window.__log.push(t)};
+window.addEventListener('message',(e)=>{const i=frames.findIndex(f=>f.contentWindow===e.source);if(i>=0)log(i+' '+JSON.stringify(e.data))});
+const send=(m)=>{for(const f of frames)f.contentWindow.postMessage(m,'*');log('→ '+JSON.stringify(m))};
+mute.onclick=()=>send({type:'wm:mute',muted:true});unmute.onclick=()=>send(JSON.stringify({type:'wm:mute',muted:false}));
+pause.onclick=()=>send({type:'wm:pause'});resume.onclick=()=>send({type:'wm:resume'});
+</script></body></html>
