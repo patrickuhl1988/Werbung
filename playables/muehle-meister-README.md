@@ -2,8 +2,9 @@
 
 Live: https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html
 
-Zweite Mühle-Demo neben `muehle.html`. Beide bleiben vorerst nebeneinander liegen, damit man sie vergleichen kann.
-Eingetragen ist diese Variante noch in keiner Config.
+Zweite Mühle-Demo neben `muehle.html` (Endspiel-Variante). Nach dem Vergleich am 09.11.2026 gewählt: Die Creative-ID
+`muehle-meister-playable` zeigt jetzt überall auf diese Datei. `muehle.html` bleibt liegen, wird aber von keiner Config
+mehr verwendet.
 
 Eine eigenständige HTML-Datei (277 KB), ohne externe Bibliotheken, Nachladen oder Tracking. Drei kurze Rätsel, die
 nacheinander die Kernmomente des Spiels zeigen:
@@ -57,7 +58,12 @@ anderen Anzeigen. Außerhalb unserer Apps fällt der Store-Knopf auf `mraid.open
 
 ## Einbinden
 
-Wie `koeniginnen-playable`: Eintrag in `creatives`, ID in `selectedIds` (und bei Kettro zusätzlich in
+Eingetragen (Creative + `selectedIds`, bei Kettro auch `rewarded.selectedIds`) seit 09.11.2026 in:
+`arrow-puzzle-werbe-config.json`, `claw-machine-heroes-playables-config.json`, `claw-machine-heroes-werbe-config.json`,
+`kettro-werbe-config.json` (wie Königinnen) sowie `dame-playables-config.json` und `drop-match-playables-config.json`
+(dort ersetzt sie die Endspiel-Variante). Akzentfarbe `#e0b15e` wie im Katalog des Werbemoduls.
+
+Neue Configs wie `koeniginnen-playable`: Eintrag in `creatives`, ID in `selectedIds` (und bei Kettro zusätzlich in
 `rewarded.selectedIds`). In der Mühle-Meister-App selbst nicht eintragen (`excludeSelf`).
 
 ```json
@@ -72,13 +78,12 @@ Wie `koeniginnen-playable`: Eintrag in `creatives`, ID in `selectedIds` (und bei
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html" }
   },
   "target": { "android": "app.muehle.muehle" },
-  "accent": "#ffffff",
+  "accent": "#e0b15e",
   "status": "live",
   "tags": ["playable", "board"]
 }
 ```
 
-Die ID `muehle-meister-playable` schlägt auch `muehle-README.md` für die andere Variante vor. Eingetragen wird nur die
-gewählte Variante, die `src` zeigt dann auf deren Datei. Kettro lädt Playables aus der Config ohne neuen Build
+Kettro lädt Playables aus der Config ohne neuen Build
 (seit dem Drei-Spiele-Adapter genügt die Origin-Allowlist). Arrow Puzzle und Claw Machine Heroes sperren ihre Auswahl
 im Code (`lockedConfig`): Dort erscheint eine neue Anzeige erst mit dem nächsten App-Build.

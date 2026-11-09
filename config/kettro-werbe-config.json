@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Kettro: je 1/5 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes und QuizNova, alle spielbar. Claw Machine Heroes und QuizNova erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
+  "_hinweis": "Kettro: je 1/6 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova und Mühle Meister, alle spielbar. Claw Machine Heroes, QuizNova und Mühle Meister erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -9,7 +9,8 @@
       "sort-rush-playable",
       "koeniginnen-playable",
       "claw-machine-heroes-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "muehle-meister-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -833,6 +834,38 @@
       ]
     },
     {
+      "id": "muehle-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Mühle Meister",
+        "en": "Nine Men's Morris"
+      },
+      "tagline": {
+        "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
+        "en": "Close the mill, master the double mill – play it right here."
+      },
+      "icon": "icons/muehle-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        }
+      },
+      "target": {
+        "android": "app.muehle.muehle"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "board"
+      ]
+    },
+    {
       "id": "claw-machine-heroes-playable",
       "kind": "game",
       "title": {
@@ -903,7 +936,8 @@
       "sort-rush-playable",
       "koeniginnen-playable",
       "claw-machine-heroes-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "muehle-meister-playable"
     ]
   }
 }

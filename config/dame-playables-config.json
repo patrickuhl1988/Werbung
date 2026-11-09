@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Dame Meister ab Version 1.8.0 (versionCode 10, Werbemodul 1.2.0): nur die spielbaren Demos von Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle und QuizNova, zufällig je ein Sechstel. Timing wie bisher (alle 3 Partien nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erste Partie werbefrei). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter dame-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
+  "_hinweis": "Dame Meister ab Version 1.8.0 (versionCode 10, Werbemodul 1.2.0): nur die spielbaren Demos von Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle und QuizNova, zufällig je ein Sechstel. Timing wie bisher (alle 3 Partien nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erste Partie werbefrei). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter dame-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -147,31 +147,31 @@
       "kind": "game",
       "title": {
         "de": "Mühle Meister",
-        "en": "Nine Men's Morris Master"
+        "en": "Nine Men's Morris"
       },
       "tagline": {
-        "de": "Schließe die Mühle. Drei echte Rätsel – direkt hier spielen.",
-        "en": "Close the mill. Three real puzzles – play them right here."
+        "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
+        "en": "Close the mill, master the double mill – play it right here."
       },
       "icon": "icons/muehle-meister.png",
       "media": {
         "portrait": {
           "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle.html"
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
         },
         "landscape": {
           "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle.html"
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
         }
       },
       "target": {
         "android": "app.muehle.muehle"
       },
-      "accent": "#C97721",
+      "accent": "#e0b15e",
       "status": "live",
       "tags": [
         "playable",
-        "puzzle"
+        "board"
       ]
     },
     {

@@ -1,13 +1,14 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 (neuer App-Build) nur die spielbaren Demos von Sort Rush und Koeniginnen, zufaellig je zur Haelfte; Calm Arrow Puzzle steht ab 09.11.2026 bereit und erscheint, sobald ein Build die Auswahl aus dieser Datei uebernimmt (lockedConfig); laedt eine Demo nicht, springt das Sort-Rush-Bild ein. Die App sperrt die Auswahl im Code (lockedConfig) - diese Datei liefert vor allem die Anzeigen selbst. Installierte aeltere Builds zeigen weiter ihre bisherigen Bildanzeigen. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 (neuer App-Build) nur die spielbaren Demos von Sort Rush und Koeniginnen, zufaellig je zur Haelfte; Calm Arrow Puzzle und Mühle Meister (Zwickmühle) stehen ab 09.11.2026 bereit und erscheint, sobald ein Build die Auswahl aus dieser Datei uebernimmt (lockedConfig); laedt eine Demo nicht, springt das Sort-Rush-Bild ein. Die App sperrt die Auswahl im Code (lockedConfig) - diese Datei liefert vor allem die Anzeigen selbst. Installierte aeltere Builds zeigen weiter ihre bisherigen Bildanzeigen. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
       "sort-rush-playable",
       "koeniginnen-playable",
-      "calm-arrow-puzzle-playable"
+      "calm-arrow-puzzle-playable",
+      "muehle-meister-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -435,6 +436,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "muehle-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Mühle Meister",
+        "en": "Nine Men's Morris"
+      },
+      "tagline": {
+        "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
+        "en": "Close the mill, master the double mill – play it right here."
+      },
+      "icon": "icons/muehle-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        }
+      },
+      "target": {
+        "android": "app.muehle.muehle"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "board"
       ]
     },
     {

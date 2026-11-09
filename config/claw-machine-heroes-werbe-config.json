@@ -1,13 +1,14 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Store-Builds von Claw Machine Heroes (Werbemodul 1.0.0): ab 09.11.2026 nur Arrow Puzzle, Sort Rush und Königinnen als spielbare Demo, keine Bilder oder Videos (Nutzerentscheidung). 1.0.0 kann Demos nicht darstellen und zeigt stattdessen die Kachel des Spiels ohne Belohnung. Builds ab Werbemodul 1.2.0-cmh.3 lesen claw-machine-heroes-playables-config.json. Vorherige Fassung (23 Bild-/Videoanzeigen) vom 30.09.2026.",
+  "_hinweis": "Store-Builds von Claw Machine Heroes (Werbemodul 1.0.0): ab 09.11.2026 nur Arrow Puzzle, Sort Rush, Königinnen und Mühle Meister als spielbare Demo, keine Bilder oder Videos (Nutzerentscheidung). 1.0.0 kann Demos nicht darstellen und zeigt stattdessen die Kachel des Spiels ohne Belohnung. Builds ab Werbemodul 1.2.0-cmh.3 lesen claw-machine-heroes-playables-config.json. Vorherige Fassung (23 Bild-/Videoanzeigen) vom 30.09.2026.",
   "config": {
     "enabled": true,
     "selectedIds": [
       "arrow-puzzle-playable",
       "sort-rush-playable",
-      "koeniginnen-playable"
+      "koeniginnen-playable",
+      "muehle-meister-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -137,6 +138,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "muehle-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Mühle Meister",
+        "en": "Nine Men's Morris"
+      },
+      "tagline": {
+        "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
+        "en": "Close the mill, master the double mill – play it right here."
+      },
+      "icon": "icons/muehle-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        }
+      },
+      "target": {
+        "android": "app.muehle.muehle"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "board"
       ]
     }
   ]
