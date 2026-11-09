@@ -51,3 +51,5 @@ Aktiv (`tower100-playable`, zufällig gleichverteilt mit den anderen Demos) in `
 ```
 
 In TOWER 100 selbst nicht eintragen (`excludeSelf`).
+
+TOWER 100 selbst zeigt ab 0.3.3 (Werbemodul 1.2.0) die spielbaren Demos der anderen Spiele als freiwillige Belohnung für einen Hinweis. Die Auswahl steht in `config/relic-tower-playables-config.json`. 0.3.2 und älter lesen weiter `relic-tower-werbe-config.json`.
