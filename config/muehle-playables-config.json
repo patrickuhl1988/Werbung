@@ -9,7 +9,8 @@
       "koeniginnen-playable",
       "calm-arrow-puzzle-playable",
       "quiznova-playable",
-      "tower100-playable"
+      "tower100-playable",
+      "claw-machine-heroes-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -235,6 +236,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "claw-machine-heroes-playable",
+      "kind": "game",
+      "title": {
+        "de": "Claw Machine Heroes",
+        "en": "Claw Machine Heroes"
+      },
+      "tagline": {
+        "de": "Greifen, ausrüsten, siegen – probier den Greifautomaten direkt hier.",
+        "en": "Grab, gear up, win – try the claw machine right here."
+      },
+      "icon": "icons/claw-machine-heroes.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        }
+      },
+      "target": {
+        "android": "com.uhl.clawmachineheroes"
+      },
+      "accent": "#ff3f8e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "idle"
       ]
     }
   ]
