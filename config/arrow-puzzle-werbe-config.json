@@ -1,15 +1,17 @@
 {
   "version": 1,
   "updatedAt": "2026-11-09",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Seit Werbemodul 1.2.0 nur spielbare Demos, zufaellig gleich oft: Sort Rush, Koeniginnen, Calm Arrow Puzzle, Mühle Meister (Zwickmühle), Claw Machine Heroes und TOWER 100 (je ein Sechstel). Ab dem naechsten Arrow-Puzzle-Build nach 1.14.0 (versionCode 25) bestimmt diese Datei die Auswahl (selectedIds, rotation); Timing und Takt bleiben im Code gesperrt. Aeltere Builds sperren die Auswahl im Code (lockedConfig) und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Achtel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova und TOWER 100. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
       "sort-rush-playable",
       "koeniginnen-playable",
-      "calm-arrow-puzzle-playable",
-      "muehle-meister-playable",
       "claw-machine-heroes-playable",
+      "calm-arrow-puzzle-playable",
+      "dame-meister-playable",
+      "muehle-meister-playable",
+      "quiznova-playable",
       "tower100-playable"
     ],
     "defaultUnlockSeconds": 5,
@@ -566,6 +568,71 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "dame-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Dame Meister",
+        "en": "Checkers Master"
+      },
+      "tagline": {
+        "de": "Schlag zu: Drei echte Dame-Rätsel – direkt hier spielen.",
+        "en": "Strike now: three real checkers puzzles – play them right here."
+      },
+      "icon": "icons/dame-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        }
+      },
+      "target": {
+        "android": "de.damemeister.app"
+      },
+      "accent": "#206A65",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle",
+        "board"
+      ]
+    },
+    {
+      "id": "quiznova-playable",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "QuizNova"
+      },
+      "tagline": {
+        "de": "Drei Fragen, ein Versuch: Wie viel weißt du? Direkt hier spielen.",
+        "en": "Three questions, one shot: how much do you know? Play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "quiz"
       ]
     }
   ]
