@@ -1,6 +1,6 @@
 # SONARIS – spielbare Anzeige
 
-Live (nach dem Hochladen): https://patrickuhl1988.github.io/Werbung/playables/sonaris.html
+Live: https://patrickuhl1988.github.io/Werbung/playables/sonaris.html
 
 Eine eigenständige HTML-Datei (542 KB), ohne externe Bibliotheken, Nachladen oder Tracking. Gespielt wird das Minispiel **Ring-Jagd** der 3D-Fassung in einer echten 3D-Szene (WebGL, eigener kleiner Renderer): Kai schwimmt mit Lumen durch die Arena, acht Ringe tauchen nacheinander auf, jeder schenkt 2 s. Unterwegs liegen Muscheln, Dash und Echo funktionieren wie im Spiel. Nach dem achten Ring oder wenn die Zeit um ist, kommt die Ergebniskarte mit Store-Knopf und „Nochmal schwimmen“. Ablauf etwa 20–30 s.
 
