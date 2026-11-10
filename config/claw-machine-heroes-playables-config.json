@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (neuer App-Build): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100 und SONARIS, zufällig je ein Neuntel (seit 10.11.2026). Ab dem nächsten CMH-Build bestimmt diese Datei die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Builds mit gesperrter Auswahl zeigen weiter nur Arrow Puzzle, Sort Rush und Königinnen. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds lesen weiter claw-machine-heroes-werbe-config.json.",
+  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (App-Build nach 0.8.2): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100 und SONARIS, zufällig je ein Neuntel (seit 10.11.2026). Diese Datei bestimmt die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Neue Demo = Creative + ID hier eintragen, kein App-Build nötig. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds (Werbemodul 1.0.0) lesen weiter claw-machine-heroes-werbe-config.json.",
   "config": {
     "enabled": true,
     "selectedIds": [
