@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-10",
   "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
   "config": {
     "enabled": true,
@@ -8,7 +8,8 @@
       "arrow-puzzle-playable",
       "calm-arrow-puzzle-playable",
       "quiznova-playable",
-      "tower100-playable"
+      "tower100-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -861,6 +862,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ],

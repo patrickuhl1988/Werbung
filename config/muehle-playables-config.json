@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-10",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,8 @@
       "calm-arrow-puzzle-playable",
       "quiznova-playable",
       "tower100-playable",
-      "claw-machine-heroes-playable"
+      "claw-machine-heroes-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -268,6 +269,38 @@
       "tags": [
         "playable",
         "idle"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ]

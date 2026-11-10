@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Achtel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova und TOWER 100. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "updatedAt": "2026-11-10",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Neuntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100 und SONARIS. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -12,7 +12,8 @@
       "dame-meister-playable",
       "muehle-meister-playable",
       "quiznova-playable",
-      "tower100-playable"
+      "tower100-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -633,6 +634,38 @@
       "tags": [
         "playable",
         "quiz"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ]

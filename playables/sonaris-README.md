@@ -45,7 +45,7 @@ Geprüft: 8 Tests (Größe, keine externen Adressen, Modelle, Klänge, sieben Sp
 
 ## Einbinden
 
-Noch in keiner Config eingetragen. Eintrag für `creatives`:
+Seit dem 10.11.2026 aktiv (`sonaris-playable`, zufällig gleichverteilt mit den anderen Demos) in `arrow-puzzle-werbe`, `calm-arrow-puzzle-playables`, `claw-machine-heroes-playables`, `dame-playables`, `drop-match-playables`, `kettro-werbe` (dort auch bei den Belohnungsanzeigen), `koeniginnen-playables`, `muehle-playables`, `quiznova-playables`, `relic-tower-playables` und `zip-werbe`. Sie erscheint nur in Builds, die jede Demo aus `/Werbung/playables/` zulassen (Werbemodul 1.2.0 bzw. Ordner-Freigabe); ältere Builds zeigen weiter ihre bisherige Auswahl. Nicht eingetragen in `claw-machine-heroes-werbe` (alte Builds mit fester Liste) und `sonaris-playables` (eigenes Spiel). Das Symbol liegt unter `images/icons/sonaris.png`. Eintrag für weitere Configs:
 
 ```json
 {
@@ -53,7 +53,7 @@ Noch in keiner Config eingetragen. Eintrag für `creatives`:
   "kind": "game",
   "title": { "de": "SONARIS", "en": "SONARIS" },
   "tagline": { "de": "Schwimm mit Kai durch die Ringe – direkt hier.", "en": "Swim through the rings with Kai – right here." },
-  "icon": "icons/sonaris.png",
+  "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
   "media": {
     "portrait": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html" },
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html" }

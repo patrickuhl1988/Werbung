@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
-  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf).",
+  "updatedAt": "2026-11-10",
+  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -12,7 +12,8 @@
       "calm-arrow-puzzle-playable",
       "tower100-playable",
       "claw-machine-heroes-playable",
-      "dame-meister-playable"
+      "dame-meister-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -303,6 +304,38 @@
         "playable",
         "puzzle",
         "board"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ]

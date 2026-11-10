@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
-  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (neuer App-Build): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova und TOWER 100, zufällig je ein Achtel (seit 09.11.2026). Ab dem nächsten CMH-Build bestimmt diese Datei die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Builds mit gesperrter Auswahl zeigen weiter nur Arrow Puzzle, Sort Rush und Königinnen. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds lesen weiter claw-machine-heroes-werbe-config.json.",
+  "updatedAt": "2026-11-10",
+  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (neuer App-Build): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100 und SONARIS, zufällig je ein Neuntel (seit 10.11.2026). Ab dem nächsten CMH-Build bestimmt diese Datei die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Builds mit gesperrter Auswahl zeigen weiter nur Arrow Puzzle, Sort Rush und Königinnen. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds lesen weiter claw-machine-heroes-werbe-config.json.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -12,7 +12,8 @@
       "calm-arrow-puzzle-playable",
       "dame-meister-playable",
       "quiznova-playable",
-      "tower100-playable"
+      "tower100-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -292,6 +293,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ]

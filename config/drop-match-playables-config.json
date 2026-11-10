@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
-  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
+  "updatedAt": "2026-11-10",
+  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100, SONARIS), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,8 @@
       "koeniginnen-playable",
       "muehle-meister-playable",
       "calm-arrow-puzzle-playable",
-      "tower100-playable"
+      "tower100-playable",
+      "sonaris-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -236,6 +237,38 @@
       "tags": [
         "playable",
         "puzzle"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
       ]
     }
   ]
