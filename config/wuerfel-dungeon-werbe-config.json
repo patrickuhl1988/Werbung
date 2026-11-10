@@ -1,10 +1,21 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
-  "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "updatedAt": "2026-11-10",
+  "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 10.11.2026 nur spielbare HTML-Anzeigen (Playables) ausgewählt.",
   "config": {
     "enabled": true,
-    "selectedIds": ["bridge-royale", "zip", "nova-knock", "nullweave", "pop-order", "seifen-atelier", "sort-rush", "tiefsee-tempel", "wuerfel-dungeon", "quiznova-bild", "arrow-puzzle-bild-1", "muehle-meister-bild-1", "kiosk-simulator-bild-1", "lucky-catch-bild-1", "sonaris-bild-1", "dame-meister-bild-1", "lumenfall-bild-1", "drop-match-bild-1", "feierabend-rush", "pop-order-bild-2", "seifen-atelier-bild-2", "tiefsee-tempel-bild-2"],
+    "selectedIds": [
+      "arrow-puzzle-playable",
+      "calm-arrow-puzzle-playable",
+      "claw-machine-heroes-playable",
+      "dame-meister-playable",
+      "koeniginnen-playable",
+      "muehle-meister-playable",
+      "quiznova-playable",
+      "sonaris-playable",
+      "sort-rush-playable",
+      "tower100-playable"
+    ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
     "perAdUnlockSeconds": {},
@@ -45,7 +56,7 @@
       "Godot browser beta",
       "Legacy Web/Capacitor"
     ],
-    "adapter": "Existing Werbemodul 1.0.0; native Android WebViewAssetLoader host",
+    "adapter": "Werbemodul 1.2.0 (HTML-Anzeigen) ab Android 25.0.0; 24.0.0 und älter nutzen 1.1.0 ohne HTML-Anzeigen; native Android WebViewAssetLoader host",
     "placements": "Completed runs, released from result screen at a safe menu; no overlay during combat",
     "analytics": "Independent, optional Firebase Analytics and Crashlytics in Android only"
   },
@@ -739,6 +750,327 @@
       "status": "live",
       "tags": [
         "werbebild"
+      ]
+    },
+    {
+      "id": "arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Arrow Puzzle",
+        "en": "Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Probier es gleich hier: Tippe die freien Pfeile an und löse den Fuchs.",
+        "en": "Try it right here: tap the free arrows and solve the fox."
+      },
+      "icon": "icons/arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/arrow-puzzle-fox.html"
+        }
+      },
+      "target": {
+        "android": "app.arrowpuzzle"
+      },
+      "accent": "#FF9A4D",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "calm-arrow-puzzle-playable",
+      "kind": "game",
+      "title": {
+        "de": "Calm Arrow Puzzle",
+        "en": "Calm Arrow Puzzle"
+      },
+      "tagline": {
+        "de": "Pfeile wegtippen, Bild entdecken – direkt hier spielen.",
+        "en": "Tap the arrows away, reveal the picture – play it right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/calm-arrow-puzzle.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/calm-arrow-puzzle.html"
+        }
+      },
+      "target": {
+        "android": "com.neondrift.nightrun"
+      },
+      "accent": "#63784F",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "claw-machine-heroes-playable",
+      "kind": "game",
+      "title": {
+        "de": "Claw Machine Heroes",
+        "en": "Claw Machine Heroes"
+      },
+      "tagline": {
+        "de": "Greifen, ausrüsten, siegen – probier den Greifautomaten direkt hier.",
+        "en": "Grab, gear up, win – try the claw machine right here."
+      },
+      "icon": "icons/claw-machine-heroes.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/claw-machine-heroes.html"
+        }
+      },
+      "target": {
+        "android": "com.uhl.clawmachineheroes"
+      },
+      "accent": "#ff3f8e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "idle"
+      ]
+    },
+    {
+      "id": "dame-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Dame Meister",
+        "en": "Checkers Master"
+      },
+      "tagline": {
+        "de": "Schlag zu: Drei echte Dame-Rätsel – direkt hier spielen.",
+        "en": "Strike now: three real checkers puzzles – play them right here."
+      },
+      "icon": "icons/dame-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/dame-meister.html"
+        }
+      },
+      "target": {
+        "android": "de.damemeister.app"
+      },
+      "accent": "#206A65",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle",
+        "board"
+      ]
+    },
+    {
+      "id": "koeniginnen-playable",
+      "kind": "game",
+      "title": {
+        "de": "Königinnen",
+        "en": "Queens"
+      },
+      "tagline": {
+        "de": "Setze die Kronen. Ein echtes Rätsel – direkt hier spielen.",
+        "en": "Place the crowns. A real puzzle — play it right here."
+      },
+      "icon": "icons/koeniginnen.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/koeniginnen.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.koeniginnen"
+      },
+      "accent": "#527E58",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "muehle-meister-playable",
+      "kind": "game",
+      "title": {
+        "de": "Mühle Meister",
+        "en": "Nine Men's Morris"
+      },
+      "tagline": {
+        "de": "Schließe die Mühle, meistere die Zwickmühle – direkt hier spielen.",
+        "en": "Close the mill, master the double mill – play it right here."
+      },
+      "icon": "icons/muehle-meister.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/muehle-meister.html"
+        }
+      },
+      "target": {
+        "android": "app.muehle.muehle"
+      },
+      "accent": "#e0b15e",
+      "status": "live",
+      "tags": [
+        "playable",
+        "board"
+      ]
+    },
+    {
+      "id": "quiznova-playable",
+      "kind": "game",
+      "title": {
+        "de": "QuizNova",
+        "en": "QuizNova"
+      },
+      "tagline": {
+        "de": "Drei Fragen, ein Versuch: Wie viel weißt du? Direkt hier spielen.",
+        "en": "Three questions, one shot: how much do you know? Play it right here."
+      },
+      "icon": "icons/quiznova.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/quiznova.html"
+        }
+      },
+      "target": {
+        "android": "de.uhl.quiznova"
+      },
+      "accent": "#8b7bff",
+      "status": "live",
+      "tags": [
+        "playable",
+        "quiz"
+      ]
+    },
+    {
+      "id": "sonaris-playable",
+      "kind": "game",
+      "title": {
+        "de": "SONARIS",
+        "en": "SONARIS"
+      },
+      "tagline": {
+        "de": "Schwimm mit Kai durch die Ringe – direkt hier.",
+        "en": "Swim through the rings with Kai – right here."
+      },
+      "icon": "icons/sonaris.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sonaris.html"
+        }
+      },
+      "target": {
+        "android": "com.sonaris.drownedcity"
+      },
+      "accent": "#74f7d2",
+      "status": "live",
+      "tags": [
+        "playable",
+        "adventure"
+      ]
+    },
+    {
+      "id": "sort-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Sort Rush",
+        "en": "Sort Rush"
+      },
+      "tagline": {
+        "de": "Jetzt ausprobieren: Sortiere die Farben in ihre Röhren.",
+        "en": "Try it now: sort the colours into their tubes."
+      },
+      "icon": "icons/sort-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/sort-rush.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.sortrush"
+      },
+      "accent": "#63d9ae",
+      "status": "live",
+      "tags": [
+        "playable",
+        "sort"
+      ]
+    },
+    {
+      "id": "tower100-playable",
+      "kind": "game",
+      "title": {
+        "de": "TOWER 100",
+        "en": "TOWER 100"
+      },
+      "tagline": {
+        "de": "Drei echte Escape-Rooms – direkt hier lösen.",
+        "en": "Three real escape rooms – solve them right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/tower100.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/tower100.html"
+        }
+      },
+      "target": {
+        "android": "org.relictower.awakening"
+      },
+      "accent": "#FFB547",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]
