@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf).",
+  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS, FUNDFIEBER), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -13,7 +13,8 @@
       "tower100-playable",
       "claw-machine-heroes-playable",
       "dame-meister-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -336,6 +337,38 @@
       "tags": [
         "playable",
         "adventure"
+      ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
       ]
     }
   ]

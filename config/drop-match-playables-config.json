@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100, SONARIS), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
+  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100, SONARIS, FUNDFIEBER), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -11,7 +11,8 @@
       "muehle-meister-playable",
       "calm-arrow-puzzle-playable",
       "tower100-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -269,6 +270,38 @@
       "tags": [
         "playable",
         "adventure"
+      ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
       ]
     }
   ]

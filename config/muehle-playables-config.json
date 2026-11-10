@@ -11,7 +11,8 @@
       "quiznova-playable",
       "tower100-playable",
       "claw-machine-heroes-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -301,6 +302,38 @@
       "tags": [
         "playable",
         "adventure"
+      ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
       ]
     }
   ]

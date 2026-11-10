@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Neuntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100 und SONARIS. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -13,7 +13,8 @@
       "muehle-meister-playable",
       "quiznova-playable",
       "tower100-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -666,6 +667,38 @@
       "tags": [
         "playable",
         "adventure"
+      ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
       ]
     }
   ]

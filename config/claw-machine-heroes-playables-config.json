@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (App-Build nach 0.8.2): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100 und SONARIS, zufällig je ein Neuntel (seit 10.11.2026). Diese Datei bestimmt die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Neue Demo = Creative + ID hier eintragen, kein App-Build nötig. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds (Werbemodul 1.0.0) lesen weiter claw-machine-heroes-werbe-config.json.",
+  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (App-Build nach 0.8.2): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100, SONARIS und FUNDFIEBER, zufällig je ein Zehntel (seit 10.11.2026). Diese Datei bestimmt die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Neue Demo = Creative + ID hier eintragen, kein App-Build nötig. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds (Werbemodul 1.0.0) lesen weiter claw-machine-heroes-werbe-config.json.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -13,7 +13,8 @@
       "dame-meister-playable",
       "quiznova-playable",
       "tower100-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -325,6 +326,38 @@
       "tags": [
         "playable",
         "adventure"
+      ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-10",
-  "_hinweis": "Kettro: je 1/8 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100 und SONARIS, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100 und SONARIS erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
+  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -12,7 +12,8 @@
       "quiznova-playable",
       "muehle-meister-playable",
       "tower100-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -994,6 +995,38 @@
         "playable",
         "adventure"
       ]
+    },
+    {
+      "id": "fundfieber-playable",
+      "kind": "game",
+      "title": {
+        "de": "FUNDFIEBER",
+        "en": "FUNDFIEBER"
+      },
+      "tagline": {
+        "de": "Such mit dem Metalldetektor den Strand ab – direkt hier.",
+        "en": "Sweep the beach with your metal detector – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/fundfieber.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/fundfieber.html"
+        }
+      },
+      "target": {
+        "android": "com.novaknock.gravitydemolition"
+      },
+      "accent": "#009F93",
+      "status": "live",
+      "tags": [
+        "playable",
+        "simulation"
+      ]
     }
   ],
   "rewarded": {
@@ -1005,7 +1038,8 @@
       "quiznova-playable",
       "muehle-meister-playable",
       "tower100-playable",
-      "sonaris-playable"
+      "sonaris-playable",
+      "fundfieber-playable"
     ]
   }
 }

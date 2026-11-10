@@ -51,7 +51,7 @@ Geprüft im Browser (Edge, auch ohne Fenster): ganzer Selbstlauf bis zur Abschlu
 
 ## Einbinden
 
-Noch in keiner Config eingetragen. Das Symbol liegt unter `images/icons/fundfieber.png`. Eintrag:
+Seit dem 10.11.2026 aktiv (`fundfieber-playable`, zufällig gleichverteilt mit den anderen Demos) in `arrow-puzzle-werbe`, `calm-arrow-puzzle-playables`, `claw-machine-heroes-playables`, `dame-playables`, `drop-match-playables`, `kettro-werbe` (dort auch bei den Belohnungsanzeigen), `koeniginnen-playables`, `muehle-playables`, `quiznova-playables`, `relic-tower-playables`, `sonaris-playables`, `wuerfel-dungeon-werbe` und `zip-werbe`. Sie erscheint nur in Builds, die jede Demo aus `/Werbung/playables/` zulassen (Werbemodul 1.2.0 bzw. Ordner-Freigabe); ältere Builds zeigen weiter ihre bisherige Auswahl. Nicht eingetragen in `claw-machine-heroes-werbe` (alte Builds mit fester Liste) und `fundfieber-playables` (eigenes Spiel). Das Symbol liegt unter `images/icons/fundfieber.png`. Eintrag für weitere Configs:
 
 ```json
 {
@@ -67,7 +67,7 @@ Noch in keiner Config eingetragen. Das Symbol liegt unter `images/icons/fundfieb
   "target": { "android": "com.novaknock.gravitydemolition" },
   "accent": "#009F93",
   "status": "live",
-  "tags": ["playable", "idle"]
+  "tags": ["playable", "simulation"]
 }
 ```
 
