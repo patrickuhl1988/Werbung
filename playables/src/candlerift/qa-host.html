@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Candlerift QA-Host</title>
+<style>body{margin:0;background:#222;color:#ddd;font:12px system-ui}iframe{display:block;width:100vw;height:calc(100vh - 60px);border:0}#log{height:60px;overflow:auto;padding:4px 8px}</style></head>
+<body>
+<!-- Prüft die Nachrichtenbrücke: wm:ready, wm:cleared, wm:cta; Knöpfe senden wm:mute/pause/resume -->
+<iframe id="f" src="../../candlerift.html"></iframe>
+<div id="log"><button onclick="post({type:'wm:mute',muted:true})">mute</button> <button onclick="post({type:'wm:mute',muted:false})">unmute</button> <button onclick="post({type:'wm:pause'})">pause</button> <button onclick="post({type:'wm:resume'})">resume</button> </div>
+<script>
+  window.__msgs = [];
+  var f = document.getElementById('f');
+  if (location.search) f.src = f.src + location.search;
+  function post(m) { f.contentWindow.postMessage(m, '*'); }
+  window.addEventListener('message', function (e) { window.__msgs.push(e.data); var d = document.createElement('div'); d.textContent = JSON.stringify(e.data); document.getElementById('log').appendChild(d); });
+</script>
+</body></html>
