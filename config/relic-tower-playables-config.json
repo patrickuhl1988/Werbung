@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
-  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages.",
+  "updatedAt": "2026-11-11",
+  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 11 Demos, zufaellig je 1/11.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -14,7 +14,8 @@
       "quiznova-playable",
       "claw-machine-heroes-playable",
       "sonaris-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -358,6 +359,38 @@
       "tags": [
         "playable",
         "simulation"
+      ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
       ]
     }
   ]

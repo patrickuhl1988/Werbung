@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "Werbeeinstellungen fuer BELLMOOR LOST & FOUND / Das Fundbuero von Bellmoor (de.jokerstudios.neonricochet3d, Godot, Werbemodul 1.2.0 ueber das Werbung-Plugin ab Version 2.3.0): nur spielbare HTML-Demos, zufaellig je eine. Keine Bild- oder Videoanzeigen. Werbung nach jeder beendeten Nachtschicht, sobald der Spieler ins Fundbuero zurueckkehrt (nie waehrend einer Suche), erste Schicht werbefrei, mind. 3 Minuten Abstand. Laedt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build.",
+  "_hinweis": "Werbeeinstellungen fuer BELLMOOR LOST & FOUND / Das Fundbuero von Bellmoor (de.jokerstudios.neonricochet3d, Godot, Werbemodul 1.2.0 ueber das Werbung-Plugin ab Version 2.3.0): nur spielbare HTML-Demos, zufaellig je eine. Keine Bild- oder Videoanzeigen. Werbung nach jeder beendeten Nachtschicht, sobald der Spieler ins Fundbuero zurueckkehrt (nie waehrend einer Suche), erste Schicht werbefrei, mind. 3 Minuten Abstand. Laedt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "sonaris-playable",
       "fundfieber-playable",
       "calm-arrow-puzzle-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -398,6 +399,38 @@
       "tags": [
         "playable",
         "quiz"
+      ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
       ]
     }
   ]

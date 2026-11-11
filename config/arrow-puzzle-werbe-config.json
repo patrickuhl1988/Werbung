@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain).",
+  "updatedAt": "2026-11-11",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 11 Demos, zufaellig je 1/11.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -14,7 +14,8 @@
       "quiznova-playable",
       "tower100-playable",
       "sonaris-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -699,6 +700,38 @@
       "tags": [
         "playable",
         "simulation"
+      ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
       ]
     }
   ]

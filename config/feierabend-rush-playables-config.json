@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "Feierabend Rush ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels.",
+  "_hinweis": "Feierabend Rush ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "sonaris-playable",
       "fundfieber-playable",
       "claw-machine-heroes-playable",
-      "dame-meister-playable"
+      "dame-meister-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -402,6 +403,38 @@
         "playable",
         "puzzle",
         "board"
+      ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
       ]
     }
   ]

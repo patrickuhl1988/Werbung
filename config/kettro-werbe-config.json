@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
-  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen.",
+  "updatedAt": "2026-11-11",
+  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 10 Demos, zufaellig je 1/10.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -13,7 +13,8 @@
       "muehle-meister-playable",
       "tower100-playable",
       "sonaris-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -1027,6 +1028,38 @@
         "playable",
         "simulation"
       ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
+      ]
     }
   ],
   "rewarded": {
@@ -1039,7 +1072,8 @@
       "muehle-meister-playable",
       "tower100-playable",
       "sonaris-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "candlerift-playable"
     ]
   }
 }

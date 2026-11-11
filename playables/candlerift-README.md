@@ -28,7 +28,7 @@ Geprüft im Browser (Chromium, iframe): Start, Tutorial-Dash und Sturzschlag per
 
 ## Einbinden
 
-Noch in keiner Config aktiv. Eintrag für andere Spiele (in Candlerift selbst nicht, `excludeSelf`):
+Aktiv seit 11.11.2026 (`candlerift-playable`, zufällig gleichverteilt mit den anderen Demos) in allen Configs, die nur spielbare Demos zeigen: `arrow-puzzle-werbe`, `bellmoor-playables`, `calm-arrow-puzzle-playables`, `claw-machine-heroes-playables`, `dame-playables`, `drop-match-playables`, `feierabend-rush-playables`, `fundfieber-playables`, `kettro-werbe` (auch bei den Belohnungsanzeigen; ältere Kettro-Builds ohne Ordner-Freigabe übergehen sie), `koeniginnen-playables`, `muehle-playables`, `neon-ricochet-playables`, `pocket-planet-playables`, `pop-order-playables`, `quiznova-playables`, `relic-tower-playables`, `sonaris-playables`, `wuerfel-dungeon-werbe` und `zip-werbe`. Nicht in `lumenfall-werbe` (eigene App) und nicht in `claw-machine-heroes-werbe` (Werbemodul 1.0.0 ohne Demo-Darstellung, feste Auswahl). Configs mit Bild- und Videoanzeigen bleiben unverändert, weil ältere Module Nicht-Bilder als Video abspielen. Eintrag für weitere Configs:
 
 ```json
 {

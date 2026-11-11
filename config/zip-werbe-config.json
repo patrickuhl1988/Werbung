@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
-  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "updatedAt": "2026-11-11",
+  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 7 Demos, zufaellig je 1/7.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,8 @@
       "quiznova-playable",
       "tower100-playable",
       "sonaris-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "candlerift-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -927,6 +928,38 @@
       "tags": [
         "playable",
         "simulation"
+      ]
+    },
+    {
+      "id": "candlerift-playable",
+      "kind": "game",
+      "title": {
+        "de": "Candlerift",
+        "en": "Candlerift"
+      },
+      "tagline": {
+        "de": "Fallen, dashen, die Dornmutter stürzen – direkt hier.",
+        "en": "Fall, dash and topple the Thornmother – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/candlerift.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/candlerift.html"
+        }
+      },
+      "target": {
+        "android": "de.lumenfall.app"
+      },
+      "accent": "#FFC64A",
+      "status": "live",
+      "tags": [
+        "playable",
+        "action"
       ]
     }
   ],
