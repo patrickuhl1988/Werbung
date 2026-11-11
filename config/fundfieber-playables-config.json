@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "FUNDFIEBER (com.novaknock.gravitydemolition, Godot) ab dem Build mit Werbemodul 1.2.0-cmh.3 (nach 3.3.1): nur interaktive Werbung – alle spielbaren Demos, zufällig gleich oft (je ein Zehntel). Bild- und Videowerbung gibt es nicht mehr; der Adapter lässt nur spielbare Demos durch. Timing wie zuvor bei NOVA KNOCK: frühestens alle 7 Minuten (seit 11.11.2026), und nur in ruhigen Momenten (Tagesende geschlossen, Rückkehr ins Hauptmenü, Spielstart; ab dem Build nach 3.4.0 auch Shop und Fabrik-Übersicht geschlossen). Lädt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Ältere Builds (Phaser-NOVA-KNOCK) lesen weiter nova-knock-werbe-config.json. Playables nur über GitHub Pages.",
+  "_hinweis": "FUNDFIEBER (com.novaknock.gravitydemolition, Godot) ab dem Build mit Werbemodul 1.2.0-cmh.3 (nach 3.3.1): nur interaktive Werbung – alle spielbaren Demos, zufällig gleich oft (je ein Zehntel). Bild- und Videowerbung gibt es nicht mehr; der Adapter lässt nur spielbare Demos durch. Timing wie zuvor bei NOVA KNOCK: frühestens alle 10 Minuten, und nur in ruhigen Momenten (Tagesende geschlossen, Rückkehr ins Hauptmenü, Spielstart; ab dem Build nach 3.4.0 auch Shop und Fabrik-Übersicht geschlossen). Ab dem Build nach 3.4.0 dazu freiwillig: „Fund verdoppeln“ gegen eine Demo (5 s, höchstens alle 3 Minuten, nur Wertfunde). Lädt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Ältere Builds (Phaser-NOVA-KNOCK) lesen weiter nova-knock-werbe-config.json. Playables nur über GitHub Pages.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -28,7 +28,7 @@
       "gameEndBehavior": "onDismiss",
       "dismissMinSeconds": 3,
       "releaseEvents": [],
-      "everyMinutes": 7,
+      "everyMinutes": 10,
       "minutesBehavior": "onEvent",
       "minuteEvents": [
         "result_action",
