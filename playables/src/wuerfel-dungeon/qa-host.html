@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QA-Wirt · Würfel Dungeon</title>
+<style>body{margin:0;padding:12px;background:#222;color:#ddd;font:13px system-ui,sans-serif}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
+figure{margin:0}figcaption{font-size:11px;color:#aaa;margin-bottom:3px}iframe{border:1px solid #555;background:#000;display:block}
+#log{white-space:pre-wrap;font:11px ui-monospace,monospace;background:#111;padding:8px;max-height:220px;overflow:auto;margin-top:10px}button{margin-right:6px}</style></head><body>
+<div><button data-m='{"type":"wm:mute","muted":true}'>wm:mute an</button><button data-m='{"type":"wm:mute","muted":false}'>wm:mute aus</button><button data-m='{"type":"wm:pause"}'>wm:pause</button><button data-m='{"type":"wm:resume"}'>wm:resume</button><button data-m='"{\"type\":\"wm:mute\",\"muted\":true}"'>wm:mute als Text</button></div>
+<div id="frames" class="row" style="margin-top:10px"></div><div id="log"></div>
+<script>
+// Aufruf: qa-host.html?src=../../wuerfel-dungeon.html&sizes=360x540,510x360&lang=de
+const q = new URLSearchParams(location.search);
+const src = q.get('src') || '../../wuerfel-dungeon.html';
+const sizes = (q.get('sizes') || '360x540,510x360,320x480,390x844').split(',');
+const lang = q.get('lang');
+const frames = [];
+for (const s of sizes) {
+  const [w, h] = s.split('x').map(Number);
+  const fig = document.createElement('figure'); fig.innerHTML = `<figcaption>${s}</figcaption>`;
+  const f = document.createElement('iframe'); f.width = w; f.height = h; f.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+  f.src = src + (lang ? (src.includes('?') ? '&' : '?') + 'lang=' + lang : ''); fig.appendChild(f); document.getElementById('frames').appendChild(fig); frames.push(f);
+}
+window.__msgs = [];
+addEventListener('message', (e) => { const i = frames.findIndex((f) => f.contentWindow === e.source); window.__msgs.push({ i, ...e.data }); document.getElementById('log').textContent += `[${sizes[i]}] ${JSON.stringify(e.data)}\n`; });
+for (const b of document.querySelectorAll('button[data-m]')) b.onclick = () => { const m = JSON.parse(b.dataset.m); frames.forEach((f) => f.contentWindow.postMessage(m, '*')); document.getElementById('log').textContent += `→ ${JSON.stringify(m)}\n`; };
+</script></body></html>
