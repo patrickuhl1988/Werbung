@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS, FUNDFIEBER), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 11 Demos, zufaellig je 1/11.",
+  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS, FUNDFIEBER), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "dame-meister-playable",
       "sonaris-playable",
       "fundfieber-playable",
-      "candlerift-playable"
+      "candlerift-playable",
+      "feierabend-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -402,6 +403,38 @@
       "tags": [
         "playable",
         "action"
+      ]
+    },
+    {
+      "id": "feierabend-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
+        "en": "Hop through rush hour and clock in on time – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "playable",
+        "arcade"
       ]
     }
   ]

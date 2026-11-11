@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "Werbeeinstellungen fuer BELLMOOR LOST & FOUND / Das Fundbuero von Bellmoor (de.jokerstudios.neonricochet3d, Godot, Werbemodul 1.2.0 ueber das Werbung-Plugin ab Version 2.3.0): nur spielbare HTML-Demos, zufaellig je eine. Keine Bild- oder Videoanzeigen. Werbung nach jeder beendeten Nachtschicht, sobald der Spieler ins Fundbuero zurueckkehrt (nie waehrend einer Suche), erste Schicht werbefrei, mind. 3 Minuten Abstand. Laedt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 12 Demos, zufaellig je 1/12.",
+  "_hinweis": "Werbeeinstellungen fuer BELLMOOR LOST & FOUND / Das Fundbuero von Bellmoor (de.jokerstudios.neonricochet3d, Godot, Werbemodul 1.2.0 ueber das Werbung-Plugin ab Version 2.3.0): nur spielbare HTML-Demos, zufaellig je eine. Keine Bild- oder Videoanzeigen. Werbung nach jeder beendeten Nachtschicht, sobald der Spieler ins Fundbuero zurueckkehrt (nie waehrend einer Suche), erste Schicht werbefrei, mind. 3 Minuten Abstand. Laedt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -16,7 +16,8 @@
       "fundfieber-playable",
       "calm-arrow-puzzle-playable",
       "quiznova-playable",
-      "candlerift-playable"
+      "candlerift-playable",
+      "feierabend-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -431,6 +432,38 @@
       "tags": [
         "playable",
         "action"
+      ]
+    },
+    {
+      "id": "feierabend-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
+        "en": "Hop through rush hour and clock in on time – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "playable",
+        "arcade"
       ]
     }
   ]

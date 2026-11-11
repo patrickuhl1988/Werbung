@@ -56,22 +56,24 @@ keinen eigenen Schließen-Countdown.
 
 ## Einbinden
 
-Noch in keiner Config eingetragen. Für die Configs der anderen Spiele (Eintrag in `creatives`, ID in `selectedIds`;
-in Feierabend Rush selbst nicht eintragen, `excludeSelf`):
+Seit 11.11.2026 als `feierabend-rush-playable` in allen 19 Configs mit ausschließlich spielbaren Demos (bei Kettro
+auch rewarded), auch bei CANDLERIFT (`lumenfall-werbe-config.json`). Nicht in den beiden Feierabend-Rush-Configs
+(eigene App, `excludeSelf`) und nicht in `claw-machine-heroes-werbe-config.json` (Werbemodul 1.0.0 kann keine Demos).
+Bild-/Video-Configs bleiben unverändert. Symbol: `images/icons/feierabend-rush.png`.
 
 ```json
 {
   "id": "feierabend-rush-playable",
   "kind": "game",
   "title": { "de": "Feierabend Rush", "en": "Feierabend Rush" },
-  "tagline": { "de": "Hüpf durch den Berufsverkehr – direkt hier spielen.", "en": "Hop through rush hour – play it right here." },
-  "icon": "icons/feierabend-rush.png",
+  "tagline": { "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.", "en": "Hop through rush hour and clock in on time – right here." },
+  "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
   "media": {
     "portrait": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html" },
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html" }
   },
   "target": { "android": "de.patrickuhl.feierabendrush" },
-  "accent": "#F8C038",
+  "accent": "#ffb454",
   "status": "live",
   "tags": ["playable", "arcade"]
 }

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "Calm Arrow Puzzle ab Werbemodul 1.2.0 (Android-Plugin NeonAds, neuer App-Build): nur freiwillige Belohnungsanzeigen (Herz zurück nach 5 s), keine automatischen Einblendungen – das ist im Spiel fest eingebaut. Auswahl hier frei änderbar: die spielbaren Demos der neun anderen Spiele, zufällig je ein Neuntel. Lädt eine Demo nicht, erscheint die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds nutzen weiter die eigene Kachel-Werbung (house_ads.json). Playables nur über GitHub Pages, nie über jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 10 Demos, zufaellig je 1/10.",
+  "_hinweis": "Calm Arrow Puzzle ab Werbemodul 1.2.0 (Android-Plugin NeonAds, neuer App-Build): nur freiwillige Belohnungsanzeigen (Herz zurück nach 5 s), keine automatischen Einblendungen – das ist im Spiel fest eingebaut. Auswahl hier frei änderbar: die spielbaren Demos der neun anderen Spiele, zufällig je ein Neuntel. Lädt eine Demo nicht, erscheint die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds nutzen weiter die eigene Kachel-Werbung (house_ads.json). Playables nur über GitHub Pages, nie über jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable); jetzt 11 Demos, zufaellig je 1/11.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -14,7 +14,8 @@
       "tower100-playable",
       "sonaris-playable",
       "fundfieber-playable",
-      "candlerift-playable"
+      "candlerift-playable",
+      "feierabend-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -358,6 +359,38 @@
       "tags": [
         "playable",
         "action"
+      ]
+    },
+    {
+      "id": "feierabend-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
+        "en": "Hop through rush hour and clock in on time – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "playable",
+        "arcade"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build.",
+  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich Feierabend Rush (feierabend-rush-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "sonaris-playable",
       "fundfieber-playable",
       "calm-arrow-puzzle-playable",
-      "quiznova-playable"
+      "quiznova-playable",
+      "feierabend-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -402,6 +403,38 @@
       "tags": [
         "playable",
         "quiz"
+      ]
+    },
+    {
+      "id": "feierabend-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
+        "en": "Hop through rush hour and clock in on time – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "playable",
+        "arcade"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-11",
-  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 11 Demos, zufaellig je 1/11.",
+  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "claw-machine-heroes-playable",
       "sonaris-playable",
       "fundfieber-playable",
-      "candlerift-playable"
+      "candlerift-playable",
+      "feierabend-rush-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -391,6 +392,38 @@
       "tags": [
         "playable",
         "action"
+      ]
+    },
+    {
+      "id": "feierabend-rush-playable",
+      "kind": "game",
+      "title": {
+        "de": "Feierabend Rush",
+        "en": "Feierabend Rush"
+      },
+      "tagline": {
+        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
+        "en": "Hop through rush hour and clock in on time – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
+        }
+      },
+      "target": {
+        "android": "de.patrickuhl.feierabendrush"
+      },
+      "accent": "#ffb454",
+      "status": "live",
+      "tags": [
+        "playable",
+        "arcade"
       ]
     }
   ]
