@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-11",
-  "_hinweis": "Feierabend Rush ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable); jetzt 12 Demos, zufaellig je 1/12.",
+  "updatedAt": "2026-11-12",
+  "_hinweis": "Feierabend Rush ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, der Reihe nach.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -16,7 +16,8 @@
       "fundfieber-playable",
       "claw-machine-heroes-playable",
       "dame-meister-playable",
-      "candlerift-playable"
+      "candlerift-playable",
+      "wuerfel-dungeon-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -435,6 +436,38 @@
       "tags": [
         "playable",
         "action"
+      ]
+    },
+    {
+      "id": "wuerfel-dungeon-playable",
+      "kind": "game",
+      "title": {
+        "de": "Würfel Dungeon",
+        "en": "Dice Dungeon"
+      },
+      "tagline": {
+        "de": "Würfle Kombos, besiege den Würfelfresser – direkt hier.",
+        "en": "Roll combos, beat the Dice Devourer – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/wuerfel-dungeon.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.wuerfeldungeon"
+      },
+      "accent": "#f2c35a",
+      "status": "live",
+      "tags": [
+        "playable",
+        "roguelike"
       ]
     }
   ]

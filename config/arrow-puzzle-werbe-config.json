@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-11",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable); jetzt 12 Demos, zufaellig je 1/12.",
+  "updatedAt": "2026-11-12",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -16,7 +16,8 @@
       "sonaris-playable",
       "fundfieber-playable",
       "candlerift-playable",
-      "feierabend-rush-playable"
+      "feierabend-rush-playable",
+      "wuerfel-dungeon-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -765,6 +766,38 @@
       "tags": [
         "playable",
         "arcade"
+      ]
+    },
+    {
+      "id": "wuerfel-dungeon-playable",
+      "kind": "game",
+      "title": {
+        "de": "Würfel Dungeon",
+        "en": "Dice Dungeon"
+      },
+      "tagline": {
+        "de": "Würfle Kombos, besiege den Würfelfresser – direkt hier.",
+        "en": "Roll combos, beat the Dice Devourer – right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/wuerfel-dungeon.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.wuerfeldungeon"
+      },
+      "accent": "#f2c35a",
+      "status": "live",
+      "tags": [
+        "playable",
+        "roguelike"
       ]
     }
   ]

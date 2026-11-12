@@ -69,16 +69,17 @@ keinen eigenen Schließen-Countdown. Die Knöpfe sagen „Jetzt spielen“, nich
 
 ## Einbinden
 
-Noch in keiner Config ausgewählt. Eintrag für die Configs der anderen Spiele (in Würfel Dungeon selbst nie eintragen,
-`excludeSelf`):
+Seit 12.11.2026 in 19 Configs mit ausschließlich spielbaren Demos ausgewählt (bei Kettro auch rewarded, auch bei
+Feierabend Rush und CANDLERIFT/lumenfall). Nicht in `wuerfel-dungeon-werbe-config.json` (eigene App) und nicht in
+`claw-machine-heroes-werbe-config.json` (Werbemodul 1.0.0); Bild-/Video-Configs bleiben. Eintrag:
 
 ```json
 {
   "id": "wuerfel-dungeon-playable",
   "kind": "game",
   "title": { "de": "Würfel Dungeon", "en": "Dice Dungeon" },
-  "tagline": { "de": "Würfle Kombos, besiege den Würfelfresser – direkt hier spielen.", "en": "Roll combos, beat the Dice Devourer – play it right here." },
-  "icon": "icons/wuerfel-dungeon.png",
+  "tagline": { "de": "Würfle Kombos, besiege den Würfelfresser – direkt hier.", "en": "Roll combos, beat the Dice Devourer – right here." },
+  "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/wuerfel-dungeon.png",
   "media": {
     "portrait": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html" },
     "landscape": { "type": "playable", "src": "https://patrickuhl1988.github.io/Werbung/playables/wuerfel-dungeon.html" }
@@ -90,5 +91,5 @@ Noch in keiner Config ausgewählt. Eintrag für die Configs der anderen Spiele (
 }
 ```
 
-Fehlt das Symbol in einer App, die volle Adresse eines Symbols unter `images/icons/` eintragen. Playables nie über
+Symbol: `images/icons/wuerfel-dungeon.png` (256 px, App-Symbol des Spiels). Playables nie über
 jsDelivr oder raw.githubusercontent.com laden (liefern `text/plain`).
