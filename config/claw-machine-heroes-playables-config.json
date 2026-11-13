@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (App-Build nach 0.8.2): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100, SONARIS und FUNDFIEBER, zufällig je ein Zehntel (seit 10.11.2026). Diese Datei bestimmt die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Neue Demo = Creative + ID hier eintragen, kein App-Build nötig. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds (Werbemodul 1.0.0) lesen weiter claw-machine-heroes-werbe-config.json. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "_hinweis": "CMH ab Werbemodul 1.2.0-cmh.3 (App-Build nach 0.8.2): alle spielbaren Demos ausser der eigenen – Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Zwickmühle), Calm Arrow Puzzle, Dame Meister, QuizNova, TOWER 100, SONARIS und FUNDFIEBER, zufällig je ein Zehntel (seit 10.11.2026). Diese Datei bestimmt die Auswahl (selectedIds); der Adapter lässt dabei nur spielbare Demos durch, Bilder und Videos nie. Neue Demo = Creative + ID hier eintragen, kein App-Build nötig. Werbung nur als freiwillige Belohnungsanzeige; das Timing bleibt im Adapter gesperrt. Lädt eine Demo nicht, erscheint nur die Kachel des Spiels und es gibt keine Belohnung. Ältere Builds (Werbemodul 1.0.0) lesen weiter claw-machine-heroes-werbe-config.json. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -399,8 +399,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

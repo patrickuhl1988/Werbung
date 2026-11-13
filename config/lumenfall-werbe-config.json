@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -410,8 +410,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

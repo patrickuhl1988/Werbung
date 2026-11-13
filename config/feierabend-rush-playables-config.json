@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "Feierabend Rush ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, der Reihe nach.",
+  "_hinweis": "Rushstep ab Werbemodul 1.2.0 (Build nach versionCode 9): nur spielbare HTML-Anzeigen, der Reihe nach abwechselnd (rotation sequential). Timing wie in feierabend-rush-werbe-config.json (alle 2 Laeufe nach dem Ergebnisbildschirm, mind. 2 Minuten Abstand, erster Lauf werbefrei, nie waehrend eines Laufs). Aeltere Builds lesen weiter feierabend-rush-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Laedt eine Anzeige nicht, erscheint die Kachel des Spiels. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, der Reihe nach.",
   "config": {
     "enabled": true,
     "selectedIds": [

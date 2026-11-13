@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "Pop Order ab Version 2.3.0 (versionCode 19, Werbemodul 1.2.0): nur noch spielbare HTML-Anzeigen (Playables), keine Bilder oder Videos mehr. Zufaellig eine der Demos von Arrow Puzzle, Sort Rush, Koeniginnen, Muehle Meister, Calm Arrow Puzzle, QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Timing wie bisher (alle 10 Spiele nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erstes Spiel werbefrei). Laedt eine Demo nicht, erscheint die Kachel des Spiels. Aeltere Builds lesen weiter pop-order-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12.",
+  "_hinweis": "Pop Order ab Version 2.3.0 (versionCode 19, Werbemodul 1.2.0): nur noch spielbare HTML-Anzeigen (Playables), keine Bilder oder Videos mehr. Zufaellig eine der Demos von Arrow Puzzle, Sort Rush, Koeniginnen, Muehle Meister, Calm Arrow Puzzle, QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Timing wie bisher (alle 10 Spiele nach Verlassen des Endbildschirms, mind. 2 Minuten Abstand, erstes Spiel werbefrei). Laedt eine Demo nicht, erscheint die Kachel des Spiels. Aeltere Builds lesen weiter pop-order-werbe-config.json. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -376,8 +376,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

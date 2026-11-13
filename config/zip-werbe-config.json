@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 9 Demos, zufaellig je 1/9.",
+  "_hinweis": "Werbeeinstellungen fuer Zip. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 9 Demos, zufaellig je 1/9.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -595,8 +595,8 @@
       "id": "feierabend-rush",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -606,13 +606,13 @@
       "media": {
         "portrait": {
           "type": "video",
-          "src": "videos/feierabend-rush-hoch.mp4",
-          "poster": "posters/feierabend-rush-hoch.jpg"
+          "src": "videos/rushstep-portrait.mp4",
+          "poster": "posters/rushstep-portrait.jpg"
         },
         "landscape": {
           "type": "video",
-          "src": "videos/feierabend-rush-quer.mp4",
-          "poster": "posters/feierabend-rush-quer.jpg"
+          "src": "videos/rushstep-landscape.mp4",
+          "poster": "posters/rushstep-landscape.jpg"
         }
       },
       "target": {
@@ -628,8 +628,8 @@
       "id": "feierabend-rush-bild-1",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -639,11 +639,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-1-hoch.jpg"
+          "src": "images/rushstep-portrait.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-2-quer.jpg"
+          "src": "images/rushstep-landscape.jpg"
         }
       },
       "target": {
@@ -968,8 +968,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS, FUNDFIEBER), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "_hinweis": "QuizNova ab Version 1.14.0 (versionCode 20, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister, Calm Arrow Puzzle, TOWER 100, Claw Machine Heroes, Dame Meister, SONARIS, FUNDFIEBER), zufällig gleichverteilt – auch bei der Belohnungsanzeige „Münzen verdoppeln“. Timing wie in quiznova-werbe-config.json. Lädt eine Demo nicht (z. B. offline), erscheint die Joculus-Kachel. Ältere Builds lesen weiter quiznova-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). QuizNova selbst nie eintragen (excludeSelf). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -410,8 +410,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12.",
+  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -598,8 +598,8 @@
       "id": "feierabend-rush",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -609,13 +609,13 @@
       "media": {
         "portrait": {
           "type": "video",
-          "src": "videos/feierabend-rush-hoch.mp4",
-          "poster": "posters/feierabend-rush-hoch.jpg"
+          "src": "videos/rushstep-portrait.mp4",
+          "poster": "posters/rushstep-portrait.jpg"
         },
         "landscape": {
           "type": "video",
-          "src": "videos/feierabend-rush-quer.mp4",
-          "poster": "posters/feierabend-rush-quer.jpg"
+          "src": "videos/rushstep-landscape.mp4",
+          "poster": "posters/rushstep-landscape.jpg"
         }
       },
       "target": {
@@ -631,8 +631,8 @@
       "id": "feierabend-rush-bild-1",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -642,11 +642,11 @@
       "media": {
         "portrait": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-1-hoch.jpg"
+          "src": "images/rushstep-portrait.jpg"
         },
         "landscape": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-2-quer.jpg"
+          "src": "images/rushstep-landscape.jpg"
         }
       },
       "target": {
@@ -1067,8 +1067,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

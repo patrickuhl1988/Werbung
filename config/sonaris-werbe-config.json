@@ -387,8 +387,8 @@
       "id": "feierabend-rush",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -398,13 +398,13 @@
       "media": {
         "portrait": {
           "type": "video",
-          "src": "videos/feierabend-rush-hoch.mp4",
-          "poster": "posters/feierabend-rush-hoch.jpg"
+          "src": "videos/rushstep-portrait.mp4",
+          "poster": "posters/rushstep-portrait.jpg"
         },
         "landscape": {
           "type": "video",
-          "src": "videos/feierabend-rush-quer.mp4",
-          "poster": "posters/feierabend-rush-quer.jpg"
+          "src": "videos/rushstep-landscape.mp4",
+          "poster": "posters/rushstep-landscape.jpg"
         }
       },
       "target": {
@@ -420,8 +420,8 @@
       "id": "feierabend-rush-bild-2",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
@@ -431,7 +431,7 @@
       "media": {
         "landscape": {
           "type": "image",
-          "src": "images/feierabend-rush-bild-2-quer.jpg"
+          "src": "images/rushstep-landscape.jpg"
         }
       },
       "target": {

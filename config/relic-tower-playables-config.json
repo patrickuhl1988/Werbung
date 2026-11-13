@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "_hinweis": "TOWER 100 (org.relictower.awakening) ab 0.3.3 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig je ein Zehntel, nur als freiwillige Belohnung fuer einen Hinweis. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing (keine automatischen Einblendungen). Laedt eine Demo nicht, zaehlt die Kachel des Spiels. Aeltere Builds (bis 0.3.2) lesen weiter relic-tower-werbe-config.json. Playables nur ueber GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -399,8 +399,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",

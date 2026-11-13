@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-12",
-  "_hinweis": "FUNDFIEBER (com.novaknock.gravitydemolition, Godot) ab dem Build mit Werbemodul 1.2.0-cmh.3 (nach 3.3.1): nur interaktive Werbung – alle spielbaren Demos, zufällig gleich oft (je ein Zehntel). Bild- und Videowerbung gibt es nicht mehr; der Adapter lässt nur spielbare Demos durch. Timing wie zuvor bei NOVA KNOCK: frühestens alle 10 Minuten, und nur in ruhigen Momenten (Tagesende geschlossen, Rückkehr ins Hauptmenü, Spielstart; ab dem Build nach 3.4.0 auch Shop und Fabrik-Übersicht geschlossen). Ab dem Build nach 3.4.0 dazu freiwillig: „Fund verdoppeln“ gegen eine Demo (5 s, höchstens alle 3 Minuten, nur Wertfunde). Lädt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Ältere Builds (Phaser-NOVA-KNOCK) lesen weiter nova-knock-werbe-config.json. Playables nur über GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Feierabend Rush (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "_hinweis": "FUNDFIEBER (com.novaknock.gravitydemolition, Godot) ab dem Build mit Werbemodul 1.2.0-cmh.3 (nach 3.3.1): nur interaktive Werbung – alle spielbaren Demos, zufällig gleich oft (je ein Zehntel). Bild- und Videowerbung gibt es nicht mehr; der Adapter lässt nur spielbare Demos durch. Timing wie zuvor bei NOVA KNOCK: frühestens alle 10 Minuten, und nur in ruhigen Momenten (Tagesende geschlossen, Rückkehr ins Hauptmenü, Spielstart; ab dem Build nach 3.4.0 auch Shop und Fabrik-Übersicht geschlossen). Ab dem Build nach 3.4.0 dazu freiwillig: „Fund verdoppeln“ gegen eine Demo (5 s, höchstens alle 3 Minuten, nur Wertfunde). Lädt eine Demo nicht (z. B. offline), erscheint die Kachel des Spiels. Ältere Builds (Phaser-NOVA-KNOCK) lesen weiter nova-knock-werbe-config.json. Playables nur über GitHub Pages. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -403,8 +403,8 @@
       "id": "feierabend-rush-playable",
       "kind": "game",
       "title": {
-        "de": "Feierabend Rush",
-        "en": "Feierabend Rush"
+        "de": "Rushstep",
+        "en": "Rushstep"
       },
       "tagline": {
         "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
