@@ -48,6 +48,7 @@ merkt sich die zuletzt geladene Fassung für Starts ohne Netz. Änderungen hier 
 | `config/kiosk-simulator-werbe-config.json` | Kiosk Simulator | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/kiosk-simulator-werbe-config.json` |
 | `config/calm-arrow-puzzle-playables-config.json` | Calm Arrow Puzzle (ab Build mit Plugin `NeonAds`) | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/calm-arrow-puzzle-playables-config.json` |
 | `config/pocket-planet-playables-config.json` | Pocket Planet (Paket `de.bridgeroyale.app`, ab Build mit Plugin `Werbung`; nur spielbare HTML-Anzeigen) | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/pocket-planet-playables-config.json` |
+| `config/sort-rush-playables-config.json` | Sort Rush (ab 1.18.0; nur spielbare HTML-Anzeigen – ältere Builds lesen weiter `sort-rush-werbe-config.json`) | `https://raw.githubusercontent.com/patrickuhl1988/Werbung/main/config/sort-rush-playables-config.json` |
 |  | Tiefsee-Tempel (Deep Sea Temple) |  |
 |  | Feierabend Rush |  |
 |  | Bridge Royale |  |
