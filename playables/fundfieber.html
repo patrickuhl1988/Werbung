@@ -89,7 +89,10 @@ canvas{position:absolute;left:0;top:0;width:100%;height:100%;display:block}
 .short #nav{display:none}
 .wide #top,.wide #goal{width:calc(var(--u)*1056)}
 .over #cta,.over #ad{display:none}
-</style></head><body>
+</style><!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed #cta,.wm-embed #ad{display:none!important}</style><!-- /wm-embed --></head><body>
 <canvas id="gl"></canvas><canvas id="cv"></canvas>
 <div id="hud">
   <div id="top" class="card"><div id="badge">1</div><div id="mid"><div id="sand"></div><div id="xp">XP<div class="bar"><i id="xpbar"></i></div></div></div><div id="money"><img id="coin" alt=""><span id="perla"></span></div><div id="menu"><i></i><i></i><i></i></div></div>

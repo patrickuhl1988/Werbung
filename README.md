@@ -11,6 +11,15 @@ Inhalt dieses Repos 1:1 hochladen (Ordnerstruktur beibehalten). Die Apps laden d
 Dateinamen = Katalog-IDs aus `core/catalog.ts` des Werbemoduls. Neue Medien: Datei mit passendem Namen hier ablegen,
 Eintrag im Katalog – kein App-Update nötig (jsDelivr cacht bis zu 7 Tage; Änderung an bestehenden Dateien greift daher verzögert).
 
+## playables/ – eingebettet ohne eigene Install-Leiste
+
+In der App zeichnet das Werbemodul Icon, Titel, Tagline, Store-Knopf und „Weiter“ selbst unter die Demo.
+Läuft eine spielbare Anzeige eingebettet (iframe oder Android-WebView), blendet sie deshalb ihren eigenen
+Store-Knopf, die Zeile „Spielbare Anzeige · JOCULUS“ und das Label „Spielbare Werbung“ aus; das Spielfeld
+bekommt den Platz. Direkt im Browser geöffnet bleibt alles sichtbar. Endbildschirme behalten ihren Knopf.
+`?chrome=1` erzwingt die volle Fassung, `?chrome=0` die eingebettete. Der Block steht zwischen
+`<!-- wm-embed -->` und `<!-- /wm-embed -->` im `<head>` jeder Anzeige (und in `src/*/template.html`).
+
 ## config/ – Werbeeinstellungen pro Spiel
 
 ### Kampagne vom 23.09.2026

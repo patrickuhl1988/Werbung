@@ -90,7 +90,10 @@ button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;borde
 @media (orientation:landscape) and (max-height:380px){.top{display:none}.app{grid-template-areas:"stage panel" "stage panel" "tray foot"}.slot small{display:none}.slot{min-height:38px}.chips{min-height:34px}.chip{padding:3px 7px}.chip b{font-size:12px}.bar{padding:2px 6px 3px}}
 @media (orientation:landscape) and (max-height:460px){.end{padding:8px}.card{width:min(100%,470px);padding:10px 16px}.card img.hero{height:24dvh}.card img.icon{display:none}.card h2{font-size:20px}.card p{margin:2px 0 8px;font-size:12px}.card .cta{min-height:42px}.card .again{margin-top:4px}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01s!important;animation-iteration-count:1!important;transition:none!important}}
-</style></head><body>
+</style><!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed footer.foot{display:none!important}</style><!-- /wm-embed --></head><body>
 <div id="app" class="app">
 <header class="top"><img id="logo" class="logo" alt=""><div class="brand"><div id="title" class="title"></div><div id="eyebrow" class="eyebrow"></div></div><span id="room" class="room"></span><button id="sound" class="sound"></button></header>
 <section id="stage" class="stage">

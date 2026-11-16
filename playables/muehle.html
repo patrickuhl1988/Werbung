@@ -81,7 +81,10 @@ main{padding:10px 20px;gap:5px}
 .actions button{min-height:40px}.status{min-height:30px}.cta{min-height:40px}
 .logo{width:30px;height:30px}h1{font-size:22px}.eyebrow{font-size:8px}}
 @media(prefers-reduced-motion:reduce){*,*:after{animation:none!important;transition:none!important}}
-</style></head><body><main>
+</style><!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed .footer{display:none!important}</style><!-- /wm-embed --></head><body><main>
 <header><div class="brand"><div id="logo" class="logo" role="img"></div><div style="min-width:0"><div id="eyebrow" class="eyebrow"></div><h1 id="title"></h1></div></div><button id="sound" class="sound" aria-pressed="true"></button></header>
 <div class="layout"><div class="intro"><p id="rule"></p><span id="level" class="badge"></span></div>
 <div class="board-area"><div id="stage" class="stage"></div></div>

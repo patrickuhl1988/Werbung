@@ -9,7 +9,10 @@
   html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #110A22; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
   canvas { display: block; position: absolute; left: 0; top: 0; }
 </style>
-</head>
+<!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><!-- /wm-embed --></head>
 <body>
 <canvas id="c"></canvas>
 <script>
@@ -39,8 +42,11 @@
     var vw = window.innerWidth, vh = window.innerHeight;
     canvas.width = vw * dpr; canvas.height = vh * dpr;
     canvas.style.width = vw + "px"; canvas.style.height = vh + "px";
-    scale = Math.min(vw / W, vh / H);
-    offX = (vw - W * scale) / 2; offY = (vh - H * scale) / 2;
+    // Eingebettet steht der Store-Knopf schon in der Karte des Werbemoduls darunter: Der
+    // untere Streifen mit dem eigenen Knopf entfällt, das Brett wird entsprechend größer.
+    var VH = window.WM_EMBED ? 1740 : H;
+    scale = Math.min(vw / W, vh / VH);
+    offX = (vw - W * scale) / 2; offY = (vh - VH * scale) / 2;
   }
   window.addEventListener("resize", resize); resize();
 
@@ -181,7 +187,7 @@
   function tapAt(px, py) {
     lastTap = now; tutorialDone = true;
     if (phase === "cleared") { openStore(); return; }
-    if (px >= ctaBtn.x - ctaBtn.w / 2 && px <= ctaBtn.x + ctaBtn.w / 2 && py >= ctaBtn.y - ctaBtn.h / 2 && py <= ctaBtn.y + ctaBtn.h / 2) { openStore(); return; }
+    if (!window.WM_EMBED && px >= ctaBtn.x - ctaBtn.w / 2 && px <= ctaBtn.x + ctaBtn.w / 2 && py >= ctaBtn.y - ctaBtn.h / 2 && py <= ctaBtn.y + ctaBtn.h / 2) { openStore(); return; }
     if (phase !== "play") return;
     var col = Math.floor((px - bx) / cs), row = Math.floor((py - by) / cs), best = -1, bestD = Infinity;
     for (var dr = -1; dr <= 1; dr++) for (var dc = -1; dc <= 1; dc++) {
@@ -393,9 +399,11 @@
     ctx.translate(offX, offY); ctx.scale(scale, scale);
     drawBackdrop(t);
     if (phase === "cleared" && now - clearedAt > 900) {
-      drawConfetti(); drawCleared(); drawCta(true);
+      drawConfetti(); drawCleared();
+      if (window.WM_EMBED) text("Play 100+ pictures. No timer, no pressure.", 540, 1650, 34, "600", THEME.ink);
+      else drawCta(true);
     } else {
-      drawHeader(); drawBoard(); drawPops(); drawHint(); drawCounterAndProgress(); drawCta(false);
+      drawHeader(); drawBoard(); drawPops(); drawHint(); drawCounterAndProgress(); if (!window.WM_EMBED) drawCta(false);
       if (phase === "cleared") drawConfetti();
       if (phase === "auto") { ctx.fillStyle = "#000000aa"; rr(190, 330, 700, 90, 28); ctx.fill(); text("Nice! Watch the rest fly…", 540, 376, 38, "700", "#fff"); }
     }

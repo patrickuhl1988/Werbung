@@ -75,7 +75,10 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:8}
  #cta{flex:1;min-height:44px;font-size:16px}
  #foot{flex:none}
 }
-</style></head>
+</style><!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed main > footer,.wm-embed #tag{display:none!important}</style><!-- /wm-embed --></head>
 <body><div id="bg"></div><canvas id="stars"></canvas>
 <main>
  <header><img id="logo" alt=""><div class="brand">Quiz<b>Nova</b></div><div class="tag" id="tag"></div><button id="sound" aria-label="sound">🔊</button></header>

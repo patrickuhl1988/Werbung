@@ -70,7 +70,10 @@ header{grid-column:2;grid-row:1}
 .foot{grid-column:2;grid-row:3}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style></head><body><main>
+</style><!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
+Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
+?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed .foot{display:none!important}</style><!-- /wm-embed --></head><body><main>
 <header><div id="logo" class="logo" role="img"></div><div class="head"><div id="over" class="over"></div><h1 id="title"></h1></div><button id="hint" class="ib"></button><button id="sound" class="ib"></button></header>
 <div class="play"><div class="stage"><div class="room"><canvas id="cv" width="540" height="690"></canvas>
 <div id="result" class="result" hidden><div class="card"><div id="r-over" class="ov"></div><h2 id="r-title"></h2><div id="r-stars" class="stars"></div><p id="r-text"></p><button id="r-main" class="pri"></button><div class="row"><button id="r-look"></button></div></div></div>
