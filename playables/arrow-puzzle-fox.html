@@ -339,6 +339,21 @@ Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-L
     ctx.strokeStyle = THEME.ink + "44"; ctx.lineWidth = 2; rr(540 - w / 2, 1640, w, 66, 33); ctx.stroke();
     text(label, 540, 1674, 36, "800", THEME.ink);
   }
+  /* wm-brand ENTWURF: JOCULUS zwischen zwei Pfeilen, die wie im Spiel darauf zufliegen. */
+  function drawBrand() {
+    var y = window.WM_EMBED ? 1724 : 1886, glide = 6 * Math.sin(now / 700);
+    ctx.save(); ctx.globalAlpha = 0.6;
+    ctx.font = "800 30px " + FONT; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    if ("letterSpacing" in ctx) ctx.letterSpacing = "14px";
+    ctx.fillStyle = THEME.ink; ctx.fillText("JOCULUS", 547, y);
+    ctx.strokeStyle = THEME.accent; ctx.fillStyle = THEME.accent; ctx.lineWidth = 5; ctx.lineCap = "round";
+    [[1, 382 - glide], [-1, 698 + glide]].forEach(function (a) {
+      var d = a[0], x = a[1];
+      ctx.beginPath(); ctx.moveTo(x - d * 46, y); ctx.lineTo(x, y); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x + d * 12, y); ctx.lineTo(x - d * 4, y - 12); ctx.lineTo(x - d * 4, y + 12); ctx.closePath(); ctx.fill();
+    });
+    ctx.restore();
+  }
   function drawCta(big) {
     var t = (now / 900) % 1, pulse = 1 + 0.03 * Math.sin(t * Math.PI * 2);
     var w = ctaBtn.w * pulse, h = ctaBtn.h * pulse, x = ctaBtn.x - w / 2, y = ctaBtn.y - h / 2;
@@ -403,7 +418,7 @@ Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-L
       if (window.WM_EMBED) text("Play 100+ pictures. No timer, no pressure.", 540, 1650, 34, "600", THEME.ink);
       else drawCta(true);
     } else {
-      drawHeader(); drawBoard(); drawPops(); drawHint(); drawCounterAndProgress(); if (!window.WM_EMBED) drawCta(false);
+      drawHeader(); drawBoard(); drawPops(); drawHint(); drawCounterAndProgress(); drawBrand(); if (!window.WM_EMBED) drawCta(false);
       if (phase === "cleared") drawConfetti();
       if (phase === "auto") { ctx.fillStyle = "#000000aa"; rr(190, 330, 700, 90, 28); ctx.fill(); text("Nice! Watch the rest fly…", 540, 376, 38, "700", "#fff"); }
     }

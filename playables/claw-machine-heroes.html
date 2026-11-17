@@ -9,7 +9,11 @@
 <!-- wm-embed --><script>/* In der App zeigt das Werbemodul Icon, Titel und Store-Knopf schon unter der Demo.
 Eingebettet (iframe oder Android-WebView) entfällt deshalb die eigene Install-Leiste.
 ?chrome=1 erzwingt die volle Fassung, ?chrome=0 die eingebettete. */
-(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed #ctaTop{display:none!important}</style><!-- /wm-embed --></head>
+(function(){try{var c=new URLSearchParams(location.search).get('chrome');var e=c==='1'?false:(c==='0'||window.self!==window.top||!!window.ReactNativeWebView||/; wv\)/.test(navigator.userAgent));window.WM_EMBED=e;if(e)document.documentElement.classList.add('wm-embed')}catch(_){window.WM_EMBED=false}})();</script><style>.wm-embed #ctaTop{display:none!important}</style><!-- /wm-embed --><!-- wm-brand --><style>.wm-brand.wm-neon{position:fixed;left:50%;top:41.3%;transform:translate(-50%,-50%);font:italic 900 15px/1 "Trebuchet MS",system-ui,sans-serif;letter-spacing:.14em;color:#fff4fb;text-shadow:0 0 2px #fff,0 0 5px #ff5fae,0 0 11px #ff2d8a,0 0 22px #ff2d8a,0 0 34px rgba(255,45,138,.6);pointer-events:none;z-index:6;animation:wmNeon 5s linear infinite}
+@keyframes wmNeon{0%,7%,9%,11%,100%{opacity:1}8%,10%{opacity:.35}}</style><script>window.wmBrand=function(sel,make){var run=function(){document.querySelectorAll(sel).forEach(function(el){if(el.querySelector(':scope > .wm-brand'))return;var n=make(el);if(!n)return;n.classList.add('wm-brand');if(el!==document.body&&getComputedStyle(el).position==='static')el.style.position='relative';el.appendChild(n)})};var go=function(){run();new MutationObserver(run).observe(document.body,{childList:true,subtree:true})};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go()};
+window.wmEl=function(html){var t=document.createElement('template');t.innerHTML=html.trim();return t.content.firstChild};
+window.wmDe=/^de/.test(new URLSearchParams(location.search).get('lang')||navigator.language||'');
+wmBrand('body',function(){return wmEl('<div class="wm-neon" aria-hidden="true">JOCULUS</div>')});</script><!-- /wm-brand --></head>
 <body>
 <canvas id="cv"></canvas>
 <div id="top" class="bar">
