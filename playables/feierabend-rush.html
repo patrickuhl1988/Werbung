@@ -530,7 +530,8 @@ function layout(){
 /* ---------------- Kamera ---------------- */
 function camTarget(){
   var startH=START_H/DESIGN_W*bw;
-  var want=effTop+.7*(effBottom-effTop);
+  /* Figur weit unten halten, damit man sieht, wohin man läuft (auch bei niedriger Werbefläche). */
+  var want=Math.max(effTop+.7*(effBottom-effTop),effBottom-.5*cell);
   var c=st.vrow-(H-want)/cell;
   var cMin=1-startH/cell;
   /* Über der Zielreihe bleibt Platz für die Hinweise (quer) bzw. das HUD (hoch). */
