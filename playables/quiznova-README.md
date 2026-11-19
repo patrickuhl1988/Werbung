@@ -2,9 +2,9 @@
 
 Live: https://patrickuhl1988.github.io/Werbung/playables/quiznova.html
 
-Eine eigenständige HTML-Datei (≈ 230 KB), ohne externe Bibliotheken, Nachladen oder Tracking. Eine Mini-Runde QuizNova: drei echte Fragen aus dem Spiel mit ihren Originalbildern, vier Antwortkarten, grün/rot mit Punkten, Serienbonus, Konfetti und dem „Did you know?“-Fakt aus dem Spiel. Danach die Endkarte (Ergebnis, „1.500+ Fragen · 8 Kategorien · 6 Sprachen · offline · für Kinder“) mit Store-Knopf und „Noch eine Runde“ (die nächsten drei Fragen). Wer nur zuschaut, sieht trotzdem alles: nach 4,5 s ohne Eingabe zeigt eine Hand auf die richtige Antwort, nach 9 s antwortet die Anzeige selbst. Ablauf etwa 25 s.
+Eine eigenständige HTML-Datei (≈ 298 KiB), ohne externe Bibliotheken, Nachladen oder Tracking. Eine Mini-Runde QuizNova: drei echte Fragen aus dem Spiel mit ihren Originalbildern, vier Antwortkarten, grün/rot mit Punkten, Serienbonus, Konfetti und dem „Did you know?“-Fakt aus dem Spiel. Danach die Endkarte (Ergebnis, „1.500+ Fragen · 8 Kategorien · 6 Sprachen · offline · für Kinder“) mit Store-Knopf und „Noch eine Runde“ (die nächsten drei Fragen). Wer nur zuschaut, sieht trotzdem alles: nach 4,5 s ohne Eingabe zeigt eine Hand auf die richtige Antwort, nach 9 s antwortet die Anzeige selbst. Ablauf etwa 25 s.
 
-Sechs Fragen (Science, Film, Sport, Geography, History), Texte in Englisch, Deutsch, Spanisch, Französisch, Italienisch und Thai – direkt aus `data/questions/<sprache>/` des Spiels. Sprache per `?lang=` oder Gerätesprache, sonst Englisch. Klänge (richtig, falsch, Serie) aus dem Spiel, erst nach einer Nutzeraktion; `?muted=1` startet stumm.
+Sechs Fragen (Science, Film, Sport, Geography, History), Texte in Englisch, Deutsch, Spanisch, Französisch, Italienisch und Thai – direkt aus `data/questions/<sprache>/` des Spiels. Sprache per `?lang=` oder Gerätesprache, sonst Englisch. Die Originalklänge für richtige Antworten, falsche Antworten und Serien sind als PCM eingebettet. Ein Tipp auf die Anzeige aktiviert die Wiedergabe über Web Audio. Der Lautsprecher ist von Anfang an sichtbar und spielt beim Einschalten einen kurzen Bestätigungston. Mit `?muted=1` bleiben auch Antworten stumm, bis der Ton eingeschaltet wird.
 
 ## Bauen und prüfen
 
