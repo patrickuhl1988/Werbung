@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-11",
-  "_hinweis": "Werbeeinstellungen fuer Tiefsee-Tempel ab Werbemodul 1.2.0: nur spielbare HTML-Anzeigen (Playables von GitHub Pages). Aeltere App-Versionen lesen weiter tiefsee-tempel-werbe-config.json.",
+  "updatedAt": "2026-11-23",
+  "_hinweis": "Werbeeinstellungen fuer Tiefsee-Tempel ab Werbemodul 1.2.0: nur spielbare HTML-Anzeigen (Playables von GitHub Pages). Aeltere App-Versionen lesen weiter tiefsee-tempel-werbe-config.json. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 12 Demos.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "sonaris-playable",
       "sort-rush-playable",
       "tower100-playable",
-      "fundfieber-playable"
+      "fundfieber-playable",
+      "plush-parade-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -402,6 +403,38 @@
       "tags": [
         "playable",
         "simulation"
+      ]
+    },
+    {
+      "id": "plush-parade-playable",
+      "kind": "game",
+      "title": {
+        "de": "Plush Parade",
+        "en": "Plush Parade"
+      },
+      "tagline": {
+        "de": "Plüschis sortieren, Kapseln füllen – probier den Greifautomaten direkt hier.",
+        "en": "Sort the plushies, fill the capsules – try the claw machine puzzle right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/plush-parade.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.luckycatch"
+      },
+      "accent": "#ff5c8d",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]

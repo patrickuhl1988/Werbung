@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-23",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,8 @@
       "fundfieber-playable",
       "candlerift-playable",
       "feierabend-rush-playable",
-      "wuerfel-dungeon-playable"
+      "wuerfel-dungeon-playable",
+      "plush-parade-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -433,6 +434,38 @@
       "tags": [
         "playable",
         "roguelike"
+      ]
+    },
+    {
+      "id": "plush-parade-playable",
+      "kind": "game",
+      "title": {
+        "de": "Plush Parade",
+        "en": "Plush Parade"
+      },
+      "tagline": {
+        "de": "Plüschis sortieren, Kapseln füllen – probier den Greifautomaten direkt hier.",
+        "en": "Sort the plushies, fill the capsules – try the claw machine puzzle right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/plush-parade.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.luckycatch"
+      },
+      "accent": "#ff5c8d",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]

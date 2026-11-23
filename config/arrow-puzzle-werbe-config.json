@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12",
-  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13.",
+  "updatedAt": "2026-11-23",
+  "_hinweis": "Werbeeinstellungen fuer Arrow Puzzle. Nur interaktive Werbung: die spielbaren Demos aller Spiele, fuer die es eine gibt, zufaellig gleich oft (je ein Zehntel): Sort Rush, Koeniginnen, Claw Machine Heroes, Calm Arrow Puzzle, Dame Meister, Muehle Meister (Zwickmuehle), QuizNova, TOWER 100, SONARIS und FUNDFIEBER. Ab Arrow Puzzle 1.15.0 bestimmt diese Datei die Auswahl (selectedIds, rotation); Takt und Timing bleiben im Code gesperrt, und der Build zeigt nur spielbare Demos (Bild-/Videoanzeigen in selectedIds werden uebergangen). Neue Demos: Eintrag unter creatives (Icon als volle Adresse unter images/icons/) und die Id in selectedIds - kein App-Build noetig. Aeltere Builds bis 1.14.0 sperren die Auswahl im Code und zeigen weiter ihre eingebaute Liste. Laedt eine Demo nicht, springt die Koeniginnen-Demo ein. Playables nur ueber GitHub Pages (nicht jsDelivr/raw: text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 14 Demos.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -17,7 +17,8 @@
       "fundfieber-playable",
       "candlerift-playable",
       "feierabend-rush-playable",
-      "wuerfel-dungeon-playable"
+      "wuerfel-dungeon-playable",
+      "plush-parade-playable"
     ],
     "defaultUnlockSeconds": 5,
     "advancedTimings": false,
@@ -798,6 +799,38 @@
       "tags": [
         "playable",
         "roguelike"
+      ]
+    },
+    {
+      "id": "plush-parade-playable",
+      "kind": "game",
+      "title": {
+        "de": "Plush Parade",
+        "en": "Plush Parade"
+      },
+      "tagline": {
+        "de": "Plüschis sortieren, Kapseln füllen – probier den Greifautomaten direkt hier.",
+        "en": "Sort the plushies, fill the capsules – try the claw machine puzzle right here."
+      },
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/plush-parade.png",
+      "media": {
+        "portrait": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        },
+        "landscape": {
+          "type": "playable",
+          "src": "https://patrickuhl1988.github.io/Werbung/playables/plush-parade.html"
+        }
+      },
+      "target": {
+        "android": "com.patrickuhl.luckycatch"
+      },
+      "accent": "#ff5c8d",
+      "status": "live",
+      "tags": [
+        "playable",
+        "puzzle"
       ]
     }
   ]
