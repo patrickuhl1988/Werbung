@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
-  "_hinweis": "Wird von keinem Lucky-Catch-Build gelesen. Ab 0.10.17 (Werbemodul 1.2.0, nur spielbare Demos als freiwillige Belohnung) gilt lucky-catch-playables-config.json. Werbeeinstellungen fuer Lucky Catch. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert.",
+  "updatedAt": "2026-11-23",
+  "_hinweis": "Wird von keinem Lucky-Catch-Build gelesen. Ab 0.10.17 (Werbemodul 1.2.0, nur spielbare Demos als freiwillige Belohnung) gilt lucky-catch-playables-config.json. Werbeeinstellungen fuer Lucky Catch. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 20 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -22,7 +22,6 @@
       "dame-meister-bild-1",
       "lumenfall-bild-1",
       "drop-match-bild-1",
-      "feierabend-rush",
       "pop-order-bild-2",
       "seifen-atelier-bild-2",
       "tiefsee-tempel-bild-2"
@@ -567,70 +566,6 @@
         "android": "de.patrickuhl.dropandmatch"
       },
       "accent": "#4ade80",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
-      "id": "feierabend-rush",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "video",
-          "src": "videos/rushstep-portrait.mp4",
-          "poster": "posters/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "video",
-          "src": "videos/rushstep-landscape.mp4",
-          "poster": "posters/rushstep-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "arcade"
-      ]
-    },
-    {
-      "id": "feierabend-rush-bild-1",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "images/rushstep-street-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
       "status": "live",
       "tags": [
         "werbebild"

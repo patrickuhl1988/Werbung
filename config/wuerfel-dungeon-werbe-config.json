@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-23",
-  "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 10.11.2026 nur spielbare HTML-Anzeigen (Playables) ausgewählt. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable); jetzt 13 Demos, zufaellig je 1/13. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 14 Demos.",
+  "_hinweis": "Werbeeinstellungen fuer Wuerfel Dungeon. Aenderungen hier gelten in der App innerhalb von ca. 5 Minuten nach dem naechsten App-Start - ohne neuen Build. Felder, die fehlen, behalten ihren Wert aus der App. Ungueltige Werte werden ignoriert. Seit 10.11.2026 nur spielbare HTML-Anzeigen (Playables) ausgewählt. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable); jetzt 13 Demos, zufaellig je 1/13. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 14 Demos. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 13 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -17,7 +17,6 @@
       "tower100-playable",
       "fundfieber-playable",
       "candlerift-playable",
-      "feierabend-rush-playable",
       "plush-parade-playable"
     ],
     "defaultUnlockSeconds": 5,
@@ -608,70 +607,6 @@
       ]
     },
     {
-      "id": "feierabend-rush",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "video",
-          "src": "videos/rushstep-portrait.mp4",
-          "poster": "posters/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "video",
-          "src": "videos/rushstep-landscape.mp4",
-          "poster": "posters/rushstep-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "arcade"
-      ]
-    },
-    {
-      "id": "feierabend-rush-bild-1",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "images/rushstep-street-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
       "id": "pop-order-bild-2",
       "kind": "game",
       "title": {
@@ -1139,38 +1074,6 @@
       "tags": [
         "playable",
         "action"
-      ]
-    },
-    {
-      "id": "feierabend-rush-playable",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
-        "en": "Hop through rush hour and clock in on time – right here."
-      },
-      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        },
-        "landscape": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "playable",
-        "arcade"
       ]
     },
     {

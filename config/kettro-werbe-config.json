@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-23",
-  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 13 Demos.",
+  "_hinweis": "Kettro: je 1/9 Arrow Puzzle, Sort Rush, Königinnen, Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER, alle spielbar. Claw Machine Heroes, QuizNova, Mühle Meister, TOWER 100, SONARIS und FUNDFIEBER erst ab dem Kettro-Build mit Ordner-Freigabe (nach 2.2.0/26: jede Demo aus /Werbung/playables/ wie Werbemodul 1.2.0). Ältere Builds kennen nur ihre bisher erlaubten Spiele und zeigen weiter je 1/3 Arrow Puzzle, Sort Rush und Königinnen. Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 12 Demos, zufaellig je 1/12. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 13 Demos. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 12 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -15,7 +15,6 @@
       "sonaris-playable",
       "fundfieber-playable",
       "candlerift-playable",
-      "feierabend-rush-playable",
       "wuerfel-dungeon-playable",
       "plush-parade-playable"
     ],
@@ -596,70 +595,6 @@
       ]
     },
     {
-      "id": "feierabend-rush",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "video",
-          "src": "videos/rushstep-portrait.mp4",
-          "poster": "posters/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "video",
-          "src": "videos/rushstep-landscape.mp4",
-          "poster": "posters/rushstep-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "arcade"
-      ]
-    },
-    {
-      "id": "feierabend-rush-bild-1",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "image",
-          "src": "images/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "image",
-          "src": "images/rushstep-street-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
       "id": "pop-order-bild-2",
       "kind": "game",
       "title": {
@@ -1065,38 +1000,6 @@
       ]
     },
     {
-      "id": "feierabend-rush-playable",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
-        "en": "Hop through rush hour and clock in on time – right here."
-      },
-      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        },
-        "landscape": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "playable",
-        "arcade"
-      ]
-    },
-    {
       "id": "wuerfel-dungeon-playable",
       "kind": "game",
       "title": {
@@ -1173,7 +1076,6 @@
       "sonaris-playable",
       "fundfieber-playable",
       "candlerift-playable",
-      "feierabend-rush-playable",
       "wuerfel-dungeon-playable",
       "plush-parade-playable"
     ]

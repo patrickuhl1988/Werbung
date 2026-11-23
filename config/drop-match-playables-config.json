@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-23",
-  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100, SONARIS, FUNDFIEBER), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 11 Demos, zufaellig je 1/11. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 12 Demos.",
+  "_hinweis": "Drop n Match ab Version 1.10.0 (versionCode 11, Werbemodul 1.2.0): nur spielbare Demos (Arrow Puzzle, Sort Rush, Königinnen, Mühle Meister (Variante Zwickmühle, playables/muehle-meister.html), Calm Arrow Puzzle, TOWER 100, SONARIS, FUNDFIEBER), zufällig. Timing wie in drop-match-werbe-config.json (alle 10 Minuten beim nächsten Spielende). Lädt eine Demo nicht, erscheint die Kachel des Spiels. Ältere Builds lesen weiter drop-match-werbe-config.json. Playables nur über GitHub Pages (absolute Adresse), nie über jsDelivr/raw (text/plain). Seit 11.11.2026 zusaetzlich CANDLERIFT (candlerift-playable) und Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 11 Demos, zufaellig je 1/11. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 12 Demos. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 11 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -14,7 +14,6 @@
       "sonaris-playable",
       "fundfieber-playable",
       "candlerift-playable",
-      "feierabend-rush-playable",
       "wuerfel-dungeon-playable",
       "plush-parade-playable"
     ],
@@ -338,38 +337,6 @@
       "tags": [
         "playable",
         "action"
-      ]
-    },
-    {
-      "id": "feierabend-rush-playable",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
-        "en": "Hop through rush hour and clock in on time – right here."
-      },
-      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        },
-        "landscape": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "playable",
-        "arcade"
       ]
     },
     {

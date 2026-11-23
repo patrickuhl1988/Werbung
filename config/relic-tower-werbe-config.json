@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-23",
-  "_hinweis": "Relic Tower (org.relictower.awakening): campaign and timing configuration identical to Sort Rush / IONWAKE; independent app identity.",
+  "_hinweis": "Relic Tower (org.relictower.awakening): campaign and timing configuration identical to Sort Rush / IONWAKE; independent app identity. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 14 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -18,7 +18,6 @@
       "dame-meister-bild-2",
       "lumenfall-bild-2",
       "drop-match-bild-2",
-      "feierabend-rush",
       "tiefsee-tempel-bild-1"
     ],
     "defaultUnlockSeconds": 5,
@@ -421,66 +420,6 @@
         "android": "de.patrickuhl.dropandmatch"
       },
       "accent": "#4ade80",
-      "status": "live",
-      "tags": [
-        "werbebild"
-      ]
-    },
-    {
-      "id": "feierabend-rush",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "video",
-          "src": "videos/rushstep-portrait.mp4",
-          "poster": "posters/rushstep-portrait.jpg"
-        },
-        "landscape": {
-          "type": "video",
-          "src": "videos/rushstep-landscape.mp4",
-          "poster": "posters/rushstep-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "arcade"
-      ]
-    },
-    {
-      "id": "feierabend-rush-bild-2",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Straße überqueren, Büro überleben: Arcade-Hüpfspiel, offline, mit einem Daumen.",
-        "en": "Hop across traffic, trams & a busy office. One-thumb offline arcade. No IAP."
-      },
-      "icon": "icons/feierabend-rush.png",
-      "media": {
-        "landscape": {
-          "type": "image",
-          "src": "images/rushstep-street-landscape.jpg"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
       "status": "live",
       "tags": [
         "werbebild"

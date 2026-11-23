@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-23",
-  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 14 Demos.",
+  "_hinweis": "Werbeeinstellungen fuer CANDLERIFT (de.lumenfall.app, Werbemodul 1.2.0 ab Version 1.5.0): nur noch spielbare HTML-Demos, zufaellig je eine. Bild- und Videoanzeigen entfernt. Builds bis 1.4.0 haben das alte Modul ohne HTML-Unterstuetzung. Playables nur ueber GitHub Pages (absolute Adresse), nie ueber jsDelivr/raw (text/plain). Aenderungen gelten ca. 5 Minuten nach dem naechsten App-Start, ohne neuen Build. Seit 11.11.2026 zusaetzlich Rushstep (feierabend-rush-playable). Seit 12.11.2026 zusaetzlich Wuerfel Dungeon (wuerfel-dungeon-playable); jetzt 13 Demos, zufaellig je 1/13. Seit 23.11.2026 zusaetzlich Plush Parade (plush-parade-playable, com.patrickuhl.luckycatch); jetzt 14 Demos. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 13 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -16,7 +16,6 @@
       "fundfieber-playable",
       "calm-arrow-puzzle-playable",
       "quiznova-playable",
-      "feierabend-rush-playable",
       "wuerfel-dungeon-playable",
       "plush-parade-playable"
     ],
@@ -405,38 +404,6 @@
       "tags": [
         "playable",
         "quiz"
-      ]
-    },
-    {
-      "id": "feierabend-rush-playable",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
-        "en": "Hop through rush hour and clock in on time – right here."
-      },
-      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        },
-        "landscape": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "playable",
-        "arcade"
       ]
     },
     {

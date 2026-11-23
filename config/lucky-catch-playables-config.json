@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13",
-  "_hinweis": "Lucky Catch (com.patrickuhl.luckycatch) ab 0.10.17 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig, nur freiwillig als Belohnung 'Fang verdoppeln' nach einem seltenen oder besseren Fang, nie zeitgesteuert. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing. Laedt eine Demo nicht binnen 8 s, zaehlt die Kachel des Spiels. lucky-catch-werbe-config.json liest kein Build. Playables nur ueber GitHub Pages.",
+  "updatedAt": "2026-11-23",
+  "_hinweis": "Lucky Catch (com.patrickuhl.luckycatch) ab 0.10.17 mit Werbemodul 1.2.0: nur spielbare Demos der anderen Spiele, zufaellig, nur freiwillig als Belohnung 'Fang verdoppeln' nach einem seltenen oder besseren Fang, nie zeitgesteuert. Die Auswahl (selectedIds) kommt aus dieser Datei; der Adapter laesst nur spielbare Demos durch und sperrt das Timing. Laedt eine Demo nicht binnen 8 s, zaehlt die Kachel des Spiels. lucky-catch-werbe-config.json liest kein Build. Playables nur ueber GitHub Pages. Seit 23.11.2026 ohne Rushstep/Feierabend Rush (Spiel eingestellt); jetzt 13 Anzeigen.",
   "config": {
     "enabled": true,
     "selectedIds": [
@@ -10,7 +10,6 @@
       "candlerift-playable",
       "claw-machine-heroes-playable",
       "dame-meister-playable",
-      "feierabend-rush-playable",
       "fundfieber-playable",
       "koeniginnen-playable",
       "muehle-meister-playable",
@@ -202,38 +201,6 @@
         "playable",
         "puzzle",
         "board"
-      ]
-    },
-    {
-      "id": "feierabend-rush-playable",
-      "kind": "game",
-      "title": {
-        "de": "Rushstep",
-        "en": "Rushstep"
-      },
-      "tagline": {
-        "de": "Durch den Berufsverkehr hüpfen, pünktlich stempeln – direkt hier.",
-        "en": "Hop through rush hour and clock in on time – right here."
-      },
-      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/feierabend-rush.png",
-      "media": {
-        "portrait": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        },
-        "landscape": {
-          "type": "playable",
-          "src": "https://patrickuhl1988.github.io/Werbung/playables/feierabend-rush.html"
-        }
-      },
-      "target": {
-        "android": "de.patrickuhl.feierabendrush"
-      },
-      "accent": "#ffb454",
-      "status": "live",
-      "tags": [
-        "playable",
-        "arcade"
       ]
     },
     {
