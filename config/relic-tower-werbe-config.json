@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-11-23",
   "_hinweis": "Relic Tower (org.relictower.awakening): campaign and timing configuration identical to Sort Rush / IONWAKE; independent app identity.",
   "config": {
     "enabled": true,
@@ -13,7 +13,7 @@
       "arrow-puzzle-bild-2",
       "muehle-meister-bild-2",
       "kiosk-simulator-bild-2",
-      "lucky-catch-bild-2",
+      "plush-parade-bild-2",
       "sonaris-bild-2",
       "dame-meister-bild-2",
       "lumenfall-bild-2",
@@ -292,27 +292,27 @@
       ]
     },
     {
-      "id": "lucky-catch-bild-2",
+      "id": "plush-parade-bild-2",
       "kind": "game",
       "title": {
-        "de": "Lucky Catch",
-        "en": "Lucky Catch"
+        "de": "Plush Parade",
+        "en": "Plush Parade"
       },
       "tagline": {
-        "de": "140 Arten entdecken, seltene Fänge sammeln und dein Aquarium gestalten.",
-        "en": "Discover 140 species, collect rare catches and create your own aquarium."
+        "de": "Plüschis sortieren, Kapseln füllen – das gemütliche Greifautomaten-Puzzle.",
+        "en": "Sort the plushies, fill the capsules – the cozy claw machine puzzle."
       },
-      "icon": "icons/lucky-catch.png",
+      "icon": "https://patrickuhl1988.github.io/Werbung/images/icons/plush-parade.png",
       "media": {
         "landscape": {
           "type": "image",
-          "src": "images/lucky-catch-bild-2-quer.jpg"
+          "src": "https://patrickuhl1988.github.io/Werbung/images/plush-parade-bild-2-quer.jpg"
         }
       },
       "target": {
         "android": "com.patrickuhl.luckycatch"
       },
-      "accent": "#3fa7f5",
+      "accent": "#ff5c8d",
       "status": "live",
       "tags": [
         "werbebild"

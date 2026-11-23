@@ -73,3 +73,12 @@ Eintrag für `creatives`:
   "tags": ["playable", "puzzle"]
 }
 ```
+
+## Bildanzeigen für ältere Werbemodule
+
+Seit 23.11.2026 ersetzen `plush-parade-bild-1` (Hoch- und Querformat) und `plush-parade-bild-2` (nur Querformat) in
+24 Bild-/Video-Configs die alten Angelspiel-Anzeigen `lucky-catch-bild-1/-2` an derselben Stelle (gleiche App
+`com.patrickuhl.luckycatch`, neuer Titel, Text, Symbol und Akzent `#ff5c8d`). Bilder: `images/plush-parade-bild-1-hoch.jpg`
+(1080×1920) und `images/plush-parade-bild-2-quer.jpg` (1920×1080), gebaut mit `tools/playable/make_ad_images.py` im
+Lucky-Catch-Projekt aus Titel-Automat und Store-Vorschaugrafik. Die Configs verweisen mit voller GitHub-Pages-Adresse
+darauf, damit der jsDelivr-Cache die neuen Dateien nicht verzögert. Die alten Lucky-Catch-Medien bleiben im Repo liegen.
